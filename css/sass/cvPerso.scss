@@ -1,0 +1,196 @@
+//Import du fichier _variables.scss présent dans bootstrap-sass-official (renomé en _customVariables.scss), CF https://www.sitepoint.com/bootstrap-sass-installation-and-customisation/, SETUP :
+@import "_customVariables";
+// Import Boostrap-sass components : CF https://www.sitepoint.com/bootstrap-sass-installation-and-customisation/, SETUP :
+@import "../../../librairiesFront/bootstrap-sass-official/assets/stylesheets/bootstrap";
+// CF http://stackoverflow.com/questions/18570424/using-fontawesome-with-sass
+@import "font-awesome.scss";
+
+// -- Definition des variables utilisées : -- //
+$heightContainerAllPage: 1000px;
+$grisTresSombre: rgb(42, 44, 51);
+$grisSombre: rgb(58, 60, 71);
+$grisClair: rgb(131,133,141);
+$grisBackground: rgb(246,247,247);
+$orangeTextHover : rgb(250, 115, 3);
+$bleu4TitlesTransitions: rgb(21, 103,160);
+$typoGoogleChoisie: 'Lato', sans-serif;
+$tailleTextBig: 30px;
+$tailleTextMedium: 20px;
+$tailleTextLittle: 15px;
+// --- Pour utiliser via mixin ://
+@mixin typoLegere{
+	font-family: $typoGoogleChoisie;
+	font-weight: 300;
+}
+@mixin typoMedium{
+	font-family: $typoGoogleChoisie;
+	font-weight: 400;
+}
+@mixin typoBig{
+	font-family: $typoGoogleChoisie;
+	font-weight: 700;
+}
+@mixin proprietesTitlesContainers {
+	display: flex;
+	display: -webkit-flex; /* Safari */
+	flex-direction: row;
+	/*justify-content: space-around;*/
+	justify-content: center;
+
+}
+@mixin lignesTransition{
+	height: 1px;
+	background-color: $grisClair;
+	align-self: center;// permet d'aligner verticalement (f(axe 2ndaire)).
+	width: 30%;
+}
+@mixin titlesTransitions {
+	color:$bleu4TitlesTransitions;
+	@include typoBig;
+	font-size: $tailleTextMedium;
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+@mixin textHover {
+	color: $orangeTextHover;
+	font-weight: 400;
+	cursor:pointer;
+}
+// -------------------------------------------- //
+// -------------------------------------------- //
+// -------------------------------------------- //
+body {
+	background-color: $grisBackground;
+}
+
+#globalPageContainer {
+	font-size: $tailleTextMedium;
+	display: -webkit-flex; /* Safari */
+	display: flex;
+	width: 90%;
+	margin-left: 5%;
+	flex-direction: column;
+	flex-wrap: wrap;
+	background-color: white;
+	height: $heightContainerAllPage;// Si on set heigt/global container, on peut ensuite travailler avec %/enfants.
+	justify-content: space-around;
+	header {
+		height: 12%;
+		width: 100%;
+		display: flex;
+		display: -webkit-flex; /* Safari */
+		flex-direction: row;
+		justify-content: center;
+		.typoBig {
+			@include typoBig;
+		}
+		.typoMedium {
+			@include typoMedium;
+		}
+		.typoLegere {
+			@include typoLegere;
+		}
+		.tailleTextLittle {
+			font-size: $tailleTextLittle;
+		}
+		.tailleTextMedium {
+			font-size: $tailleTextMedium;
+		}
+		.tailleTextBig {
+			font-size: $tailleTextBig;
+		}
+		#nomPrenomTelMail {
+			display: flex;
+			display: -webkit-flex; /* Safari */
+			flex-direction: column;
+			width: 32%;
+			color: $grisSombre;
+			padding-left: 5px;
+			.mailAndtel {
+				margin-left: 5px;
+				.iconeFontAwesome {
+				padding-right: 3px;
+				}
+			}
+		}
+		#titreDePresentation {
+			width: 40%;
+			text-align: center;
+			color: $grisTresSombre;
+			#complementTitrePpal:hover {
+				@include textHover;
+			}
+		}
+		#photo {
+			padding-right: 2%;
+			padding-top: 10px;
+			width: 30%;
+			/*border: solid 1px green;*/
+			display: flex;
+			// Je remet diplay et flex-direction pour permettre d'aligner la photo sur la ->.
+			display: -webkit-flex; /* Safari */
+			flex-direction: row;
+			justify-content: flex-end;
+			img {
+				border: solid 2px $grisClair;
+			}
+		}
+	}
+
+	#savoirFaire {
+		height: 28%;
+		.transitionsContainers {
+			@include proprietesTitlesContainers;
+			.ligne4Transition {
+				@include lignesTransition;
+			}
+			.titlesTransitions {
+				@include titlesTransitions;
+			}
+		}
+	}
+
+	#experienceprofes {
+		height: 25%;
+		.transitionsContainers {
+			@include proprietesTitlesContainers;
+			.ligne4Transition {
+				@include lignesTransition;
+			}
+			.titlesTransitions {
+				@include titlesTransitions;
+			}
+		}
+	}
+
+	#formationAcad {
+		height: 20%;
+		.transitionsContainers {
+			@include proprietesTitlesContainers;
+			.ligne4Transition {
+				@include lignesTransition;
+			}
+			.titlesTransitions {
+				@include titlesTransitions;
+			}
+		}
+	}
+	#languesAndAutres {
+		height: 15%;
+		.transitionsContainers {
+			@include proprietesTitlesContainers;
+			.ligne4Transition {
+				@include lignesTransition;
+			}
+			.titlesTransitions {
+				@include titlesTransitions;
+			}
+		}
+	}
+
+
+
+
+
+}
