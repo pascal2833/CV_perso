@@ -137,6 +137,18 @@ body {
 			}
 		}
 	}
+	#popUpMoreDetailsHeader {
+		margin-top: -50px;
+		width: 60%;
+		/*background-color: rgba(100, 100, 100, 0.5);*/
+		align-self: center;// permet d'aligner verticalement (f(axe 2ndaire)).
+		overflow: auto;
+		padding: 5px;
+		border: 1px solid rgb(217, 39, 1);
+		border-radius: 5px;
+		font-size: $tailleTextLittle;
+		@include typoMedium;
+	}
 
 	#savoirFaire {
 		height: 28%;
