@@ -9,3 +9,7 @@ else {
 		console.log("flex box non autorisé avec ce navigateur, il faut l'updater !");
 		$("span").css("color", "green");
 		}*/
+
+$("#complementTitrePpal").click(function() {
+	$("#popUpMoreDetailsHeader").css("display", "none");
+});

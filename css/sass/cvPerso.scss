@@ -133,11 +133,12 @@ body {
 			flex-direction: row;
 			justify-content: flex-end;
 			img {
-				border: solid 2px $grisClair;
+				border: solid 5px $grisClair;
 			}
 		}
 	}
 	#popUpMoreDetailsHeader {
+		display: flex;
 		margin-top: -50px;
 		width: 60%;
 		/*background-color: rgba(100, 100, 100, 0.5);*/
@@ -145,9 +146,18 @@ body {
 		overflow: auto;
 		padding: 5px;
 		border: 1px solid rgb(217, 39, 1);
-		border-radius: 5px;
+		border-radius: 1px;
 		font-size: $tailleTextLittle;
 		@include typoMedium;
+		#croixPourFermerPopUp {
+			/*height: 200px;
+			width: 200px;
+			display: block;
+			position: relative;
+			top: 200px;
+			background-color: red;*/
+			align-self: flex-end;
+		}
 	}
 
 	#savoirFaire {
