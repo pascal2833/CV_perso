@@ -7,4 +7,8 @@
 * Add icon/name site
 * Il faut aussi mettre en placel'option multilangue.
 * /Flex box : reste à vérifier que compatible et donc à bloquer si non (déjà commencé avec la librairie modernizr)
+    * On peut utiliser au lieu de la lib js modernizr  la nvlle propiété css, "support" (CF https://www.sitepoint.com/an-introduction-to-css-supports-rule-feature-queries/)
 * Ajouter footer `pour faire + joli.
+* Enlever les divs pour mettre des tags avec sémantique (CF exo Udacity).
+* Appliquer web-kit pour all flex/safari avec mixin gnaux !
+* Adapter pour rem/css/typo : support issues: doesn't work in IE 8, Safari 4, or iOS 3.2.

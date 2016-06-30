@@ -14,10 +14,20 @@ $grisBackground: rgb(246,247,247);
 $orangeTextHover : rgb(250, 115, 3);
 $bleu4TitlesTransitions: rgb(21, 103,160);
 $typoGoogleChoisie: 'Lato', sans-serif;
-$tailleTextBig: 30px;
-$tailleTextMedium: 20px;
-$tailleTextLittle: 15px;
+$tailleTextBig: 3rem;
+$tailleTextMedium: 1.8rem;
+$tailleTextLittle: 1.25rem;
 // --- Pour utiliser via mixin ://
+@mixin box-sizing {// CF https://css-tricks.com/international-box-sizing-awareness-day/
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+* {
+	@include box-sizing;
+}
+
+
 @mixin typoLegere{
 	font-family: $typoGoogleChoisie;
 	font-weight: 300;
@@ -36,7 +46,6 @@ $tailleTextLittle: 15px;
 	flex-direction: row;
 	/*justify-content: space-around;*/
 	justify-content: center;
-
 }
 @mixin lignesTransition{
 	height: 1px;
@@ -53,13 +62,23 @@ $tailleTextLittle: 15px;
 	padding-right: 15px;
 }
 @mixin textHover {
-	color: $orangeTextHover;
-	font-weight: 400;
 	cursor:pointer;
 }
 // -------------------------------------------- //
 // -------------------------------------------- //
 // -------------------------------------------- //
+a.close-modal {
+			top: 1.5px!important;
+			right: 2.5px!important;
+		}
+.modal {
+	margin-bottom: 80%!important;
+	vertical-align: none!important;
+}
+.blocker {
+	background-color: rgba(42, 44, 51,0.6)!important;
+}
+
 body {
 	background-color: $grisBackground;
 }
@@ -118,6 +137,10 @@ body {
 			width: 40%;
 			text-align: center;
 			color: $grisTresSombre;
+			a {
+					@include typoMedium;
+					color: $grisSombre!important;
+				}
 			#complementTitrePpal:hover {
 				@include textHover;
 			}
@@ -133,30 +156,8 @@ body {
 			flex-direction: row;
 			justify-content: flex-end;
 			img {
-				border: solid 5px $grisClair;
+				border: solid 1px $grisClair;
 			}
-		}
-	}
-	#popUpMoreDetailsHeader {
-		display: flex;
-		margin-top: -50px;
-		width: 60%;
-		/*background-color: rgba(100, 100, 100, 0.5);*/
-		align-self: center;// permet d'aligner verticalement (f(axe 2ndaire)).
-		overflow: auto;
-		padding: 5px;
-		border: 1px solid rgb(217, 39, 1);
-		border-radius: 1px;
-		font-size: $tailleTextLittle;
-		@include typoMedium;
-		#croixPourFermerPopUp {
-			/*height: 200px;
-			width: 200px;
-			display: block;
-			position: relative;
-			top: 200px;
-			background-color: red;*/
-			align-self: flex-end;
 		}
 	}
 
@@ -212,7 +213,6 @@ body {
 	}
 
 
-
-
-
 }
+
+

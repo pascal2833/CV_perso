@@ -10,6 +10,8 @@ else {
 		$("span").css("color", "green");
 		}*/
 
-$("#complementTitrePpal").click(function() {
-	$("#popUpMoreDetailsHeader").css("display", "none");
-});
+
+$("a").click(function() {
+	$("ex1").css("display", "visible");
+})
+

@@ -10336,13 +10336,33 @@ button.close {
   overflow: visible;
   clip: auto; }
 
-/* line 63, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+/* line 26, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+/* line 70, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+a.close-modal {
+  top: 1.5px !important;
+  right: 2.5px !important; }
+
+/* line 74, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+.modal {
+  margin-bottom: 80% !important;
+  vertical-align: none !important; }
+
+/* line 78, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+.blocker {
+  background-color: rgba(42, 44, 51, 0.6) !important; }
+
+/* line 82, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
 body {
   background-color: #f6f7f7; }
 
-/* line 67, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+/* line 86, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
 #globalPageContainer {
-  font-size: 20px;
+  font-size: 1.8rem;
   display: -webkit-flex;
   /* Safari */
   display: flex;
@@ -10353,7 +10373,7 @@ body {
   background-color: white;
   height: 1000px;
   justify-content: space-around; }
-  /* line 78, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+  /* line 97, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
   #globalPageContainer header {
     height: 12%;
     width: 100%;
@@ -10362,28 +10382,28 @@ body {
     /* Safari */
     flex-direction: row;
     justify-content: center; }
-    /* line 85, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+    /* line 104, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
     #globalPageContainer header .typoBig {
       font-family: "Lato", sans-serif;
       font-weight: 700; }
-    /* line 88, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+    /* line 107, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
     #globalPageContainer header .typoMedium {
       font-family: "Lato", sans-serif;
       font-weight: 400; }
-    /* line 91, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+    /* line 110, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
     #globalPageContainer header .typoLegere {
       font-family: "Lato", sans-serif;
       font-weight: 300; }
-    /* line 94, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+    /* line 113, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
     #globalPageContainer header .tailleTextLittle {
-      font-size: 15px; }
-    /* line 97, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+      font-size: 1.25rem; }
+    /* line 116, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
     #globalPageContainer header .tailleTextMedium {
-      font-size: 20px; }
-    /* line 100, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+      font-size: 1.8rem; }
+    /* line 119, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
     #globalPageContainer header .tailleTextBig {
-      font-size: 30px; }
-    /* line 103, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+      font-size: 3rem; }
+    /* line 122, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
     #globalPageContainer header #nomPrenomTelMail {
       display: flex;
       display: -webkit-flex;
@@ -10392,23 +10412,26 @@ body {
       width: 32%;
       color: #3a3c47;
       padding-left: 5px; }
-      /* line 110, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+      /* line 129, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
       #globalPageContainer header #nomPrenomTelMail .mailAndtel {
         margin-left: 5px; }
-        /* line 112, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+        /* line 131, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
         #globalPageContainer header #nomPrenomTelMail .mailAndtel .iconeFontAwesome {
           padding-right: 3px; }
-    /* line 117, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+    /* line 136, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
     #globalPageContainer header #titreDePresentation {
       width: 40%;
       text-align: center;
       color: #2a2c33; }
-      /* line 121, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
-      #globalPageContainer header #titreDePresentation #complementTitrePpal:hover {
-        color: #fa7303;
+      /* line 140, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+      #globalPageContainer header #titreDePresentation a {
+        font-family: "Lato", sans-serif;
         font-weight: 400;
+        color: #3a3c47 !important; }
+      /* line 144, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+      #globalPageContainer header #titreDePresentation #complementTitrePpal:hover {
         cursor: pointer; }
-    /* line 125, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+    /* line 148, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
     #globalPageContainer header #photo {
       padding-right: 2%;
       padding-top: 10px;
@@ -10419,36 +10442,13 @@ body {
       /* Safari */
       flex-direction: row;
       justify-content: flex-end; }
-      /* line 135, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+      /* line 158, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
       #globalPageContainer header #photo img {
-        border: solid 5px #83858d; }
-  /* line 140, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
-  #globalPageContainer #popUpMoreDetailsHeader {
-    display: flex;
-    margin-top: -50px;
-    width: 60%;
-    /*background-color: rgba(100, 100, 100, 0.5);*/
-    align-self: center;
-    overflow: auto;
-    padding: 5px;
-    border: 1px solid #d92701;
-    border-radius: 1px;
-    font-size: 15px;
-    font-family: "Lato", sans-serif;
-    font-weight: 400; }
-    /* line 152, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
-    #globalPageContainer #popUpMoreDetailsHeader #croixPourFermerPopUp {
-      /*height: 200px;
-			width: 200px;
-			display: block;
-			position: relative;
-			top: 200px;
-			background-color: red;*/
-      align-self: flex-end; }
-  /* line 163, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+        border: solid 1px #83858d; }
+  /* line 164, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
   #globalPageContainer #savoirFaire {
     height: 28%; }
-    /* line 165, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+    /* line 166, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
     #globalPageContainer #savoirFaire .transitionsContainers {
       display: flex;
       display: -webkit-flex;
@@ -10456,25 +10456,25 @@ body {
       flex-direction: row;
       /*justify-content: space-around;*/
       justify-content: center; }
-      /* line 167, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+      /* line 168, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
       #globalPageContainer #savoirFaire .transitionsContainers .ligne4Transition {
         height: 1px;
         background-color: #83858d;
         align-self: center;
         width: 30%; }
-      /* line 170, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+      /* line 171, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
       #globalPageContainer #savoirFaire .transitionsContainers .titlesTransitions {
         color: #1567a0;
         font-family: "Lato", sans-serif;
         font-weight: 700;
-        font-size: 20px;
+        font-size: 1.8rem;
         text-align: center;
         padding-left: 15px;
         padding-right: 15px; }
-  /* line 176, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+  /* line 177, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
   #globalPageContainer #experienceprofes {
     height: 25%; }
-    /* line 178, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+    /* line 179, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
     #globalPageContainer #experienceprofes .transitionsContainers {
       display: flex;
       display: -webkit-flex;
@@ -10482,25 +10482,25 @@ body {
       flex-direction: row;
       /*justify-content: space-around;*/
       justify-content: center; }
-      /* line 180, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+      /* line 181, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
       #globalPageContainer #experienceprofes .transitionsContainers .ligne4Transition {
         height: 1px;
         background-color: #83858d;
         align-self: center;
         width: 30%; }
-      /* line 183, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+      /* line 184, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
       #globalPageContainer #experienceprofes .transitionsContainers .titlesTransitions {
         color: #1567a0;
         font-family: "Lato", sans-serif;
         font-weight: 700;
-        font-size: 20px;
+        font-size: 1.8rem;
         text-align: center;
         padding-left: 15px;
         padding-right: 15px; }
-  /* line 189, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+  /* line 190, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
   #globalPageContainer #formationAcad {
     height: 20%; }
-    /* line 191, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+    /* line 192, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
     #globalPageContainer #formationAcad .transitionsContainers {
       display: flex;
       display: -webkit-flex;
@@ -10508,25 +10508,25 @@ body {
       flex-direction: row;
       /*justify-content: space-around;*/
       justify-content: center; }
-      /* line 193, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+      /* line 194, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
       #globalPageContainer #formationAcad .transitionsContainers .ligne4Transition {
         height: 1px;
         background-color: #83858d;
         align-self: center;
         width: 30%; }
-      /* line 196, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+      /* line 197, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
       #globalPageContainer #formationAcad .transitionsContainers .titlesTransitions {
         color: #1567a0;
         font-family: "Lato", sans-serif;
         font-weight: 700;
-        font-size: 20px;
+        font-size: 1.8rem;
         text-align: center;
         padding-left: 15px;
         padding-right: 15px; }
-  /* line 201, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+  /* line 202, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
   #globalPageContainer #languesAndAutres {
     height: 15%; }
-    /* line 203, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+    /* line 204, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
     #globalPageContainer #languesAndAutres .transitionsContainers {
       display: flex;
       display: -webkit-flex;
@@ -10534,18 +10534,18 @@ body {
       flex-direction: row;
       /*justify-content: space-around;*/
       justify-content: center; }
-      /* line 205, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+      /* line 206, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
       #globalPageContainer #languesAndAutres .transitionsContainers .ligne4Transition {
         height: 1px;
         background-color: #83858d;
         align-self: center;
         width: 30%; }
-      /* line 208, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
+      /* line 209, C:/wamp/www/CV_perso/css/sass/cvPerso.scss */
       #globalPageContainer #languesAndAutres .transitionsContainers .titlesTransitions {
         color: #1567a0;
         font-family: "Lato", sans-serif;
         font-weight: 700;
-        font-size: 20px;
+        font-size: 1.8rem;
         text-align: center;
         padding-left: 15px;
         padding-right: 15px; }
