@@ -10,6 +10,7 @@ $heightContainerAllPage: 1000px;
 $grisTresSombre: rgb(42, 44, 51);
 $grisSombre: rgb(58, 60, 71);
 $grisClair: rgb(131,133,141);
+$grisTresClair: rgb(180,190,200);
 $grisBackground: rgb(246,247,247);
 $orangeTextHover : rgb(250, 115, 3);
 $bleu4TitlesTransitions: rgb(21, 103,160);
@@ -22,6 +23,7 @@ $tailleTextLittle: 1.25rem;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
 }
 * {
 	@include box-sizing;
@@ -79,16 +81,28 @@ a.close-modal {
 	background-color: rgba(42, 44, 51,0.6)!important;
 }
 
-body {
-	background-color: $grisBackground;
+@supports (display: flex) {
+	body {
+		background-color: $grisBackground;
+		margin-top: 10px;
+	}
+}
+@supports not(display: flex) {
+	body {
+		background-color: red;
+	}
 }
 
 #globalPageContainer {
+	border: solid 1px $grisTresClair;
+	border-radius: 3px;
 	font-size: $tailleTextMedium;
 	display: -webkit-flex; /* Safari */
 	display: flex;
 	width: 90%;
-	margin-left: 5%;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
 	flex-direction: column;
 	flex-wrap: wrap;
 	background-color: white;
@@ -126,6 +140,7 @@ body {
 			width: 32%;
 			color: $grisSombre;
 			padding-left: 5px;
+			line-height: 1.7;
 			.mailAndtel {
 				margin-left: 5px;
 				.iconeFontAwesome {
