@@ -1,0 +1,266 @@
+//Import du fichier _variables.scss présent dans bootstrap-sass-official (renomé en _customVariables.scss), CF https://www.sitepoint.com/bootstrap-sass-installation-and-customisation/, SETUP :
+@import "_customVariables"; // Bootstrap
+// Import Boostrap-sass components : CF https://www.sitepoint.com/bootstrap-sass-installation-and-customisation/, SETUP :
+@import "../../../librairiesFront/bootstrap-sass-official/assets/stylesheets/bootstrap";
+// CF http://stackoverflow.com/questions/18570424/using-fontawesome-with-sass
+@import "font-awesome.scss";
+
+// -- Definition des variables utilisées : -- //
+$heightContainerAllPage: 1000px;
+$grisTresSombre: rgb(42, 44, 51);
+$grisSombre: rgb(58, 60, 71);
+$grisClair: rgb(131,133,141);
+$grisTresClair: rgb(180,190,200);
+$grisBackground: #e6e5df;
+$text-hover-color : rgb(250, 115, 3);
+$bleu4TitlesTransitions: rgb(21, 103,160);
+$typoGoogleChoisie: 'Lato', sans-serif;
+// ---- Fonts-sizes : ------- //
+$header-font-size : 1.5em;
+$adress-font-size: 0.8em;
+$adress-num-and-mail-font-size: 0.8em;
+$titre-presentation-font-size: 1.2em;
+$complement-titrePresentation-font-size: 0.52em;
+//
+$section-font-size : 1.2em;
+$max-width: 1000px;
+
+// Responsive touch :
+$breakpoint1: 480px;
+$breakpoint2: 680px;
+
+// Test fonction, pour aider/responsive.
+@function set_flexDirection($breakPoint) {
+	@return if($breakPoint == $breakpoint1, column, row);// red si oui, si non.
+}
+
+
+// --- Pour utiliser via mixin ://
+@mixin box-sizing {// CF https://css-tricks.com/international-box-sizing-awareness-day/
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+@mixin typoLegere{
+	font-weight: 300;
+}
+@mixin typoMedium{
+	font-weight: 400;
+}
+@mixin typoBig{
+	font-weight: 700;
+}
+@mixin proprietesTitlesContainers {
+	justify-content: center;
+}
+@mixin lignesTransition {
+	height: 1px;
+	background-color: $grisClair;
+	//align-self: center;// permet d'aligner verticalement (f(axe 2ndaire)).
+	width: 30%;
+}
+@mixin titlesTransitions {
+	color:$bleu4TitlesTransitions;
+	@include typoBig;
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+@mixin textHover {
+	cursor:pointer;
+	color: $text-hover-color!important;
+}
+///////////////////////////////////////
+// Stylisation des éléments : //
+///////////////////////////////////////
+
+// --------------------------------------- //
+// ------- Commun à ttes les pages : --- //
+// --------------------------------------- //
+* {
+	@include box-sizing;
+	font-family: $typoGoogleChoisie;
+}
+
+body {
+	margin-bottom: 10px;
+}
+
+img,embed,video {
+	max-width: 100%;
+}
+
+// Tests/si propriétés supportées ou pas :
+/*@supports (display: flex) {
+body {
+background-color: $grisBackground;
+}
+}
+@supports not(display: flex) {
+body {
+background-color: red;
+}
+}*/
+
+.globalPageContainer {
+	background-color: white;
+	display:flex;
+	display: -webkit-flex; /* Safari */
+	flex-direction: column;
+	.header {
+		display:flex;
+		display: -webkit-flex; /* Safari */
+		.typoBig {
+			@include typoBig;
+		}
+		.typoMedium {
+			@include typoMedium;
+		}
+		.typoLegere {
+			@include typoLegere;
+		}
+		#photo {
+			margin-top: 5px;
+			img {
+				border: solid 1px $grisClair;
+			}
+		}
+	}
+
+	.section {
+		font-size: $section-font-size;
+		&.savoir-faire-section {
+			order: 1;
+		}
+		&.experience-section {
+			order: 2;
+		}
+		&.formationAcad-section {
+			order: 3;
+		}
+		&.languesAndAutre-section {
+			order: 4;
+		}
+		.transitionsContainers {
+			@include proprietesTitlesContainers;
+			.ligne4Transition {
+				@include lignesTransition;
+			}
+			.titlesTransitions {
+				@include titlesTransitions;
+			}
+		}
+		.savoirFaire {
+			/*height: 28%;*/
+		}
+		.experienceprofes {
+			/*height: 25%;*/
+		}
+		.formationAcad {
+			/*height: 20%;*/
+		}
+		.languesAndAutres {
+			/*height: 15%;*/
+		}
+	}
+
+}
+// --------------------------------------- //
+// ------- Taille niveau 1 (mobiles) : --- //
+// --------------------------------------- //
+@media screen and (max-width: $breakpoint1) {
+	body {
+		//font-size: 1em;// Ici on met body et pas root, hhtml car besoin surimposer valeur par defaut/Bootstrap.
+		background-color: red;
+	}
+	.globalPageContainer {
+		width: 100%;
+		border: none;
+		.header {
+			flex-direction: column;
+			align-items: center;
+			#nomPrenomTelMail {
+				order: 1;
+				font-size: $adress-font-size;
+				color: $grisSombre;
+				padding-left: 5px;
+				line-height: 1.7;
+				.mailAndTel {
+					font-size: $adress-num-and-mail-font-size;
+					.iconeFontAwesome {
+						padding-right: 5px;
+					}
+				}
+			}
+			#titreDePresentation {
+				order: 2;
+				font-size: $titre-presentation-font-size;
+				text-align: center;
+				color: $grisTresSombre;
+				a {
+					@include typoMedium;
+					color: $grisSombre!important;
+				}
+				#complementTitrePpal {
+					font-size: $complement-titrePresentation-font-size;
+					& :hover {
+						@include textHover;
+					}
+				}
+			}
+			#photo {
+				text-align: center;
+				order: 0;
+				img {
+					border: solid 1px $grisClair;
+					width: 75px;
+				}
+			}
+
+		}
+
+	}
+
+}
+// ------------------------------------------------------ //
+// ------- Taille niveau 2 (gros mobiles, tablets): --- //
+// ------------------------------------------------------ //
+@media screen and (min-width: $breakpoint1+1) and (max-width: $breakpoint2) {
+	body {
+		background-color: blue;
+		margin-top: 10px;
+	}
+}
+
+
+// --------------------------------------- //
+// ------- Taille niveau 3 (desktops) : --- //
+// --------------------------------------- //
+@media screen and (min-width: $breakpoint2+1) {
+	body {
+		background-color: green;
+		margin-top: 10px;
+	}
+	.globalPageContainer {
+		max-width: $max-width;
+		border: solid 1px $grisTresClair;
+		border-radius: 3px;
+		margin-left: auto;
+		margin-right: auto;
+
+
+		#photo {
+			margin-right: 2%;
+			margin-top: 5px;
+			img {
+				border: solid 1px $grisClair;
+				width: 120px;
+			}
+		}
+
+	}
+
+}
+
+

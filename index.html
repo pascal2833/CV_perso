@@ -1,85 +1,101 @@
 <!DOCTYPE html>
 <html>
-<head>
-<!--
+	<head>
+		<!--
 meta pour Boostrap : cf http://getbootstrap.com/getting-started/
 -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./css/sass/cvPerso.css">
-	<link rel= "stylesheet" href="./librairiesFront/bootstrap-sass-official/assets/stylesheets/_bootstrap-compass.scss"/>
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"/>
-	<link rel="stylesheet" href=".//librairiesFront/font-awesome-4.6.3/css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="./librairiesFront/jquery-modal-master/jquery.modal.min.css" type="text/css" media="screen" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1"><!--CF http://www.alsacreations.com/article/lire/1490-comprendre-le-viewport-dans-le-web-mobile.html-->
+		<link rel="stylesheet" href="./css/sass/cv_perso.css">
+		<!--Adapt style to screen size: CF http://paulgruson.fr/2013/01/22/responsive-design-10-conseils-pour-reussir/-->
+		<!--<link rel= "stylesheet" media="screen and (max-width:575px)" href="./css/sass/cvPerso_mobiles.css"/>-->
+		<!--<link rel= "stylesheet" media="screen and (max-width:480px)" href="./css/sass/cvPerso_mobilesPetits.css"/>-->
+		<link rel= "stylesheet" href="./../../librairiesFront/bootstrap-sass-official/assets/stylesheets/_bootstrap-compass.scss"/>
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"/>
+		<link rel="stylesheet" href="./../../librairiesFront/font-awesome-4.6.3/css/font-awesome.min.css"/>
+		<!--<link rel="stylesheet" href="./../../librairiesFront/jquery-modal-master/jquery.modal.min.css" type="text/css" media="screen" />-->
 
-	<title>CV pascal Evano</title>
-</head>
+		<title>CV pascal Evano</title>
+	</head>
 
-<body>
-
-<div id = "globalPageContainer">
-	<header>
-		<adress id= "nomPrenomTelMail">
-			<div id= "nomPrenom" class= "typoBig tailleTextMedium">Pascal Evano</div>
-			<div id= "mailPerso" class= "typoMedium tailleTextLittle mailAndtel"><i class="fa fa-envelope-o iconeFontAwesome"></i>pascal2833@gmail.com</div>
-			<div id= "telephone" class= "typoMedium tailleTextLittle mailAndtel"><i class="fa fa-phone iconeFontAwesome"></i>650.754.255</div>
-		</adress>
-		<div id= "titreDePresentation" class= "typoBig tailleTextBig">Web-developper
-			<div id= "complementTitrePpal" class= "typoLegere tailleTextLittle">
-				<a href="#modalMoreDetailsHeader" rel="modal:open">Cliquer ici pour plus de détails</a>
+	<body>
+		<!--Modal : -->
+		<div class= "modal fade" id="modalMoreDetailsHeader" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+			<div class="modal-dialog" role="dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="modal-title">Title à mettre</h4>
+					</div>
+					<div class="modal-body">
+						<span>
+							Me he hecho desarrollador-web y desarrollador Front-end gracias a la experiencia y a la formación continua.
+							Me apasiona buscar la mejor manera de plasmar y visualizar la información online.
+						</span>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close modal</button>
+					</div>
+				</div>
 			</div>
 		</div>
-		<figure id= "photo">
-			<img src="images/photoPerfil.jpg" alt= "Photo de profil de Pascal Evano" height="115" width="115">
-		</figure>
-	</header>
-	<div id="modalMoreDetailsHeader" style="display:none;">
-		Me he hecho desarrollador-web y desarrollador Front-end gracias a la experiencia y a la formación continua.
-		Me apasiona buscar la mejor manera de plasmar y visualizar la información online.
-		<a href="#" rel="modal:close"></a>
-	</div>
-	<section id= "savoirFaire">
-		<div class= "transitionsContainers">
-			<div class="ligne4Transition"></div>
-			<div class="titlesTransitions">Connaissances techniques</div>
-			<div class="ligne4Transition"></div>
+		<!----------------->
+
+		<div class = "globalPageContainer">
+			<header class="header">
+				<adress id= "nomPrenomTelMail">
+					<div id= "nomPrenom" class= "typoBig">Pascal Evano</div>
+					<div id= "mailPerso" class= "typoMedium mailAndTel"><i class="fa fa-envelope-o iconeFontAwesome"></i>pascal2833@gmail.com</div>
+					<div id= "telephone" class= "typoMedium mailAndTel"><i class="fa fa-phone iconeFontAwesome"></i>650.754.255</div>
+				</adress>
+				<div id= "titreDePresentation" class= "typoBig">Web-developper
+					<div id= "complementTitrePpal" class= "typoLegere ">
+						<a data-target="#modalMoreDetailsHeader" data-toggle="modal">Cliquer ici pour plus de détails</a>
+					</div>
+				</div>
+				<figure id= "photo">
+					<img class= "photo-perfil" src="images/photoPerfil.jpg" alt= "Photo de profil de Pascal Evano">
+				</figure>
+			</header>
+			<section class="section savoir-faire-section">
+				<div class= "transitionsContainers savoirFaire">
+					<div class="ligne4Transition"></div>
+					<div class="titlesTransitions">Connaissances techniques</div>
+					<div class="ligne4Transition"></div>
+				</div>
+			</section>
+			<section class="section experience-section">
+				<div class= "transitionsContainers experienceprofes">
+					<div class="ligne4Transition"></div>
+					<div class="titlesTransitions">Expérience professionnelle</div>
+					<div class="ligne4Transition"></div>
+				</div>
+			</section>
+			<section class="section formationAcad-section">
+				<div class= "transitionsContainers formationAcad">
+					<div class="ligne4Transition"></div>
+					<div class="titlesTransitions">Formation académique</div>
+					<div class="ligne4Transition"></div>
+				</div>
+			</section>
+			<section class="section languesAndAutre-section">
+				<div class= "transitionsContainers languesAndAutres">
+					<div class="ligne4Transition"></div>
+					<div class="titlesTransitions">Langues et autre</div>
+					<div class="ligne4Transition"></div>
+				</div>
+			</section>
 		</div>
-	</section>
-	<section id= "experienceprofes">
-		<div class= "transitionsContainers">
-			<div class="ligne4Transition"></div>
-			<div class="titlesTransitions">Expérience professionnelle</div>
-			<div class="ligne4Transition"></div>
-		</div>
-	</section>
-	<section id= "formationAcad">
-		<div class= "transitionsContainers">
-			<div class="ligne4Transition"></div>
-			<div class="titlesTransitions">Formation académique</div>
-			<div class="ligne4Transition"></div>
-		</div>
-	</section>
-	<section id= "languesAndAutres">
-		<div class= "transitionsContainers">
-			<div class="ligne4Transition"></div>
-			<div class="titlesTransitions">Langues et autre</div>
-			<div class="ligne4Transition"></div>
-		</div>
-	</section>
-	<!--<button class="btn btn-primary" type="submit">Button</button>--> <!--Juste un test pour voir si boostrap-saa bien installé : OK-->
-</div>
 
 
-<!--<script src="/librairiesFront/modernizr-custom.js"></script>--> <!--Fout le bordel /etude element vi aconsole chrome, affiche user agent.-->
-<script src="./librairiesFront/jquery/jquery.min.js"></script>
-<script src="./librairiesFront/jquery-modal-master/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
-<!--<script src="./librairiesFront/bootstrap-sass-official/assets/javascripts/bootstrap.min.js"></script>-->
-<!--J'ai enlevé Bootstrap parce que confliyt avec lib/modal (en plus pas utile ici ...).-->
-<script src="./librairiesFront/angular/angular.min.js"></script>
-<script src="./librairiesFront/angular-animate/angular-animate.min.js"></script>
-<script src="./librairiesFront/angular-route/angular-route.min.js"></script>
-<script src="./js/index.js"></script>
+		<!--<script src="./../../librairiesFront/modernizr-custom.js"></script>--> <!--Fout le bordel /etude element vi aconsole chrome, affiche user agent.-->
+		<script src="./../../librairiesFront/jquery/jquery.min.js"></script>
+		<!--<script src="./librairiesFront/jquery-modal-master/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>--> <!--Modal de Boostrap est + pratique en fait ...-->
+		<script src="./../../librairiesFront/bootstrap-sass-official/assets/javascripts/bootstrap.min.js"></script>
+		<script src="./../../librairiesFront/angular/angular.min.js"></script>
+		<script src="./../../librairiesFront/angular-animate/angular-animate.min.js"></script>
+		<script src="./../../librairiesFront/angular-route/angular-route.min.js"></script>
+		<script src="./js/index.js"></script>
 
-</body>
+	</body>
 </html>

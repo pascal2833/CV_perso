@@ -11,7 +11,27 @@ else {
 		}*/
 
 
-$("a").click(function() {
-	$("ex1").css("display", "visible");
-})
+var breakPoint1 = 480; // CF scss file.
+var widthViewPort = $(window).width();
+if(widthViewPort <= breakPoint1) {
+		$(".photo-perfil").addClass("img-circle");
+	}
+	else if(widthViewPort > breakPoint1) {
+		$(".photo-perfil").removeClass("img-circle");
+	}
+
+$(window).resize(function() {
+	var widthViewPort = $(window).width();
+	if(widthViewPort <= breakPoint1) {
+		$(".photo-perfil").addClass("img-circle");
+		console.log("inferieur");
+		console.log(widthViewPort);
+	}
+	else if(widthViewPort > breakPoint1) {
+		$(".photo-perfil").removeClass("img-circle");
+		console.log("supérieur");
+		console.log(widthViewPort);
+	}
+});
+
 
