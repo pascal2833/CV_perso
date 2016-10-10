@@ -60,29 +60,31 @@ function startScript() {
 	bio.display();
 
 	education.display = function() {
+		$(".education_section").append(HTMLschoolStart);
 		education.schools.forEach(function(element) {
-			$(".schools").append(HTMLschoolStart);
 			var formattedSchoolName = HTMLschoolName.replace("%data%", element.name);
 			var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", element.degree);
 			var formattedSchoolDates = HTMLschoolDates.replace("%data%", element.dates);
 			var formattedSchoolLocation = HTMLschoolDates.replace("%data%", element.location);
 			var formattedSchoolMajors = HTMLschoolDates.replace("%data%", element.majors);
-			$(".school-entry:last").append(formattedSchoolName);
-			$(".school-entry:last").append(formattedSchoolDegree);
-			$(".school-entry:last").append(formattedSchoolDates);
-			$(".school-entry:last").append(formattedSchoolLocation);
-			$(".school-entry:last").append(formattedSchoolMajors);
+			$(".school_entry:last").append(formattedSchoolName);
+			$(".school_entry:last").append(formattedSchoolDegree);
+			$(".school_entry:last").append(formattedSchoolDates);
+			$(".school_entry:last").append(formattedSchoolLocation);
+			$(".school_entry:last").append(formattedSchoolMajors);
 		});
+		$(".education_section").append(HTMLonlineCoursesStart);
 		education.onlineCourses.forEach(function(element) {
-			$(".onlineCourses").append(HTMLonlineClasses);
+			//$(".education_section").append(HTMLschoolStart);
+			//$(".onlineCourses").append(HTMLonlineClasses);
 			var formattedOnlineCourseTitle = HTMLonlineTitle.replace("%data%", element.title);
 			var formattedOnlineCourseSchool = HTMLonlineTitle.replace("%data%", element.school);
 			var formattedOnlineCourseDate = HTMLonlineDates.replace("%data%", element.dates);
 			var formattedOnlineCourseUrl = HTMLonlineURL.replace("%data%", element.url);
-			$(".onlineCourses:last").append(formattedOnlineCourseTitle);
-			$(".onlineCourses:last").append(formattedOnlineCourseSchool);
-			$(".onlineCourses:last").append(formattedOnlineCourseDate);
-			$(".onlineCourses:last").append(formattedOnlineCourseUrl);
+			$(".onlineCourse_entry:last").append(formattedOnlineCourseTitle);
+			$(".onlineCourse_entry:last").append(formattedOnlineCourseSchool);
+			$(".onlineCourse_entry:last").append(formattedOnlineCourseDate);
+			$(".onlineCourse_entry:last").append(formattedOnlineCourseUrl);
 		});
 	};
 	education.display();
@@ -111,10 +113,12 @@ function startScript() {
 			var formattedProjectTitle = HTMLprojectTitle.replace("%data%", element.title);
 			var formattedProjectDates = HTMLprojectDates.replace("%data%", element.dates);
 			var formattedProjectDescription = HTMLprojectDescription.replace("%data%", element.description);
+			/*var formattedInfoParralax = HTMLincludeSourceInfo.replace("%data%", element.sourceImageParralax);*/
 			$(".project-entry:last").append(formattedProjectTitle);
 			$(".project-entry:last").append(formattedProjectDates);
 			$(".project-entry:last").append(formattedProjectDescription);
 			$(".project-entry:last").append(HTMLProjectPhotoContainer);
+			/*$(".project-entry:last").append(formattedInfoParralax);*/
 			element.images.forEach(function(element) {
 				var formattedProjectImages = HTMLprojectImage.replace("%data%", element);
 				$(".photosContainer:last").append(formattedProjectImages);
@@ -126,11 +130,11 @@ function startScript() {
 	languesEtAutres.display = function() {
 		$(".languesEtAutresSection").append(HTMLlanguesStart);
 		languesEtAutres.langues.forEach(function(element) {
+			$(".languesList").append(HTMLLiElement);
 			var formattedLangueName = HTMLlanguesName.replace("%data%", element.name);
 			var formattedLangueLevel = HTMLlanguesName.replace("%data%", element.level);
-			$(".languesList").append(HTMLLiElement);
-			$(".liElement").append(formattedLangueName);
-			$(".liElement").append(formattedLangueLevel);
+			$(".liElement:last").append(formattedLangueName);
+			$(".liElement:last").append(formattedLangueLevel);
 		});
 	};
 	languesEtAutres.display();

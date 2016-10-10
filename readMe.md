@@ -9,6 +9,8 @@ Pour ce CV, j'ai utilisé le cours de Udacity Front End mais pas mal adapté.
 * Appliquer web-kit pour all flex/safari avec mixin gnaux !
 * Adapter pour rem/css/typo : support issues: doesn't work in IE 8, Safari 4, or iOS 3.2.
 * Integrer Boostrap pour que j'ai acces aux intéractions typiques des mobiles, CF http://getbootstrap.com/css/, mobile first.
+* Citer source image : https://pixabay.com
+* Manque le footer
 
 ## Il y a différentes logiques derrières :
 

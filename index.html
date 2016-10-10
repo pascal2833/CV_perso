@@ -1,78 +1,82 @@
 <!DOCTYPE html>
 <html>
-	<head>
+
+<head>
 		<!--
 meta pour Boostrap : cf http://getbootstrap.com/getting-started/
 -->
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1"><!--CF http://www.alsacreations.com/article/lire/1490-comprendre-le-viewport-dans-le-web-mobile.html-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--CF http://www.alsacreations.com/article/lire/1490-comprendre-le-viewport-dans-le-web-mobile.html-->
 		<link rel="stylesheet" href="./css/sass/cv_perso.css">
 		<!--Adapt style to screen size: CF http://paulgruson.fr/2013/01/22/responsive-design-10-conseils-pour-reussir/-->
 		<!--<link rel= "stylesheet" media="screen and (max-width:575px)" href="./css/sass/cvPerso_mobiles.css"/>-->
 		<!--<link rel= "stylesheet" media="screen and (max-width:480px)" href="./css/sass/cvPerso_mobilesPetits.css"/>-->
-		<link rel= "stylesheet" href="./../../librairiesFront/bootstrap-sass-official/assets/stylesheets/_bootstrap-compass.scss"/>
-		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"/>
-		<link rel="stylesheet" href="./../../librairiesFront/font-awesome-4.6.3/css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="./../../librairiesFront/bootstrap-sass-official/assets/stylesheets/_bootstrap-compass.scss" />
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" />
+		<link rel="stylesheet" href="./../../librairiesFront/font-awesome-4.6.3/css/font-awesome.min.css" />
 		<script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyANhGq8M1saoCeIgi0Nwi-mDRMApage6Ag"></script>
 
 		<title>CV pascal Evano</title>
-	</head>
+</head>
 
-	<body>
-		<div class = "globalPageContainer">
-			<header class="header">
-				<div class="myNameAndRoleName"></div>
-				<div class="welcome-message"></div>
-				<div class="mailTelGitAndCoe">
+<body>
+		<div class="globalPageContainer">
+				<header class="header">
+						<div class="myNameAndRoleName"></div>
+						<div class="welcome-message"></div>
+						<div class="mailTelGitAndCoe">
+						</div>
+				</header>
+				<section class="section skills-section">
+						<div class="parallax parralax_skills">
+								<h2 class="main_title_section main_title_section_skills">Connaissances techniques</h2>
+						</div>
+				</section>
+				<section class="section worksExperience-section">
+						<div class="parallax parralax_works">
+								<h2 class="main_title_section">Expérience professionnelle</h2>
+						</div>
+				</section>
+				<section class="section projects-section">
+						<div class="parallax parralax_projects">
+								<h2 class="main_title_section">Projets</h2>
+						</div>
+				</section>
+				<section class="section education_section">
+						<div class="parallax parralax_education">
+								<h2 class="main_title_section">Formation académique et associée à la programmation web</h2>
+						</div>
+						<div class="schools"></div>
+						<div class="onlineCourses"></div>
+				</section>
+				<section class="section languesEtAutresSection">
+						<div class="parallax parralax_languesAndCoe">
+								<h2 class="main_title_section">Langues et autre</h2>
+						</div>
+				</section>
+				<div id="mapDiv" class="section whereIlived">
+						<div class="parallax parralax_whereIlived">
+								<h2 class="main_title_section">where I lived and worked</h2>
+						</div>
 				</div>
-			</header>
-			<section class="section skills-section">
-				<div class="parallax parralax_skills">
-					<h2 class="main_title_section main_title_section_skills">Connaissances techniques</h2>
-				</div>
-			</section>
-			<section class="section worksExperience-section">
-				<div class="parallax parralax_works">
-					<h2 class="main_title_section">Expérience professionnelle</h2>
-				</div>
-			</section>
-			<section class="section projects-section">
-				<div class="parallax parralax_projects">
-					<h2 class="main_title_section">Projets</h2>
-				</div>
-			</section>
-			<section class="section">
-				<div class="parallax parralax_education">
-					<h2 class="main_title_section">Formation académique et associée à la programmation web</h2>
-				</div>
-				<div class="schools"></div>
-				<div class="onlineCourses"></div>
-			</section>
-			<section class="section languesEtAutresSection">
-				<div class="parallax parralax_languesAndCoe">
-					<h2 class="main_title_section">Langues et autre</h2>
-				</div>
-			</section>
-			<div id= "mapDiv" class="section whereIlived">
-				<div class="parallax parralax_whereIlived">
-					<h2 class="main_title_section">where I lived and worked</h2>
-				</div>
-			</div>
-			<section class=" section lets_connect_section">
-				<div class="parallax parralax_connect">
-					<h2 class="main_title_section">Let's Connect</h2>
-				</div>
-				<ul ><!-- TODO : styliser ul-->
-				</ul>
-			</section>
+				<section class=" section lets_connect_section">
+						<div class="parallax parralax_connect">
+								<h2 class="main_title_section">Let's Connect</h2>
+						</div>
+						<ul>
+						</ul>
+				</section>
 		</div>
-		<!--<script src="./../../librairiesFront/modernizr-custom.js"></script>--> <!--Fout le bordel /etude element vi aconsole chrome, affiche user agent.-->
+		<!--<script src="./../../librairiesFront/modernizr-custom.js"></script>-->
+		<!--Fout le bordel /etude element vi aconsole chrome, affiche user agent.-->
 		<script src="./../../librairiesFront/jquery/jquery.min.js"></script>
 		<script src="js/useGoogleMap.js"></script>
-		<script src= "js/includeHtml.js"></script>
+		<script src="js/includeHtml.js"></script>
 		<script src="js/listeInfo.js"></script>
 		<script src="js/index.js"></script>
 
-	</body>
+</body>
+
 </html>

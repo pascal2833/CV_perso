@@ -1,7 +1,7 @@
 // Using json notation :
 var bio = {
 	"name": "Pascal Evano",
-	"role": "web, front-end developper",
+	"role": "Web, front-end developper",
 	"contacts": {
 		"email": "pascal2833@gmail.com",
 		"github": "PascalEvano",
@@ -43,17 +43,17 @@ var education = {
 
 var work = {
 	"jobs": [{
-		"title": "web developper",
-		"employer": "hhhh",
-		"location": "tambouctou",
+		"title": "Web developper",
+		"employer": "CEA",
+		"location": "Orsay, France",
 		"dates": "2003/12/25",
 		"description": "iiojiojoj"
 	}, {
 		"title": "web developper",
-		"employer": "kjojoj",
-		"location": "tambouctou",
+		"employer": "Sopra-Steria",
+		"location": "Barcelona",
 		"dates": "2003/12/25",
-		"description": "iiojiojoj cerifjioerufioeruofir vjeiojfiowefocweo cdskcpkdpc jcojdcjpdwcpowpoP"
+		"description": "Description : iiojiojoj cerifjioerufioeruofir vjeiojfiowefocweo cdskcpkdpc jcojdcjpdwcpowpo"
 	}]
 };
 
@@ -63,30 +63,32 @@ var projects = {
 		"dates": "2001-02-23",
 		"description": "Description: jcdjcoijfcjeoic",
 		"images": [
-			"images/penseBete_1x.jpg", "images/fotos_mariana_1x.jpg"
-		]
+				"images/penseBete_1x.jpg", "images/fotos_mariana_1x.jpg"
+			]
+			//"sourceImageParralax": "&copy; pixabay"
 	}, {
 		"title": "Soccer player",
 		"dates": "2001-02-23",
 		"description": "Description: dgweugduygeru",
 		"images": [
-			"images/soccer_player_1x.jpg", "images/madeInItaly_1x.jpg"
-		]
+				"images/soccer_player_1x.jpg", "images/madeInItaly_1x.jpg"
+			]
+			//"sourceImageParralax": "&copy; pixabay"
 	}]
 };
 
 var languesEtAutres = {
 	"langues": [{
-		"name": "Français",
+		"name": "Français: ",
 		"level": "native"
 	}, {
-		"name": "Espagnol",
+		"name": "Espagnol: ",
 		"level": "bilingue"
 	}, {
-		"name": "Anglais",
+		"name": "Anglais: ",
 		"level": "moyen"
 	}, {
-		"name": "Catalan",
+		"name": "Catalan: ",
 		"level": "moyen"
 	}]
 };
