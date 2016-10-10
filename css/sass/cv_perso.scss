@@ -1,26 +1,22 @@
 //Import du fichier _variables.scss présent dans bootstrap-sass-official (renomé en _customVariables.scss), CF https://www.sitepoint.com/bootstrap-sass-installation-and-customisation/, SETUP :
-@import "_customVariables"; // Bootstrap
+//@import "_customVariables"; // Bootstrap
 // Import Boostrap-sass components : CF https://www.sitepoint.com/bootstrap-sass-installation-and-customisation/, SETUP :
-@import "../../../librairiesFront/bootstrap-sass-official/assets/stylesheets/bootstrap";
+//@import "../../../librairiesFront/bootstrap-sass-official/assets/stylesheets/bootstrap";
 // CF http://stackoverflow.com/questions/18570424/using-fontawesome-with-sass
-@import "font-awesome.scss";
+//@import "font-awesome.scss";
 
 // -- Definition des variables utilisées : -- //
 $heightContainerAllPage: 1000px;
 $grisTresSombre: rgb(42, 44, 51);
-$grisSombre: rgb(58, 60, 71);
+$headerTextColor: rgb(70,20,25);
 $grisClair: rgb(131,133,141);
 $grisTresClair: rgb(180,190,200);
-$grisBackground: #e6e5df;
+$grisBackground: rgb(250,250,250);
 $text-hover-color : rgb(250, 115, 3);
-$bleu4TitlesTransitions: rgb(21, 103,160);
+$bleu4main_title_section: rgb(21, 103,160);
 $typoGoogleChoisie: 'Lato', sans-serif;
 // ---- Fonts-sizes : ------- //
-$header-font-size : 1.5em;
-$adress-font-size: 0.8em;
-$adress-num-and-mail-font-size: 0.8em;
-$titre-presentation-font-size: 1.2em;
-$complement-titrePresentation-font-size: 0.52em;
+
 //
 $section-font-size : 1.2em;
 $max-width: 1000px;
@@ -33,7 +29,6 @@ $breakpoint2: 680px;
 @function set_flexDirection($breakPoint) {
 	@return if($breakPoint == $breakpoint1, column, row);// red si oui, si non.
 }
-
 
 // --- Pour utiliser via mixin ://
 @mixin box-sizing {// CF https://css-tricks.com/international-box-sizing-awareness-day/
@@ -51,21 +46,22 @@ $breakpoint2: 680px;
 @mixin typoBig{
 	font-weight: 700;
 }
-@mixin proprietesTitlesContainers {
-	justify-content: center;
+@mixin centerText{
+	text-align: center!important;
 }
-@mixin lignesTransition {
-	height: 1px;
-	background-color: $grisClair;
-	//align-self: center;// permet d'aligner verticalement (f(axe 2ndaire)).
-	width: 30%;
+@mixin centrerHoriz {
+	position: absolute;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
 }
-@mixin titlesTransitions {
-	color:$bleu4TitlesTransitions;
+
+@mixin main_title_section {
+	//color:$bleu4main_title_section;
+	color: white;
+	top: 29%;
+	@include centrerHoriz;
 	@include typoBig;
-	text-align: center;
-	padding-left: 15px;
-	padding-right: 15px;
 }
 @mixin textHover {
 	cursor:pointer;
@@ -83,7 +79,7 @@ $breakpoint2: 680px;
 	font-family: $typoGoogleChoisie;
 }
 
-body {
+html, body {
 	margin-bottom: 10px;
 }
 
@@ -91,26 +87,24 @@ img,embed,video {
 	max-width: 100%;
 }
 
-// Tests/si propriétés supportées ou pas :
-/*@supports (display: flex) {
-body {
-background-color: $grisBackground;
-}
-}
-@supports not(display: flex) {
-body {
-background-color: red;
-}
-}*/
 
 .globalPageContainer {
-	background-color: white;
-	display:flex;
-	display: -webkit-flex; /* Safari */
-	flex-direction: column;
+	width: 100%;
+	padding: 5px 15px 0 15px;
+	img {
+		border: solid 1px $grisClair;
+	}
+	ul {
+		position: relative;
+		right: 25px;
+		li {
+			list-style-type: none;
+		}
+	}
+
 	.header {
-		display:flex;
-		display: -webkit-flex; /* Safari */
+		margin-top: 12px;
+		color: $headerTextColor;
 		.typoBig {
 			@include typoBig;
 		}
@@ -120,145 +114,116 @@ background-color: red;
 		.typoLegere {
 			@include typoLegere;
 		}
-		#photo {
-			margin-top: 5px;
-			img {
-				border: solid 1px $grisClair;
+		.myNameAndRoleName {
+			display:flex;
+			display: -webkit-flex; /* Safari */
+			flex-direction: row;
+			justify-content: space-between;
+			.myName {
+				position: relative;
+				top: -8px;
+			}
+		}
+		.welcome-message {
+			top: -12px;
+			position: relative;
+			text-align: center;
+		}
+		.mailTelGitAndCoe {
+			display:flex;
+			display: -webkit-flex; /* Safari */
+			justify-content: space-around;
+			.fa {
+				margin-right: 5px;
 			}
 		}
 	}
-
 	.section {
 		font-size: $section-font-size;
-		&.savoir-faire-section {
-			order: 1;
+		color: $grisTresSombre;
+		margin-top: 20px;
+		.center_text {
+			@include centerText;
 		}
-		&.experience-section {
-			order: 2;
-		}
-		&.formationAcad-section {
-			order: 3;
-		}
-		&.languesAndAutre-section {
-			order: 4;
-		}
-		.transitionsContainers {
-			@include proprietesTitlesContainers;
-			.ligne4Transition {
-				@include lignesTransition;
-			}
-			.titlesTransitions {
-				@include titlesTransitions;
+		&.projects-section {
+			.photosContainer {
+				display: flex;
+				display: -webkit-flex; /* Safari */
+				flex-direction: row;
 			}
 		}
-		.savoirFaire {
-			/*height: 28%;*/
+		&.worksExperience-section {
+
 		}
-		.experienceprofes {
-			/*height: 25%;*/
+		.parallax {
+			position: relative;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			height: 200px;
+			background-position: 0% 100%;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			&.parralax_skills {
+				background-image: url("../../images/skills.jpg");
+			}
+			&.parralax_works {
+				background-image: url("../../images/prof_experience.jpg");
+			}
+			&.parralax_projects {
+				background-image: url("../../images/projects.jpg");
+			}
+			&.parralax_education {
+				background-image: url("../../images/education.jpg");
+			}
+			&.parralax_languesAndCoe {
+				background-image: url("../../images/langues_et_autres.jpg");
+			}
+			&.parralax_whereIlived {
+				background-image: url("../../images/whereIlived.jpg");
+			}
+			&.parralax_connect {
+				background-image: url("../../images/connect.jpg");
+			}
 		}
-		.formationAcad {
-			/*height: 20%;*/
+		.main_title_section {
+			@include main_title_section;
 		}
-		.languesAndAutres {
-			/*height: 15%;*/
+		.school-entry {
+			margin-top: 10px;
+		}
+	}
+	#mapDiv {
+		height: 400px!important;
+		width: 100%!important;
+		padding-bottom: 5%;
+		#map {
+			display: block!important;
+			height: 100%!important;
+			margin: 0 5%;
 		}
 	}
 
 }
-// --------------------------------------- //
-// ------- Taille niveau 1 (mobiles) : --- //
-// --------------------------------------- //
-@media screen and (max-width: $breakpoint1) {
-	body {
-		//font-size: 1em;// Ici on met body et pas root, hhtml car besoin surimposer valeur par defaut/Bootstrap.
-		background-color: red;
-	}
-	.globalPageContainer {
-		width: 100%;
-		border: none;
-		.header {
-			flex-direction: column;
-			align-items: center;
-			#nomPrenomTelMail {
-				order: 1;
-				font-size: $adress-font-size;
-				color: $grisSombre;
-				padding-left: 5px;
-				line-height: 1.7;
-				.mailAndTel {
-					font-size: $adress-num-and-mail-font-size;
-					.iconeFontAwesome {
-						padding-right: 5px;
-					}
-				}
-			}
-			#titreDePresentation {
-				order: 2;
-				font-size: $titre-presentation-font-size;
-				text-align: center;
-				color: $grisTresSombre;
-				a {
-					@include typoMedium;
-					color: $grisSombre!important;
-				}
-				#complementTitrePpal {
-					font-size: $complement-titrePresentation-font-size;
-					& :hover {
-						@include textHover;
-					}
-				}
-			}
-			#photo {
-				text-align: center;
-				order: 0;
-				img {
-					border: solid 1px $grisClair;
-					width: 75px;
-				}
-			}
-
-		}
-
-	}
-
-}
-// ------------------------------------------------------ //
-// ------- Taille niveau 2 (gros mobiles, tablets): --- //
-// ------------------------------------------------------ //
-@media screen and (min-width: $breakpoint1+1) and (max-width: $breakpoint2) {
-	body {
-		background-color: blue;
-		margin-top: 10px;
-	}
-}
-
 
 // --------------------------------------- //
 // ------- Taille niveau 3 (desktops) : --- //
 // --------------------------------------- //
 @media screen and (min-width: $breakpoint2+1) {
 	body {
-		background-color: green;
 		margin-top: 10px;
 	}
 	.globalPageContainer {
 		max-width: $max-width;
-		border: solid 1px $grisTresClair;
-		border-radius: 3px;
 		margin-left: auto;
 		margin-right: auto;
-
-
-		#photo {
+		.photo {
 			margin-right: 2%;
 			margin-top: 5px;
 			img {
-				border: solid 1px $grisClair;
 				width: 120px;
 			}
 		}
-
 	}
 
 }

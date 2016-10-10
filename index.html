@@ -14,88 +14,65 @@ meta pour Boostrap : cf http://getbootstrap.com/getting-started/
 		<link rel= "stylesheet" href="./../../librairiesFront/bootstrap-sass-official/assets/stylesheets/_bootstrap-compass.scss"/>
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"/>
 		<link rel="stylesheet" href="./../../librairiesFront/font-awesome-4.6.3/css/font-awesome.min.css"/>
-		<!--<link rel="stylesheet" href="./../../librairiesFront/jquery-modal-master/jquery.modal.min.css" type="text/css" media="screen" />-->
+		<script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyANhGq8M1saoCeIgi0Nwi-mDRMApage6Ag"></script>
 
 		<title>CV pascal Evano</title>
 	</head>
 
 	<body>
-		<!--Modal : -->
-		<div class= "modal fade" id="modalMoreDetailsHeader" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
-			<div class="modal-dialog" role="dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h4 class="modal-title" id="modal-title">Title à mettre</h4>
-					</div>
-					<div class="modal-body">
-						<span>
-							Me he hecho desarrollador-web y desarrollador Front-end gracias a la experiencia y a la formación continua.
-							Me apasiona buscar la mejor manera de plasmar y visualizar la información online.
-						</span>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close modal</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!----------------->
-
 		<div class = "globalPageContainer">
 			<header class="header">
-				<adress id= "nomPrenomTelMail">
-					<div id= "nomPrenom" class= "typoBig">Pascal Evano</div>
-					<div id= "mailPerso" class= "typoMedium mailAndTel"><i class="fa fa-envelope-o iconeFontAwesome"></i>pascal2833@gmail.com</div>
-					<div id= "telephone" class= "typoMedium mailAndTel"><i class="fa fa-phone iconeFontAwesome"></i>650.754.255</div>
-				</adress>
-				<div id= "titreDePresentation" class= "typoBig">Web-developper
-					<div id= "complementTitrePpal" class= "typoLegere ">
-						<a data-target="#modalMoreDetailsHeader" data-toggle="modal">Cliquer ici pour plus de détails</a>
-					</div>
+				<div class="myNameAndRoleName"></div>
+				<div class="welcome-message"></div>
+				<div class="mailTelGitAndCoe">
 				</div>
-				<figure id= "photo">
-					<img class= "photo-perfil" src="images/photoPerfil.jpg" alt= "Photo de profil de Pascal Evano">
-				</figure>
 			</header>
-			<section class="section savoir-faire-section">
-				<div class= "transitionsContainers savoirFaire">
-					<div class="ligne4Transition"></div>
-					<div class="titlesTransitions">Connaissances techniques</div>
-					<div class="ligne4Transition"></div>
+			<section class="section skills-section">
+				<div class="parallax parralax_skills">
+					<h2 class="main_title_section main_title_section_skills">Connaissances techniques</h2>
 				</div>
 			</section>
-			<section class="section experience-section">
-				<div class= "transitionsContainers experienceprofes">
-					<div class="ligne4Transition"></div>
-					<div class="titlesTransitions">Expérience professionnelle</div>
-					<div class="ligne4Transition"></div>
+			<section class="section worksExperience-section">
+				<div class="parallax parralax_works">
+					<h2 class="main_title_section">Expérience professionnelle</h2>
 				</div>
 			</section>
-			<section class="section formationAcad-section">
-				<div class= "transitionsContainers formationAcad">
-					<div class="ligne4Transition"></div>
-					<div class="titlesTransitions">Formation académique</div>
-					<div class="ligne4Transition"></div>
+			<section class="section projects-section">
+				<div class="parallax parralax_projects">
+					<h2 class="main_title_section">Projets</h2>
 				</div>
 			</section>
-			<section class="section languesAndAutre-section">
-				<div class= "transitionsContainers languesAndAutres">
-					<div class="ligne4Transition"></div>
-					<div class="titlesTransitions">Langues et autre</div>
-					<div class="ligne4Transition"></div>
+			<section class="section">
+				<div class="parallax parralax_education">
+					<h2 class="main_title_section">Formation académique et associée à la programmation web</h2>
 				</div>
+				<div class="schools"></div>
+				<div class="onlineCourses"></div>
+			</section>
+			<section class="section languesEtAutresSection">
+				<div class="parallax parralax_languesAndCoe">
+					<h2 class="main_title_section">Langues et autre</h2>
+				</div>
+			</section>
+			<div id= "mapDiv" class="section whereIlived">
+				<div class="parallax parralax_whereIlived">
+					<h2 class="main_title_section">where I lived and worked</h2>
+				</div>
+			</div>
+			<section class=" section lets_connect_section">
+				<div class="parallax parralax_connect">
+					<h2 class="main_title_section">Let's Connect</h2>
+				</div>
+				<ul ><!-- TODO : styliser ul-->
+				</ul>
 			</section>
 		</div>
-
-
 		<!--<script src="./../../librairiesFront/modernizr-custom.js"></script>--> <!--Fout le bordel /etude element vi aconsole chrome, affiche user agent.-->
 		<script src="./../../librairiesFront/jquery/jquery.min.js"></script>
-		<!--<script src="./librairiesFront/jquery-modal-master/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>--> <!--Modal de Boostrap est + pratique en fait ...-->
-		<script src="./../../librairiesFront/bootstrap-sass-official/assets/javascripts/bootstrap.min.js"></script>
-		<script src="./../../librairiesFront/angular/angular.min.js"></script>
-		<script src="./../../librairiesFront/angular-animate/angular-animate.min.js"></script>
-		<script src="./../../librairiesFront/angular-route/angular-route.min.js"></script>
-		<script src="./js/index.js"></script>
+		<script src="js/useGoogleMap.js"></script>
+		<script src= "js/includeHtml.js"></script>
+		<script src="js/listeInfo.js"></script>
+		<script src="js/index.js"></script>
 
 	</body>
 </html>

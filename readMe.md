@@ -1,15 +1,17 @@
-## Gnal presentation:
-* J'ai installé Boostrap-sass pour savoir comment l'installer mais en fait pas utile ici étant donné que je souhaite utiliser un design perso et flexbox. Pas sur, utilisation/menus ... ?
-* Comme avec flex box, il reste à vérifier que compatible et donc à bloquer si non (déjà commencé avec la librairie modernizr)
-  * C'est ma 1er expérience avec Flex donc soyez indulgents !
+Pour ce CV, j'ai utilisé le cours de Udacity Front End mais pas mal adapté.
 
 ## TODO :
 * Add icon/name site
 * Il faut aussi mettre en placel'option multilangue.
-* /Flex box : reste à vérifier que compatible et donc à bloquer si non (déjà commencé avec la librairie modernizr)
-    * On peut utiliser au lieu de la lib js modernizr  la nvlle propiété css, "support" (CF https://www.sitepoint.com/an-introduction-to-css-supports-rule-feature-queries/)
+* Adapter aux différents navigateurs car pas mal de nvlles technologies (Flex, ...).
 * Ajouter footer `pour faire + joli.
 * Enlever les divs pour mettre des tags avec sémantique (CF exo Udacity).
 * Appliquer web-kit pour all flex/safari avec mixin gnaux !
 * Adapter pour rem/css/typo : support issues: doesn't work in IE 8, Safari 4, or iOS 3.2.
 * Integrer Boostrap pour que j'ai acces aux intéractions typiques des mobiles, CF http://getbootstrap.com/css/, mobile first.
+
+## Il y a différentes logiques derrières :
+
+* Tous les textes sont dans des fichiers js, en json souvent.
+* Les parties du html qui s'ajoutent sont aussi dans des var à part, en js (**includeHtml.js**)
+

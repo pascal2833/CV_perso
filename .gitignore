@@ -3,3 +3,24 @@
 # Example .gitignore files: https://github.com/github/gitignore
 /bower_components/
 /node_modules/
+/.editorconfig
+/package.json
+/.sass-cache/
+/frontend-nanodegree-resume-master/
+/css/sass/_animated.scss
+/css/sass/_bordered-pulled.scss
+/css/sass/_core.scss
+/css/sass/_customVariables.scss
+/css/sass/_fixed-width.scss
+/css/sass/_icons.scss
+/css/sass/_larger.scss
+/css/sass/_list.scss
+/css/sass/_mixins.scss
+/css/sass/_path.scss
+/css/sass/_rotated-flipped.scss
+/css/sass/_screen-reader.scss
+/css/sass/_stacked.scss
+/css/sass/_variables.scss
+/css/sass/font-awesome.css
+/css/sass/font-awesome.scss
+/css/sass/font-awesome.css.map

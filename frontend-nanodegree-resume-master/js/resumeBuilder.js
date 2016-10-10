@@ -8,23 +8,28 @@ Ici, on a uniquement des choses que j'ai faites.
 // Using json notation :
 var bio = {
 	"name": "Pascal",
-	"role": "front truc",
-	"biopic": "jsdowjo",
+	"role": "front-end developper",
 	"contacts": {
-		"email": "pascal2833@...",
-		"github": "pascal-evano...",
-		"location": "kkpokopk",
-		"mobile": "650..."
+		"email": "pascal2833@gmail.com",
+		"github": "https://github.com/PascalEvano",
+		"location": "Barcelona",
+		"mobile": "650-754-255"
 	},
-	"welcomeMessage": "Coucou!",
-	"skills": ["css", "js", "html"]
+	"welcomeMessage": "",// TODO
+	"skills": [
+		"css", "Sass", "HTML5", "javascript", "Angular", "d3.js", "OpenLayers", "PHP", "Symfony2"
+	],//TODO
+	"biopic": "url ...",// TODO
+	"display": "function()"//TODO
 };
 
 var education = {
 	"schools": [{
-		"name": "Branly",
-		"location": "Dreux",
-		"degree dates": "1996",
+		"name": "Lycee E.Branly",
+		"location": "Dreux (France)",
+		"degree": "",// TODO
+		"majors": ["", "", ""],//TODO
+		"dates": "string (works with a hyphen between them)"// TODO
 		"url": "http...",
 		"majors": [
 			"njnj", "mkmkmk", "mkmomo"
@@ -38,12 +43,13 @@ var education = {
 			"njnj", "mkmkmk", "mkmomo"
 		]
 	}],
-	"onlineCourses": [{
+	"onlineCourses": [{// TODO
 		"title": "kkpkp",
 		"school": "swkskp",
-		"dates": "2003",
+		"dates": "string (works with a hyphen between them)",
 		"url": "jiji/jijojo/..."
-	}]
+	}],
+	display: "function()"// TODO
 };
 
 
@@ -51,20 +57,35 @@ var work = {
 	"jobs": [{
 		"title": "web developper",
 		"employer": "hhhh",
-		"location":"tambouctou",
+		"location": "tambouctou",
 		"dates": "2003/12/25",
 		"description": "iiojiojoj"
 	}, {
 		"title": "web developper",
 		"employer": "kjojoj",
-		"location":"tambouctou",
+		"location": "tambouctou",
 		"dates": "2003/12/25",
 		"description": "iiojiojoj cerifjioerufioeruofir vjeiojfiowefocweo cdskcpkdpc jcojdcjpdwcpowpoP"
 	}]
 };
 
+var projects = {// TODO
+"projects": [
+	{
+		"title": "string",
+		"dates": "string (works with a hyphen between them)",
+		"description": "string",
+		"images": "array with string urls"
+	},
+	{
+
+	}
+],
+	"display": "function"
+};
+
 // Utilisation fonction pour display works et bio/json:
-var displayWork = function() {
+var displayWork = function () {
 	// Bien voir les fichiers helper.js pour voir à quoi se réfèrent les variables.
 	if(bio.skills.length > 0) {
 		$("#header").append(HTMLskillsStart);
@@ -115,7 +136,7 @@ var projects = {
 
 // Utilisation encapsulation (création méthode/objet) pour display project object (json):
 // Note : var HTMLprojectStart = '<div class="project-entry"></div>';
-projects.display = function() {
+projects.display = function () {
 	for (project in projects.projects) {
 		if (projects.projects.hasOwnProperty(project)) {
 			$("#projects").append(HTMLprojectStart);
