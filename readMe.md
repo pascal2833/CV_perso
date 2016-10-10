@@ -12,6 +12,5 @@ Pour ce CV, j'ai utilisé le cours de Udacity Front End mais pas mal adapté.
 
 ## Il y a différentes logiques derrières :
 
-* Tous les textes sont dans des fichiers js, en json souvent.
-* Les parties du html qui s'ajoutent sont aussi dans des var à part, en js (**includeHtml.js**)
+* Bonne partie de l'html est généré par js et les données à insérées dans cet html sont elles même sissue d'un autre fichier js contenant des objets json.
 
