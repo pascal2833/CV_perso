@@ -12,7 +12,9 @@ var bio = {
 	"skills": [
 		"css", "Sass", "HTML5", "javascript", "Angular", "d3.js", "OpenLayers"
 	],
+	"frontLevel": ["80", "50", "80", "65", "50", "65", "80"],
 	"back_end_skills": ["PHP", "Symphony2", "SQL"],
+	"backEndLevel": ["60", "55", "70"],
 	"biopic": "images/photoPerfil.jpg"
 };
 

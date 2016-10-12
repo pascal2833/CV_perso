@@ -46,15 +46,33 @@ function startScript() {
 		$(".mailTelGitAndCoe").append(formattedGitHub);
 		$(".mailTelGitAndCoe").append(formattedLocation);
 		$(".myNameAndRoleName").append(formattedPhoto);
-		$(".skills-section").append(HTMLskillsFrontEndStart);
-		$(".skills-section").append(HTMLskillsBackEndStart);
+		//
+		$(".skills-section").append(HTMLskillsFrontEndDescAndLevelStart);
+		$(".skills_frontEnd_desc_level_start").append(HTMLskillsFrontEndDescriptionStart);
+		$(".skills_frontEnd_desc_level_start").append(HTMLskillsFrontEndLevelStart);
+
 		bio.skills.forEach(function(element) {
 			var formattedFrontSkills = HTMLFrontEndSkills.replace("%data%", element);
-			$(".front-end-skills-start").append(formattedFrontSkills);
+			$(".front_end_skills_desc_start").append(formattedFrontSkills);
+			$(".front_end_level_start").append(HTMLskillsLevel);
 		});
+
+		bio.frontLevel.forEach(function(element, index) {
+			$('ul.front_end_level_start li:eq('+index+') > .rectIn').attr("id", "frontSkillsNum_"+index);
+			$('#frontSkillsNum_'+index).css('width', element+"px");
+		});
+		//
+		$(".skills-section").append(HTMLskillsBackEndDescAndLevelStart);
+		$(".skills_backEnd_desc_level_start").append(HTMLskillsBackEndDescriptionStart);
+		$(".skills_backEnd_desc_level_start").append(HTMLskillsBackEndLevelStart);
 		bio.back_end_skills.forEach(function(element) {
 			var formattedBackSkills = HTMLBackEndSkills.replace("%data%", element);
-			$(".back-end-skills-start").append(formattedBackSkills);
+			$(".back_end_skills_desc_start").append(formattedBackSkills);
+			$(".back_end_level_start").append(HTMLskillsLevel);
+		});
+		bio.backEndLevel.forEach(function(element, index) {
+			$('ul.back_end_level_start li:eq('+index+') > .rectIn').attr("id", "backSkillsNum_"+index);
+			$('#backSkillsNum_'+index).css('width', element+"px");
 		});
 	};
 	bio.display();
