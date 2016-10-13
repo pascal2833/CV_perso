@@ -58,8 +58,8 @@ function startScript() {
 		});
 
 		bio.frontLevel.forEach(function(element, index) {
-			$('ul.front_end_level_start li:eq('+index+') > .rectIn').attr("id", "frontSkillsNum_"+index);
-			$('#frontSkillsNum_'+index).css('width', element+"px");
+			$('ul.front_end_level_start li:eq(' + index + ') > .rectIn').attr("id", "frontSkillsNum_" + index);
+			$('#frontSkillsNum_' + index).css('width', element + "px");
 		});
 		//
 		$(".skills-section").append(HTMLskillsBackEndDescAndLevelStart);
@@ -71,8 +71,8 @@ function startScript() {
 			$(".back_end_level_start").append(HTMLskillsLevel);
 		});
 		bio.backEndLevel.forEach(function(element, index) {
-			$('ul.back_end_level_start li:eq('+index+') > .rectIn').attr("id", "backSkillsNum_"+index);
-			$('#backSkillsNum_'+index).css('width', element+"px");
+			$('ul.back_end_level_start li:eq(' + index + ') > .rectIn').attr("id", "backSkillsNum_" + index);
+			$('#backSkillsNum_' + index).css('width', element + "px");
 		});
 	};
 	bio.display();

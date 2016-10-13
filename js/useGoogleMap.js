@@ -1,8 +1,13 @@
+"use strict";
+
 /*
 Here's where we generate the custom Google Map for the website.
 See the documentation below for more details.
 https://developers.google.com/maps/documentation/javascript/reference
 */
+
+
+
 var map; // declares a global map variable
 /*
 Start here! initializeMap() is called when page is loaded.
@@ -72,7 +77,7 @@ function initializeMap() {
 		});
 
 		// hmmmm, I wonder what this is about...
-		google.maps.event.addListener(marker, 'click', function() {
+		google.maps.event.addListener(marker, 'click', function () {
 			// your code goes here!
 			infoWindow.open(map, marker);
 		});
@@ -91,7 +96,7 @@ function initializeMap() {
 	If so, it creates a new map marker for that location.
 	*/
 	function callback(results, status) {
-		if (status == google.maps.places.PlacesServiceStatus.OK) {
+		if (status === google.maps.places.PlacesServiceStatus.OK) {
 			createMapMarker(results[0]);
 		}
 	}
@@ -107,7 +112,7 @@ function initializeMap() {
 		var service = new google.maps.places.PlacesService(map);
 
 		// Iterates through the array of locations, creates a search object for each location
-		locations.forEach(function(place) {
+		locations.forEach(function (place) {
 			// the search request object
 			var request = {
 				query: place
@@ -140,7 +145,7 @@ window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-window.addEventListener('resize', function(e) {
+window.addEventListener('resize', function (e) {
 	//Make sure the map bounds get updated on page resize
 	map.fitBounds(mapBounds);
 });

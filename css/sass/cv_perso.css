@@ -1,2 +1,206 @@
-*{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;font-family:"Lato",sans-serif}html,body{margin-bottom:10px;font-size:16px}img,embed,video{max-width:100%}.globalPageContainer{width:100%;padding:5px 15px 0 15px}.globalPageContainer img{border:solid 1px #83858d}.globalPageContainer ul{position:relative;right:25px}.globalPageContainer ul li{list-style-type:none}.globalPageContainer .header{margin-top:12px;color:#461419}.globalPageContainer .header .myNameAndRoleName{display:flex;display:-webkit-flex;flex-direction:row;justify-content:space-between}.globalPageContainer .header .myNameAndRoleName .myName{position:relative;top:-8px}.globalPageContainer .header .welcome-message{top:-12px;position:relative;text-align:center}.globalPageContainer .header .mailTelGitAndCoe{display:flex;display:-webkit-flex;justify-content:space-around}.globalPageContainer .header .mailTelGitAndCoe .fa{margin-right:5px}.globalPageContainer .section{color:#141946;margin-top:20px;line-height:180%}.globalPageContainer .section .center_text{text-align:center !important}.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start{line-height:30px;display:flex;display:-webkit-flex;justify-content:center}.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .front_end_skills_desc_start,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .back_end_level_start,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .front_end_level_start,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .back_end_skills_desc_start,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .front_end_skills_desc_start,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .back_end_level_start,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .front_end_level_start,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .back_end_skills_desc_start{margin-top:-10px}.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .front_end_skills_desc_start li.skills_list:nth-of-type(1),.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .back_end_level_start li.skills_list:nth-of-type(1),.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .front_end_level_start li.skills_list:nth-of-type(1),.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .back_end_skills_desc_start li.skills_list:nth-of-type(1),.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .front_end_skills_desc_start li.skills_list:nth-of-type(1),.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .back_end_level_start li.skills_list:nth-of-type(1),.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .front_end_level_start li.skills_list:nth-of-type(1),.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .back_end_skills_desc_start li.skills_list:nth-of-type(1){margin-top:-6px}.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .front_end_skills_desc_start .rectOut,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .back_end_level_start .rectOut,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .front_end_level_start .rectOut,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .back_end_skills_desc_start .rectOut,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .front_end_skills_desc_start .rectOut,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .back_end_level_start .rectOut,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .front_end_level_start .rectOut,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .back_end_skills_desc_start .rectOut{height:20px;width:100px;border:solid 1px #646464;margin-bottom:10px}.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .front_end_skills_desc_start .rectOut .rectIn,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .back_end_level_start .rectOut .rectIn,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .front_end_level_start .rectOut .rectIn,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .back_end_skills_desc_start .rectOut .rectIn,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .front_end_skills_desc_start .rectOut .rectIn,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .back_end_level_start .rectOut .rectIn,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .front_end_level_start .rectOut .rectIn,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .back_end_skills_desc_start .rectOut .rectIn{height:18px;background-color:grey}.globalPageContainer .section.projects-section .photosContainer{display:flex;display:-webkit-flex;margin-top:-7px;flex-direction:row;justify-content:center}.globalPageContainer .section.projects-section .photosContainer img{margin-bottom:25px}.globalPageContainer .section.projects-section .photosContainer img:first-child{margin-right:25px}.globalPageContainer .section .parallax{position:relative;margin-top:20px;margin-bottom:20px;height:200px;background-position:0% 100%;background-repeat:no-repeat;background-attachment:fixed;background-size:cover}.globalPageContainer .section .parallax.parralax_skills{background-image:url("../../images/skills.jpg")}.globalPageContainer .section .parallax.parralax_works{background-image:url("../../images/prof_experience.jpg")}.globalPageContainer .section .parallax.parralax_projects{background-image:url("../../images/projects.jpg")}.globalPageContainer .section .parallax.parralax_education{background-image:url("../../images/education.jpg")}.globalPageContainer .section .parallax.parralax_languesAndCoe{background-image:url("../../images/langues_et_autres.jpg")}.globalPageContainer .section .parallax.parralax_whereIlived{background-image:url("../../images/whereIlived.jpg")}.globalPageContainer .section .parallax.parralax_connect{background-image:url("../../images/connect.jpg")}.globalPageContainer .section .main_title_section{color:white;top:29%;position:absolute;left:50%;margin-right:-50%;transform:translate(-50%, -50%)}.globalPageContainer .section .school-entry{margin-top:10px}.globalPageContainer #mapDiv{width:100% !important;padding-bottom:23%;height:801px !important}.globalPageContainer #mapDiv #map{display:block !important;height:100% !important;margin:0 5%}@media screen and (min-width: 681px){body{margin-top:10px}.globalPageContainer{max-width:1000px;margin-left:auto;margin-right:auto}.globalPageContainer .photo{margin-right:2%;margin-top:5px}.globalPageContainer .photo img{width:120px}}
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    font-family: "Lato",sans-serif;
+}
+
+html,body {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+img,embed,video {
+    max-width: 100%;
+}
+
+.globalPageContainer {
+    width: 100%;
+    padding: 5px 15px 0 15px;
+}
+
+.globalPageContainer img {
+    border: solid 1px #83858d;
+}
+
+.globalPageContainer ul {
+    position: relative;
+    right: 25px;
+}
+
+.globalPageContainer ul li {
+    list-style-type: none;
+}
+
+.globalPageContainer .header {
+    margin-top: 12px;
+    color: #461419;
+}
+
+.globalPageContainer .header .myNameAndRoleName {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.globalPageContainer .header .myNameAndRoleName .myName {
+    position: relative;
+    top: -8px;
+}
+
+.globalPageContainer .header .welcome-message {
+    top: -12px;
+    position: relative;
+    text-align: center;
+}
+
+.globalPageContainer .header .mailTelGitAndCoe {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+}
+
+.globalPageContainer .header .mailTelGitAndCoe .fa {
+    margin-right: 5px;
+}
+
+.globalPageContainer .section {
+    color: #141946;
+    margin-top: 20px;
+    line-height: 180%;
+}
+
+.globalPageContainer .section .center_text {
+    text-align: center !important;
+}
+
+.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start {
+    line-height: 30px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+}
+
+.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .front_end_skills_desc_start,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .back_end_level_start,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .front_end_level_start,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .back_end_skills_desc_start,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .front_end_skills_desc_start,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .back_end_level_start,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .front_end_level_start,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .back_end_skills_desc_start {
+    margin-top: -10px;
+}
+
+.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .front_end_skills_desc_start li.skills_list:nth-of-type(1),.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .back_end_level_start li.skills_list:nth-of-type(1),.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .front_end_level_start li.skills_list:nth-of-type(1),.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .back_end_skills_desc_start li.skills_list:nth-of-type(1),.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .front_end_skills_desc_start li.skills_list:nth-of-type(1),.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .back_end_level_start li.skills_list:nth-of-type(1),.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .front_end_level_start li.skills_list:nth-of-type(1),.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .back_end_skills_desc_start li.skills_list:nth-of-type(1) {
+    margin-top: -6px;
+}
+
+.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .front_end_skills_desc_start .rectOut,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .back_end_level_start .rectOut,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .front_end_level_start .rectOut,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .back_end_skills_desc_start .rectOut,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .front_end_skills_desc_start .rectOut,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .back_end_level_start .rectOut,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .front_end_level_start .rectOut,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .back_end_skills_desc_start .rectOut {
+    height: 20px;
+    width: 100px;
+    border: solid 1px #646464;
+    margin-bottom: 10px;
+}
+
+.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .front_end_skills_desc_start .rectOut .rectIn,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .back_end_level_start .rectOut .rectIn,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .front_end_level_start .rectOut .rectIn,.globalPageContainer .section.skills-section .skills_frontEnd_desc_level_start .back_end_skills_desc_start .rectOut .rectIn,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .front_end_skills_desc_start .rectOut .rectIn,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .back_end_level_start .rectOut .rectIn,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .front_end_level_start .rectOut .rectIn,.globalPageContainer .section.skills-section .skills_backEnd_desc_level_start .back_end_skills_desc_start .rectOut .rectIn {
+    height: 18px;
+    background-color: grey;
+}
+
+.globalPageContainer .section.projects-section .photosContainer {
+    display: flex;
+    display: -webkit-flex;
+    margin-top: -7px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.globalPageContainer .section.projects-section .photosContainer img {
+    margin-bottom: 25px;
+}
+
+.globalPageContainer .section.projects-section .photosContainer img:first-child {
+    margin-right: 25px;
+}
+
+.globalPageContainer .section .parallax {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 200px;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.globalPageContainer .section .parallax.parralax_skills {
+    background-image: url("../../images/skills.jpg");
+}
+
+.globalPageContainer .section .parallax.parralax_works {
+    background-image: url("../../images/prof_experience.jpg");
+}
+
+.globalPageContainer .section .parallax.parralax_projects {
+    background-image: url("../../images/projects.jpg");
+}
+
+.globalPageContainer .section .parallax.parralax_education {
+    background-image: url("../../images/education.jpg");
+}
+
+.globalPageContainer .section .parallax.parralax_languesAndCoe {
+    background-image: url("../../images/langues_et_autres.jpg");
+}
+
+.globalPageContainer .section .parallax.parralax_whereIlived {
+    background-image: url("../../images/whereIlived.jpg");
+}
+
+.globalPageContainer .section .parallax.parralax_connect {
+    background-image: url("../../images/connect.jpg");
+}
+
+.globalPageContainer .section .main_title_section {
+    color: white;
+    top: 29%;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.globalPageContainer .section .school-entry {
+    margin-top: 10px;
+}
+
+.globalPageContainer #mapDiv {
+    width: 100% !important;
+    padding-bottom: 23%;
+    height: 801px !important;
+}
+
+.globalPageContainer #mapDiv #map {
+    display: block !important;
+    height: 100% !important;
+    margin: 0 5%;
+}
+
+@media screen and (min-width: 681px) {
+    body {
+        margin-top: 10px;
+    }
+
+    .globalPageContainer {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .globalPageContainer .photo {
+        margin-right: 2%;
+        margin-top: 5px;
+    }
+
+    .globalPageContainer .photo img {
+        width: 120px;
+    };
+}
 /*# sourceMappingURL=cv_perso.css.map */
