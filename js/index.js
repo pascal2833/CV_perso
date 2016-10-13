@@ -80,13 +80,16 @@ function startScript() {
 	education.display = function() {
 		$(".education_section").append(HTMLschoolStart);
 		education.schools.forEach(function(element) {
+			var formattedSchoolLink = HTMLschoolLink.replace("%data%", element.url);
 			var formattedSchoolName = HTMLschoolName.replace("%data%", element.name);
 			var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", element.degree);
+			var formattedSchoolNameLinkDegree = formattedSchoolLink+formattedSchoolName+formattedSchoolDegree;
 			var formattedSchoolDates = HTMLschoolDates.replace("%data%", element.dates);
 			var formattedSchoolLocation = HTMLschoolDates.replace("%data%", element.location);
 			var formattedSchoolMajors = HTMLschoolDates.replace("%data%", element.majors);
-			$(".school_entry:last").append(formattedSchoolName);
-			$(".school_entry:last").append(formattedSchoolDegree);
+			//$(".school_entry:last").append(formattedSchoolLink);
+			//$(".school_entry:last").append(formattedSchoolName);
+			$(".school_entry:last").append(formattedSchoolNameLinkDegree);
 			$(".school_entry:last").append(formattedSchoolDates);
 			$(".school_entry:last").append(formattedSchoolLocation);
 			$(".school_entry:last").append(formattedSchoolMajors);
