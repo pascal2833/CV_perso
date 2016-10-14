@@ -6,7 +6,7 @@ var bio = {
 		"email": "pascal2833@gmail.com",
 		"github": "PascalEvano",
 		"location": "Barcelona",
-		"mobile": "650-754-255"
+		"mobile": "+33 650-754-255"
 	},
 	"welcomeMessage": "Welcome message",
 	"skills": [
