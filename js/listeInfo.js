@@ -44,32 +44,28 @@ var education = {
 
 
 var work = {
-	"jobs": [
-		{
-			"title": "Desarrollador web/front-end",
-			"employer": '<a href= "http://www.soprasteria.com/en" target="_blank">Sopra-Steria',
-			"location": "Barcelona",
-			"dates": "Octubre 2015-actual",
-			"description": "Participación en varios proyectos web para clientes Franceses.",
-			"tecnologies": "Sass, HTML5, javascript, jQuery, AngularJS, Bootstrap, Grunt, PHP, Symfony2, Oracle"
-		},
-		{
-			"title": 'Desarrollador Front-end/mapas digitales',
-			"employer": '<a href="http://www.creaf.cat/" target="_blank">CEA/CREAF-UAB</a>',
-			"location": "Bellaterra, Barcelona",
-			"dates": "Enero 2015-septiembre 2015",
-			"description": "Representación de datos ambientales en un Web Map Service desde la parte cliente: aplicación al portal Global Carbon Atlas",
-			"tecnologies": "HTML5, javascript, jQuery, css, D3.js."
-		},
-		{
-			"title": "Desarrollador web-mapping",
-			"employer": '<a href="http://www.lsce.ipsl.fr/en/" target="_blank">CEA-LSCE</a>',
-			"location": "Paris",
-			"dates": "Enero de 2012-diciembre de 2014",
-			"description": 'Participación, desde su inicio hasta su “fin” al portal <a href="http://www.globalcarbonatlas.org/?q=en/content/welcome-carbon-atlas" target="_blank">Global Carbon Atlas</a><span> (concepción y realización de los mapas)</span>',
-			"tecnologies": "HTML5, javascript, jQuery, css, Bootstrap, OpenLayers, Geoserver, Python, PHP, xml."
-		}
-	]
+	"jobs": [{
+		"title": "Desarrollador web/front-end",
+		"employer": '<a href= "http://www.soprasteria.com/en" target="_blank">Sopra-Steria',
+		"location": "Barcelona",
+		"dates": "Octubre 2015-actual",
+		"description": "Participación en varios proyectos web para clientes Franceses.",
+		"tecnologies": "Sass, HTML5, javascript, jQuery, AngularJS, Bootstrap, Grunt, PHP, Symfony2, Oracle"
+	}, {
+		"title": 'Desarrollador Front-end/mapas digitales',
+		"employer": '<a href="http://www.creaf.cat/" target="_blank">CEA/CREAF-UAB</a>',
+		"location": "Bellaterra, Barcelona",
+		"dates": "Enero 2015-septiembre 2015",
+		"description": "Representación de datos ambientales en un Web Map Service desde la parte cliente: aplicación al portal Global Carbon Atlas",
+		"tecnologies": "HTML5, javascript, jQuery, css, D3.js."
+	}, {
+		"title": "Desarrollador web-mapping",
+		"employer": '<a href="http://www.lsce.ipsl.fr/en/" target="_blank">CEA-LSCE</a>',
+		"location": "Paris",
+		"dates": "Enero de 2012-diciembre de 2014",
+		"description": 'Participación, desde su inicio hasta su “fin” al portal <a href="http://www.globalcarbonatlas.org/?q=en/content/welcome-carbon-atlas" target="_blank">Global Carbon Atlas</a><span> (concepción y realización de los mapas)</span>',
+		"tecnologies": "HTML5, javascript, jQuery, css, Bootstrap, OpenLayers, Geoserver, Python, PHP, xml."
+	}]
 };
 
 var projects = {
@@ -78,17 +74,17 @@ var projects = {
 		"dates": "2001-02-23",
 		"description": "Description: jcdjcoijfcjeoic",
 		"images": [
-			"images/penseBete_1x.jpg", "images/fotos_mariana_1x.jpg"
-		]
-		//"sourceImageParralax": "&copy; pixabay"
+				"images/penseBete_1x.jpg", "images/fotos_mariana_1x.jpg"
+			]
+			//"sourceImageParralax": "&copy; pixabay"
 	}, {
 		"title": "Soccer player",
 		"dates": "2001-02-23",
 		"description": "Description: dgweugduygeru",
 		"images": [
-			"images/soccer_player_1x.jpg", "images/madeInItaly_1x.jpg"
-		]
-		//"sourceImageParralax": "&copy; pixabay"
+				"images/soccer_player_1x.jpg", "images/madeInItaly_1x.jpg"
+			]
+			//"sourceImageParralax": "&copy; pixabay"
 	}]
 };
 
