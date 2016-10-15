@@ -124,6 +124,7 @@ function startScript() {
 			$(".work-entry:last").append(formattedWorkDate);
 			$(".work-entry:last").append(formattedWorkLocation);
 			$(".work-entry:last").append(formattedWorkDescription);
+			$(".work-entry:last").append(formattedWorkTecnologies);
 		});
 	};
 	work.display();
