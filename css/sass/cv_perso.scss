@@ -134,9 +134,13 @@ img,embed,video {
 				display:flex;
 				display: -webkit-flex; /* Safari */
 				justify-content: center;
-
 				.front_end_skills_desc_start, .back_end_level_start, .front_end_level_start, .back_end_skills_desc_start {
-					li.skills_list:nth-of-type(1) {
+					.skills_list {
+						text-align: left;
+						position: relative;
+						left: 25px;
+					}
+					.skills_list:nth-of-type(1) {
 						margin-top: -6px;
 					}
 					margin-top: -10px;
@@ -168,7 +172,9 @@ img,embed,video {
 			}
 		}
 		&.worksExperience-section {
-
+			.employer {
+				font-weight: bold!important;
+			}
 		}
 		.parallax {
 			position: relative;

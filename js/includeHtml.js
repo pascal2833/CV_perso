@@ -33,11 +33,12 @@ var HTMLskillsLevel = '<li class="skills_level_list rectOut"><div class="rectIn"
 Expérience :
 */
 var HTMLworkStart = '<div class="work-entry center_text"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
+var HTMLworkEmployer = '<div class="employer"><a>%data%</a></div>';
+var HTMLworkTitle = '<span>- %data%</span>';
 var HTMLworkDates = '<div>%data%</div>';
-var HTMLworkLocation = '<div>%data%</div>';
+var HTMLworkLocation = '<span>%data%</span>';
 var HTMLworkDescription = '<p>%data%</p>';
+var HTMLworkTecnologies = '<p>tecnologias: %data%</p>';
 
 /*
 Projets :
@@ -55,10 +56,8 @@ Education :
 */
 var HTMLschoolStart = '<div class="school_entry center_text"><h4>Shools:</h4></div>';
 var HTMLonlineCoursesStart = '<div class="onlineCourse_entry center_text"><h4>Online Courses:</h4></div>';
-//var HTMLschoolName = '<a href="#" class="schoolNameLink">%data%';
 var HTMLschoolLink = '<a href="%data%" ';
 var HTMLschoolName = 'class="schoolNameLink">%data%';
-//var HTMLschoolName = '%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';

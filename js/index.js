@@ -118,6 +118,7 @@ function startScript() {
 			var formattedWorkDescription = HTMLworkDescription.replace("%data%", element.description);
 			var formattedWorkLocation = HTMLworkLocation.replace("%data%", element.location);
 			var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", element.employer);
+			var formattedWorkTecnologies = HTMLworkTecnologies.replace("%data%", element.tecnologies);
 			$(".work-entry:last").append(formattedWorkEmployer);
 			$(".work-entry:last").append(formattedWorkTitle);
 			$(".work-entry:last").append(formattedWorkDate);
