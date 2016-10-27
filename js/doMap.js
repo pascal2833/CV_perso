@@ -110,16 +110,19 @@ function startScript() {
 				circleRadius = 70000;
 				break;
 			case 4:
-				circleRadius = 40000;
+				circleRadius = 25000;
 				break;
 			case 5:
-				circleRadius = 30000;
+				circleRadius = 14000;
 				break;
 			case 6:
-				circleRadius = 18000;
+				circleRadius = 10000;
 				break;
 			case 7:
-				circleRadius = 10000;
+				circleRadius = 5000;
+				break;
+			case 8:
+				circleRadius = 2500;
 				break;
 		}
 		circleArray.forEach(function(element) {
