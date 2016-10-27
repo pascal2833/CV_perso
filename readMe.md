@@ -19,4 +19,24 @@ Pour ce CV, j'ai utilisé le cours de Udacity Front End mais pas mal adapté.
 * Bonne partie de l'html est généré par js et les données à insérées dans cet html sont elles même sissue d'un autre fichier js contenant des objets json.
 * On a également utiliser **l'encapsulation** pour avoir un code + propre, cad :
     * on met notre fonction associée à un objet, pour que ce soit + clair et éviter le risque des erreurs si on appelle avec même nom, ...
+* Inclure http://www.findtheconversation.com/concept-map/pour expériences (au centre, nom fonction)
+* Remplacer barre/skills par http://bl.ocks.org/mbostock/4061961
+* Cartes :
+    * Fond cartes : OSM
+    * Styliser les cartes :
+        1. Avec MapBox : https://www.mapbox.com/help/mapbox-with-openlayers/
+        Doc sur map box : https://www.mapbox.com/api-documentation/
+        //CF https://leaflet-extras.github.io/leaflet-providers/preview/
+        //stamenWatercolor
+        //Esri.WorldTerrain
+        //Esri.WorldShadeTerrain
+        //Esri.WorldGrayCanvas
+        //CartoDB.Positron
+* Mettre des effets ombres (and coe ...)/images de transition.
+* Déplacer web, front-end developper.
+* Projets : faire link de façon cool à portofolio (par ex avec une main, ...)
+* Pour ecoles et cours : http://mlvl.github.io/timeseries/
+* Intégration puntos et info associée : http://openlayers.org/en/latest/examples/overlay.html, http://openlayers.org/en/latest/examples/popup.html, http://openlayers.org/en/latest/examples/earthquake-clusters.html
+* Add zoom que j'avais fait, cool !
+* Utiliser http://loicbcn.ovh/jack-sparrow/
 

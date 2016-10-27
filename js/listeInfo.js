@@ -6,9 +6,11 @@ var bio = {
 		"email": "pascal2833@gmail.com",
 		"github": "PascalEvano",
 		"location": "Barcelona",
+		"latitude": 40,
+		"longitude": 4,
 		"mobile": "+33 650-754-255"
 	},
-	"welcomeMessage": "Welcome message",
+	//"welcomeMessage": "Welcome message",
 	"skills": [
 		"css", "Sass", "HTML5", "javascript", "AngularJS", "d3.js", "OpenLayers"
 	],
@@ -22,6 +24,10 @@ var education = {
 	"schools": [{
 		"name": "Lycee E.Branly",
 		"location": "Dreux (France)",
+		"fillColorSymbolMap": "rgb(100,100,200)",
+		"latitude": 48.74,
+		"longitude": 1.37,
+		"textPopUpMap": "Vivi en esta ciudad (Dreux) hasta el bachillerato. Recuerdos, recuerdos, ...",
 		"degree": "degree4 E Branly",
 		"majors": ["major1", "major2", "major3"],
 		"dates": "1996",
@@ -29,6 +35,10 @@ var education = {
 	}, {
 		"name": "Paris IV Sorbonne",
 		"location": "Paris",
+		"fillColorSymbolMap": "rgb(100,100,200)",
+		"latitude": 48.85,
+		"longitude": 2.34,
+		"textPopUpMap": "Estudie en la Universidad Paris Sorbonne, en el centro del Barrio Latino de Paris",
 		"degree": "degree4 Universite P.Sorbonne",
 		"majors": ["major1", "major2", "major3"],
 		"dates": "2000",
@@ -48,6 +58,10 @@ var work = {
 		"title": "Desarrollador web/front-end",
 		"employer": '<a href= "http://www.soprasteria.com/en" target="_blank">Sopra-Steria',
 		"location": "Barcelona",
+		"fillColorSymbolMap": "rgb(100,200,100)",
+		"latitude": 41.39,
+		"longitude": 2.16,
+		"textPopUpMap": "Trabajo actualmente en Sopra Steria, en Barcelona",
 		"dates": "Octubre 2015-actual",
 		"description": "Participación en varios proyectos web para clientes Franceses.",
 		"tecnologies": "Sass, HTML5, javascript, jQuery, AngularJS, Bootstrap, Grunt, PHP, Symfony2, Oracle"
@@ -55,6 +69,10 @@ var work = {
 		"title": 'Desarrollador Front-end/mapas digitales',
 		"employer": '<a href="http://www.creaf.cat/" target="_blank">CEA/CREAF-UAB</a>',
 		"location": "Bellaterra, Barcelona",
+		"fillColorSymbolMap": "rgb(100,200,100)",
+		"latitude": 41.5,
+		"longitude": 2.09,
+		"textPopUpMap": "Despues de trabajar en el CEA-LSCE, volvi a Barcelona para seguir trabajando en el Global Carbon Atlas desde con el CREAF",
 		"dates": "Enero 2015-septiembre 2015",
 		"description": "Representación de datos ambientales en un Web Map Service desde la parte cliente: aplicación al portal Global Carbon Atlas",
 		"tecnologies": "HTML5, javascript, jQuery, css, D3.js."
@@ -62,6 +80,10 @@ var work = {
 		"title": "Desarrollador web-mapping",
 		"employer": '<a href="http://www.lsce.ipsl.fr/en/" target="_blank">CEA-LSCE</a>',
 		"location": "Paris",
+		"fillColorSymbolMap": "rgb(100,200,100)",
+		"latitude": 48.7,
+		"longitude": 2.195,
+		"textPopUpMap": "Empezé a desarollar participando en un nuevo portal, el Global Carbon Atlas en CEA-LSCE, al sur de Paris (dentro del contexto de un proyecto europeo dirigido por el CREAF, en Barcelona)",
 		"dates": "Enero de 2012-diciembre de 2014",
 		"description": 'Participación, desde su inicio hasta su “fin” al portal <a href="http://www.globalcarbonatlas.org/?q=en/content/welcome-carbon-atlas" target="_blank">Global Carbon Atlas</a><span> (concepción y realización de los mapas)</span>',
 		"tecnologies": "HTML5, javascript, jQuery, css, Bootstrap, OpenLayers, Geoserver, Python, PHP, xml."

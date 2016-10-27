@@ -3,10 +3,10 @@ These are HTML strings. Using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
 /*
-Info générales : nom, prénom, mail, ...
+Info générales : nom, prénom, mail, ...(bio).
 */
 var HTMLheaderMyName = '<h1 class= "myName" class= "typoBig">%data%</h1>';
-var HTMLheaderMyRole = '<h2 class="myRole">%data%</h2>';
+var HTMLheaderMyRole = '<div class="myRole">%data%</div>';
 var HTMLmobile = '<div class= "typoMedium mailAndTel"><i class="fa fa-phone iconeFontAwesome"></i>%data%</div>';
 var HTMLemail = '<div class= "typoMedium mailAndTel"><i class="fa fa-envelope-o iconeFontAwesome"></i>%data%</div>';
 var HTMLgithub = '<div class= "typoMedium mailAndTel"><i class="fa fa-github iconeFontAwesome"></i>%data%</div>';
@@ -32,13 +32,13 @@ var HTMLskillsLevel = '<li class="skills_level_list rectOut"><div class="rectIn"
 /*
 Expérience :
 */
-var HTMLworkStart = '<div class="work-entry center_text"></div>';
-var HTMLworkEmployer = '<div class="employer"><a>%data%</a></div>';
-var HTMLworkTitle = '<span>- %data%</span>';
+var HTMLworkStart = '<div class="work_entry center_text"></div>';
+var HTMLworkTitle = '<div class="workTitle infoToHighlight">%data%</div>';
+var HTMLworkEmployer = '<span class="infoToHighlight"><a>%data%</a></span>';
+var HTMLworkLocation = '<span> (%data%)</span>';
 var HTMLworkDates = '<div>%data%</div>';
-var HTMLworkLocation = '<span>%data%</span>';
-var HTMLworkDescription = '<p>%data%</p>';
-var HTMLworkTecnologies = '<p>tecnologias: %data%</p>';
+var HTMLworkDescription = '<div><div class="work_description">%data%</div></div>';
+var HTMLworkTecnologies = '<span class="infoToHighlight">Tecnologias: </span><span>%data%</span>';
 
 /*
 Projets :
@@ -81,4 +81,3 @@ var HTMLlanguesLevel = '<span>%data%</span>';
 Autre :
 */
 var internationalizeButton = '<button>Internationalize</button>';
-var googleMap = '<div id="map"></div>';
