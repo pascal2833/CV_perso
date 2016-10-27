@@ -24,7 +24,6 @@ var education = {
 	"schools": [{
 		"name": "Lycee E.Branly",
 		"location": "Dreux (France)",
-		"fillColorSymbolMap": "rgb(100,100,200)",
 		"latitude": 48.74,
 		"longitude": 1.37,
 		"textPopUpMap": "Vivi en esta ciudad (Dreux) hasta el bachillerato. Recuerdos, recuerdos, ...",
@@ -35,7 +34,6 @@ var education = {
 	}, {
 		"name": "Paris IV Sorbonne",
 		"location": "Paris",
-		"fillColorSymbolMap": "rgb(100,100,200)",
 		"latitude": 48.85,
 		"longitude": 2.34,
 		"textPopUpMap": "Estudie en la Universidad Paris Sorbonne, en el centro del Barrio Latino de Paris",
@@ -58,7 +56,6 @@ var work = {
 		"title": "Desarrollador web/front-end",
 		"employer": '<a href= "http://www.soprasteria.com/en" target="_blank">Sopra-Steria',
 		"location": "Barcelona",
-		"fillColorSymbolMap": "rgb(100,200,100)",
 		"latitude": 41.39,
 		"longitude": 2.16,
 		"textPopUpMap": "Trabajo actualmente en Sopra Steria, en Barcelona",
@@ -69,7 +66,6 @@ var work = {
 		"title": 'Desarrollador Front-end/mapas digitales',
 		"employer": '<a href="http://www.creaf.cat/" target="_blank">CEA/CREAF-UAB</a>',
 		"location": "Bellaterra, Barcelona",
-		"fillColorSymbolMap": "rgb(100,200,100)",
 		"latitude": 41.5,
 		"longitude": 2.09,
 		"textPopUpMap": "Despues de trabajar en el CEA-LSCE, volvi a Barcelona para seguir trabajando en el Global Carbon Atlas desde con el CREAF",

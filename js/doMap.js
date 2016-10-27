@@ -1,43 +1,45 @@
 function startScript() {
 	"use strict";
 	$.getScript("js/listeInfo.js");
-
 	$.getScript("js/listeInfo.js");
-
 
 	var mymap = L.map('map').setView([45, 2], 5);
 
 	var mapBoxLayer = L.tileLayer('https://api.mapbox.com/styles/v1/pascal2833/ciuqwchor00q62hpbl7lyf3k5/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoicGFzY2FsMjgzMyIsImEiOiJjaXVlazg2dGMwMDF2Mm9vNDNwcjNtMjYyIn0.vUtR3Ij6qmJJubPKGNXWWQ', {
 		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
 		maxZoom: 18,
-		//id: 'your.mapbox.project.id'
+		minZoom: 2
 	});
 
-	var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		maxZoom: 19,
-		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-	});
-
-	//OpenStreetMap_Mapnik.addTo(mymap);
 	mapBoxLayer.addTo(mymap);
-
-
 
 	// ------------------------------------- //
 	// Add circles and asociated pop-up :
 	// ------------------------------------- //
 	var circle;
 	var popup;
+	var circleRadius = 20000;// Initialisation (/niveau zoom).
+	var circleArray = [];
+	var workStrokeColor = "rgb(116,110,109)";
+	var schoolStrokeColor = "rgb(155,161,155)";
+	var strokeOpacity = .5;
+	var fillOpacity = .5;
+	var workFillColor = "rgb(254,112,1)";
+	var schoolFillColor = "rgb(43,219,22)";
+
+	// Circles creation:
 	work.displayCircleOnMap = function() {
 		work.jobs.forEach(function(element, index) {
 			// Display cities/works/maps :
 			circle = L.circle([element.latitude, element.longitude], { //[lat, long]
-				color: element.fillColorSymbolMap,// couleur des bords.
-				opacity: 0.5,
-				fillColor: element.fillColorSymbolMap,
-				fillOpacity: 0.5,
-				radius: 5000
-			}).addTo(mymap);
+				color: workStrokeColor,
+				opacity: strokeOpacity,
+				fillColor: workFillColor,
+				fillOpacity: fillOpacity,
+				radius: circleRadius
+			});
+			circleArray.push(circle);
+			circle.addTo(mymap);
 			var latLonCircle = circle.getLatLng();
 			var latCircle = latLonCircle.lat;
 			var longCircle = latLonCircle.lng;
@@ -51,14 +53,15 @@ function startScript() {
 
 	education.displayCircleOnMap = function() {
 		education.schools.forEach(function(element, index) {
-			// Display cities/works/maps :
 			circle = L.circle([element.latitude, element.longitude], { //[lat, long]
-				color: element.fillColorSymbolMap,// couleur des bords.
-				opacity: 0.5,
-				fillColor: element.fillColorSymbolMap,
-				fillOpacity: 0.5,
-				radius: 5000
-			}).addTo(mymap);
+				color: schoolStrokeColor,
+				opacity: strokeOpacity,
+				fillColor: schoolFillColor,
+				fillOpacity: fillOpacity,
+				radius: circleRadius
+			});
+			circleArray.push(circle);
+			circle.addTo(mymap);
 			var latLonCircle = circle.getLatLng();
 			var latCircle = latLonCircle.lat;
 			var longCircle = latLonCircle.lng;
@@ -70,6 +73,7 @@ function startScript() {
 	};
 	education.displayCircleOnMap();
 
+	// Add pop up-info :
 	education.schools.forEach(function(element, index) {
 		$('#idCircleSchool_'+index).on('mouseover', function () {
 			var idCircle = $(this).attr('id');
@@ -95,38 +99,39 @@ function startScript() {
 		});
 	});
 
-
-	// ------------------------------------- //
-	// Add perso markers et pop-upo quand hover :
-	// ------------------------------------- //
-	//var marker = L.marker([51.5, -0.09]).addTo(mymap);
-	var workIcon = L.icon({
-		iconUrl: './images/connect.jpg',
-		//shadowUrl: 'leaf-shadow.png',
-		iconSize:     [38, 95], // size of the icon
-		shadowSize:   [50, 64], // size of the shadow
-		iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-		shadowAnchor: [4, 62],  // the same for the shadow
-		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+	// Adapt circles size f(map zooms):
+	mymap.on('zoomend', function() {
+		var zoomMap = mymap.getZoom();
+		switch(zoomMap) {
+			case 2:
+				circleRadius = 160000;
+				break;
+			case 3:
+				circleRadius = 70000;
+				break;
+			case 4:
+				circleRadius = 40000;
+				break;
+			case 5:
+				circleRadius = 30000;
+				break;
+			case 6:
+				circleRadius = 18000;
+				break;
+			case 7:
+				circleRadius = 10000;
+				break;
+		}
+		circleArray.forEach(function(element) {
+			element.setRadius(circleRadius);
+		});
 	});
-	var workMarker = L.marker(
-		[51.5, -0.09],
-		{
-			icon: workIcon
-		})
-	.addTo(mymap);
-
 
 	// Event/click (ex) : Utile pour avoir coordonnées/carte pour pla
 	/*function onMapClick(e) {
 		alert("You clicked the map at " + e.latlng);
 	}*/
 	//mymap.on('click', onMapClick);
-
-	$('.leaflet-marker-icon').on('mouseover', function () {
-		workMarker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-	});
-
 
 };
 $(startScript);
