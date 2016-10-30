@@ -107,7 +107,35 @@ a:hover {
 			list-style-type: none;
 		}
 	}
-
+	.toolTipInfo {
+		content: "";
+		opacity: 0;
+		width: 175px;
+		background-color: #f9f5f5;
+		color: #1f1818;
+		text-align: center;
+		border-radius: 4px;
+		padding: 5px 3px;
+		position: absolute;
+		z-index: 1;
+		margin-top: -80px;
+		margin-left: -175px;
+		border: solid 1px $grisClair;
+		transition: opacity 1.5s;
+	}
+	.addToolTip:hover .toolTipInfo {
+		opacity: 1;
+	}
+	.toolTipInfo::after {// Add bottom arrow.
+		content: "";
+		position: absolute;
+		top: 100%; /* At the bottom of the tooltip */
+		left: 31%;
+		border-width: 11px;
+		border-style: solid;
+		border-color: $grisClair transparent transparent transparent;
+		//border: solid 1px rgb(100,100,100);
+	}
 	.header {
 		margin-top: 12px;
 		color: $headerTextColor;
@@ -196,7 +224,6 @@ a:hover {
 		}
 		&.whereIlived_section {
 			#map {
-				border: solid 1px $grisClair;
 				height: 500px!important;
 				img {
 					border: none;// Pour éviter border/tiles des cartes ...
@@ -221,6 +248,31 @@ a:hover {
 				}
 				.work_description {
 					//text-align: justify;
+				}
+			}
+		}
+		&.languesEtAutresSection {
+			.languesList {
+				margin-top: 87px;
+				.langueContainer {
+					.imgLanguesFlag {
+						width: 40px;
+						margin-right: 90px;
+						cursor: pointer;
+					}
+					&:last-child {
+						.imgLanguesFlag{
+							margin-right: 0px;
+						}
+						.toolTipInfo {
+							margin-left: -87px;
+						}
+					}
+					&:first-of-type {
+						.toolTipInfo {
+							padding: 19px 1px!important;
+						}
+					}
 				}
 			}
 		}

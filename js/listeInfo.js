@@ -108,16 +108,20 @@ var projects = {
 
 var languesEtAutres = {
 	"langues": [{
-		"name": "Français: ",
-		"level": "native"
+		"name": "Frances: ",
+		"flagSymbol": "images/french_flag.png",
+		"level": "Soy frances!"
 	}, {
-		"name": "Espagnol: ",
-		"level": "bilingue"
+		"name": "Español: ",
+		"flagSymbol": "images/spain_flag.png",
+		"level": "Vivo en Barcelona desde 2006!"
 	}, {
-		"name": "Anglais: ",
-		"level": "moyen"
+		"name": "Ingles: ",
+		"flagSymbol": "images/UK_flag.jpg",
+		"level": "Nivel medio aunque lo estoy trabajando ..."
 	}, {
 		"name": "Catalan: ",
-		"level": "moyen"
+		"flagSymbol": "images/catalan_flag.png",
+		"level": "Nivel medio y practicando cada dia!"
 	}]
 };

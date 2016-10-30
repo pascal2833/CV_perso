@@ -152,11 +152,11 @@ function startScript() {
 	languesEtAutres.display = function() {
 		$(".languesEtAutresSection").append(HTMLlanguesStart);
 		languesEtAutres.langues.forEach(function(element) {
-			$(".languesList").append(HTMLLiElement);
-			var formattedLangueName = HTMLlanguesName.replace("%data%", element.name);
-			var formattedLangueLevel = HTMLlanguesName.replace("%data%", element.level);
-			$(".liElement:last").append(formattedLangueName);
-			$(".liElement:last").append(formattedLangueLevel);
+			$(".languesList").append(HTMLlangueContainer);
+			var formattedLangueLevel = HTMLlanguesLevel.replace("%data%", element.level);
+			var formattedLangueFlag = HTMLlanguesFlag.replace("%data%", element.flagSymbol);
+			$(".langueContainer:last").append(formattedLangueFlag);
+			$(".langueContainer:last").append(formattedLangueLevel);
 		});
 	};
 	languesEtAutres.display();

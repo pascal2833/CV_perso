@@ -72,10 +72,10 @@ var HTMLonlineURL = '<br><div class="center_text"><a href="#">%data%</a></div><b
 /*
 Langues et autres :
 */
-var HTMLlanguesStart = '<ul class="languesList center_text"></ul>';
-var HTMLLiElement = '<li class="liElement"></li>';
-var HTMLlanguesName = '<span>%data%</span>';
-var HTMLlanguesLevel = '<span>%data%</span>';
+var HTMLlanguesStart = '<div class="languesList center_text"><div>';
+var HTMLlangueContainer = '<span class="langueContainer addToolTip"></span>';
+var HTMLlanguesFlag = '<img src="%data%" alt = "flag image to give language information" class="imgLanguesFlag">';
+var HTMLlanguesLevel = '<span class="toolTipInfo">%data%</span>';
 
 /*
 Autre :
