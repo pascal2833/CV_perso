@@ -52,39 +52,43 @@ function startScript() {
 	work.displayCircleOnMap();
 
 	education.displayCircleOnMap = function() {
-		education.schools.forEach(function(element, index) {
-			circle = L.circle([element.latitude, element.longitude], { //[lat, long]
-				color: schoolStrokeColor,
-				opacity: strokeOpacity,
-				fillColor: schoolFillColor,
-				fillOpacity: fillOpacity,
-				radius: circleRadius
-			});
-			circleArray.push(circle);
-			circle.addTo(mymap);
-			var latLonCircle = circle.getLatLng();
-			var latCircle = latLonCircle.lat;
-			var longCircle = latLonCircle.lng;
-			$('.leaflet-interactive:last').attr('id', 'idCircleSchool_'+index);
-			$('.leaflet-interactive:last').attr('data-lat', latCircle);
-			$('.leaflet-interactive:last').attr('data-long', longCircle);
-			$('.leaflet-interactive:last').attr('data-textPopUp', element.textPopUpMap);
+		education.schoolsAndOnlineCourses.forEach(function(element, index) {
+			if (element.onlineOrSchool == "school") {
+				circle = L.circle([element.latitude, element.longitude], { //[lat, long]
+					color: schoolStrokeColor,
+					opacity: strokeOpacity,
+					fillColor: schoolFillColor,
+					fillOpacity: fillOpacity,
+					radius: circleRadius
+				});
+				circleArray.push(circle);
+				circle.addTo(mymap);
+				var latLonCircle = circle.getLatLng();
+				var latCircle = latLonCircle.lat;
+				var longCircle = latLonCircle.lng;
+				$('.leaflet-interactive:last').attr('id', 'idCircleSchool_'+index);
+				$('.leaflet-interactive:last').attr('data-lat', latCircle);
+				$('.leaflet-interactive:last').attr('data-long', longCircle);
+				$('.leaflet-interactive:last').attr('data-textPopUp', element.textPopUpMap);
+			}
 		});
 	};
 	education.displayCircleOnMap();
 
 	// Add pop up-info :
-	education.schools.forEach(function(element, index) {
-		$('#idCircleSchool_'+index).on('mouseover', function () {
-			var idCircle = $(this).attr('id');
-			var latCircle = $(this).attr('data-lat');
-			var longCircle = $(this).attr('data-long');
-			var textPopUp = $(this).attr('data-textPopUp');
-			popup = L.popup()
-				.setLatLng([latCircle,longCircle])
-				.setContent(textPopUp)
-				.addTo(mymap);
-		});
+	education.schoolsAndOnlineCourses.forEach(function(element, index) {
+		if (element.onlineOrSchool == "school") {
+			$('#idCircleSchool_'+index).on('mouseover', function () {
+				var idCircle = $(this).attr('id');
+				var latCircle = $(this).attr('data-lat');
+				var longCircle = $(this).attr('data-long');
+				var textPopUp = $(this).attr('data-textPopUp');
+				popup = L.popup()
+					.setLatLng([latCircle,longCircle])
+					.setContent(textPopUp)
+					.addTo(mymap);
+			});
+		}
 	});
 	work.jobs.forEach(function(element, index) {
 		$('#idWork_'+index).on('mouseover', function () {

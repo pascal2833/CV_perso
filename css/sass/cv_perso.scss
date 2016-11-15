@@ -222,6 +222,13 @@ a:hover {
 				}
 			}
 		}
+		&.education_section {
+			.svgEducationContainer {
+				width: 970px;
+				height: 350px;
+				border: solid 1px rgb(100,100,100);
+			}
+		}
 		&.whereIlived_section {
 			#map {
 				height: 500px!important;

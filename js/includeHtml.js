@@ -54,7 +54,7 @@ var HTMLincludeSourceInfo = '<span class="source_info">%data</span>';
 /*
 Education :
 */
-var HTMLschoolStart = '<div class="school_entry center_text"><h4>Shools:</h4></div>';
+/*var HTMLschoolStart = '<div class="school_entry center_text"><h4>Shools:</h4></div>';
 var HTMLonlineCoursesStart = '<div class="onlineCourse_entry center_text"><h4>Online Courses:</h4></div>';
 var HTMLschoolLink = '<a href="%data%" ';
 var HTMLschoolName = 'class="schoolNameLink">%data%';
@@ -67,7 +67,7 @@ var HTMLonlineClassesStart = '<h4 class="center_text">Online Classes:</h4>';
 var HTMLonlineTitle = '<div class="center_text"><a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a></div>';
 var HTMLonlineDates = '<div class="center_text">%data%</div>';
-var HTMLonlineURL = '<br><div class="center_text"><a href="#">%data%</a></div><br>';
+var HTMLonlineURL = '<br><div class="center_text"><a href="#">%data%</a></div><br>';*/
 
 /*
 Langues et autres :

@@ -48,10 +48,13 @@ meta pour Boostrap : cf http://getbootstrap.com/getting-started/
 			</section>
 			<section class="section education_section">
 				<div class="parallax parralax_education">
-					<h2 class="main_title_section">Formation relacionada</h2>
+					<h2 class="main_title_section">Estudios y formaciones relacionadas</h2>
 				</div>
-				<div class="schools"></div>
-				<div class="onlineCourses"></div>
+				<div class="svgEducationContainer">
+					<svg class= "svgFormationGraph"></svg>
+				</div>
+				<!--<div class="schools"></div>
+<div class="onlineCourses"></div>-->
 			</section>
 			<section class="section languesEtAutresSection">
 				<div class="parallax parralax_languesAndCoe">
@@ -61,18 +64,19 @@ meta pour Boostrap : cf http://getbootstrap.com/getting-started/
 
 			<section class="section whereIlived_section">
 				<!--<div class="parallax parralax_whereIlived">
-					<h2 class="main_title_section">Mis estudios y mis trabajos en mapa</h2>
-				</div>-->
+<h2 class="main_title_section">Mis estudios y mis trabajos en mapa</h2>
+</div>-->
 				<div id= "map"></div>
 			</section>
 			<!--<section class=" section lets_connect_section">
-				<div class="parallax parralax_connect">
-					<h2 class="main_title_section">Pongamonos en contacto</h2>
-				</div>
-				<ul>
-				</ul>
-			</section>-->
+<div class="parallax parralax_connect">
+<h2 class="main_title_section">Pongamonos en contacto</h2>
+</div>
+<ul>
+</ul>
+</section>-->
 		</div>
+
 		<!--<script src="./../../librairiesFront/modernizr-custom.js"></script>-->
 		<!--Fout le bordel /etude element vi aconsole chrome, affiche user agent.-->
 		<script src="./../../librairiesFront/jquery/jquery.min.js"></script>
@@ -81,8 +85,12 @@ meta pour Boostrap : cf http://getbootstrap.com/getting-started/
 		<script src="js/doMap.js"></script>
 		<script src="js/includeHtml.js"></script>
 		<script src="js/listeInfo.js"></script>
+		<!--// Add time series/formation : ---//-->
+		<script src="https://d3js.org/d3.v4.min.js"></script>
 		<script src="js/index.js"></script>
 
+
+		<!--------------->
 	</body>
 
 </html>

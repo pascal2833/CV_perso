@@ -21,15 +21,19 @@ var bio = {
 };
 
 var education = {
-	"schools": [{
+	"schoolsAndOnlineCourses": [{
 		"name": "Lycee E.Branly",
 		"location": "Dreux (France)",
 		"latitude": 48.74,
 		"longitude": 1.37,
 		"textPopUpMap": "Vivi en esta ciudad (Dreux) hasta el bachillerato. Recuerdos, recuerdos, ...",
-		"degree": "degree4 E Branly",
+		"colorCircleGraph": "rgb(150,150,200)",
+		"colorCircleStrokeGraph": "rgb(60,60,60)",
+		"degree": "Bachillerato científico",
 		"majors": ["major1", "major2", "major3"],
-		"dates": "1996",
+		"dates": "October 15, 1996",
+		"positionAxeY": 130,
+		"onlineOrSchool": "school",
 		"url": "http://www.lyceebranlydreux.fr/actualites-du-lycee.html"
 	}, {
 		"name": "Paris IV Sorbonne",
@@ -37,16 +41,28 @@ var education = {
 		"latitude": 48.85,
 		"longitude": 2.34,
 		"textPopUpMap": "Estudie en la Universidad Paris Sorbonne, en el centro del Barrio Latino de Paris",
-		"degree": "degree4 Universite P.Sorbonne",
+		"colorCircleGraph": "rgb(150,150,200)",
+		"colorCircleStrokeGraph": "rgb(60,60,60)",
+		"degree": "Licenciatura en geografía y hidrología",
 		"majors": ["major1", "major2", "major3"],
-		"dates": "2000",
+		"dates": "October 15, 2000",
+		"positionAxeY": 130,
+		"onlineOrSchool": "school",
 		"url": "http://www.english.paris-sorbonne.fr/"
-	}],
-	"onlineCourses": [{
-		"title": "Python",
-		"school": "EdX",
-		"dates": "juin-juillet 2015",
-		"url": "http://jiji/jijojo/..."
+	}, {
+		"name": "EdX-curso via plataforma web, Universidad MIT",
+		"location": "Dreux (France)",
+		"latitude": 48.74,
+		"longitude": 1.37,
+		"textPopUpMap": "Vivi en esta ciudad (Dreux) hasta el bachillerato. Recuerdos, recuerdos, ...",
+		"colorCircleGraph": "rgb(200,150,150)",
+		"colorCircleStrokeGraph": "rgb(60,60,60)",
+		"degree": "2 meses de formación en python",
+		"majors": ["major1", "major2", "major3"],
+		"dates": "October 15, 2014",
+		"positionAxeY": 60,
+		"onlineOrSchool": "school",
+		"url": "http://www.lyceebranlydreux.fr/actualites-du-lycee.html"
 	}]
 };
 
@@ -92,17 +108,17 @@ var projects = {
 		"dates": "2001-02-23",
 		"description": "Description: jcdjcoijfcjeoic",
 		"images": [
-				"images/penseBete_1x.jpg", "images/fotos_mariana_1x.jpg"
-			]
-			//"sourceImageParralax": "&copy; pixabay"
+			"images/penseBete_1x.jpg", "images/fotos_mariana_1x.jpg"
+		]
+		//"sourceImageParralax": "&copy; pixabay"
 	}, {
 		"title": "Soccer player",
 		"dates": "2001-02-23",
 		"description": "Description: dgweugduygeru",
 		"images": [
-				"images/soccer_player_1x.jpg", "images/madeInItaly_1x.jpg"
-			]
-			//"sourceImageParralax": "&copy; pixabay"
+			"images/soccer_player_1x.jpg", "images/madeInItaly_1x.jpg"
+		]
+		//"sourceImageParralax": "&copy; pixabay"
 	}]
 };
 
@@ -125,3 +141,4 @@ var languesEtAutres = {
 		"level": "Nivel medio y practicando cada dia!"
 	}]
 };
+
