@@ -8,16 +8,16 @@ var bio = {
 		"location": "Barcelona",
 		"latitude": 40,
 		"longitude": 4,
-		"mobile": "+33 650-754-255"
+		"mobile": "+34 650-754-255"
 	},
 	//"welcomeMessage": "Welcome message",
 	"skills": [
-		"css", "Sass", "HTML5", "javascript", "AngularJS", "d3.js", "OpenLayers"
+		"HTML5", "css/Sass", , "javascript", "jQuery", "AngularJS", "Grunt/npm","d3.js"
 	],
-	"frontLevel": ["80", "50", "80", "65", "50", "65", "80"],
-	"back_end_skills": ["PHP", "Symphony2", "SQL"],
-	"backEndLevel": ["60", "55", "70"],
-	"biopic": "images/photoPerfil.jpg"
+	"frontLevel": ["80", "75", "75", "75","65", "60","60"],
+	"back_end_skills": ["PHP", "Base de Datos/SQL", "Symphony2", "java/javaEE"],
+	"backEndLevel": ["60", "60", "50", "40"]
+	/*"biopic": "images/photoPerfil.jpg"*/
 };
 
 var education = {
@@ -63,6 +63,34 @@ var education = {
 		"positionAxeY": 60,
 		"onlineOrSchool": "school",
 		"url": "http://www.lyceebranlydreux.fr/actualites-du-lycee.html"
+	}, {
+		"name": "Universidad de Barcelona, UB",
+		"location": "Barcelona",
+		"latitude": 48.85,
+		"longitude": 2.34,
+		"textPopUpMap": "TODO",
+		"colorCircleGraph": "rgb(150,150,200)",
+		"colorCircleStrokeGraph": "rgb(60,60,60)",
+		"degree": "Master en gestión ambiental",
+		"majors": ["major1", "major2", "major3"],
+		"dates": "Septembre 15, 2006",
+		"positionAxeY": 130,
+		"onlineOrSchool": "school",
+		"url": "TODO"
+	},{
+		"name": "Universidad Autonoma de Barcelona, UAB-CREAF",
+		"location": "TODO",
+		"latitude": 48.85,
+		"longitude": 2.34,
+		"textPopUpMap": "TODO",
+		"colorCircleGraph": "rgb(150,150,200)",
+		"colorCircleStrokeGraph": "rgb(60,60,60)",
+		"degree": "Master en Sistema de informacion geográfica y teledetección",
+		"majors": ["major1", "major2", "major3"],
+		"dates": "Septembre 15, 2010",
+		"positionAxeY": 130,
+		"onlineOrSchool": "school",
+		"url": "TODO"
 	}]
 };
 
@@ -77,7 +105,7 @@ var work = {
 		"textPopUpMap": "Trabajo actualmente en Sopra Steria, en Barcelona",
 		"dates": "Octubre 2015-actual",
 		"description": "Participación en varios proyectos web para clientes Franceses.",
-		"tecnologies": "Sass, HTML5, javascript, jQuery, AngularJS, Bootstrap, Grunt, PHP, Symfony2, Oracle"
+		"tecnologies": "Sass, HTML5, javascript, jQuery, AngularJS, Bootstrap, Grunt, PHP, Symfony2, Oracle, Java/JavaEE"
 	}, {
 		"title": 'Desarrollador Front-end/mapas digitales',
 		"employer": '<a href="http://www.creaf.cat/" target="_blank">CEA/CREAF-UAB</a>',
@@ -102,26 +130,6 @@ var work = {
 	}]
 };
 
-var projects = {
-	"projects": [{
-		"title": "Pense bete",
-		"dates": "2001-02-23",
-		"description": "Description: jcdjcoijfcjeoic",
-		"images": [
-			"images/penseBete_1x.jpg", "images/fotos_mariana_1x.jpg"
-		]
-		//"sourceImageParralax": "&copy; pixabay"
-	}, {
-		"title": "Soccer player",
-		"dates": "2001-02-23",
-		"description": "Description: dgweugduygeru",
-		"images": [
-			"images/soccer_player_1x.jpg", "images/madeInItaly_1x.jpg"
-		]
-		//"sourceImageParralax": "&copy; pixabay"
-	}]
-};
-
 var languesEtAutres = {
 	"langues": [{
 		"name": "Frances: ",
@@ -138,7 +146,14 @@ var languesEtAutres = {
 	}, {
 		"name": "Catalan: ",
 		"flagSymbol": "images/catalan_flag.png",
-		"level": "Nivel medio y practicando cada dia!"
+		"level": "Nivel medio"
+	}],
+	"autres":[{
+		imageUrl: "images/pingpong_e0.gif",
+		"hobbyInfo":"Soy jugador federado de tenis de mesa desde que tengo 16 años. Ahora tengo menos tiempo para practicar pero sigo competiendo!",
+	}, {
+		imageUrl: "images/camera.png",
+		"hobbyInfo":"Descubrí la fotografía de vacaciones en Corsega, muy joven. Me compré luego una camara oscura y cuando estaba en la faculdad, hacía mis propias foto.",
 	}]
 };
 

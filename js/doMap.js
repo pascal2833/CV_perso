@@ -20,12 +20,12 @@ function startScript() {
 	var popup;
 	var circleRadius = 20000;// Initialisation (/niveau zoom).
 	var circleArray = [];
-	var workStrokeColor = "rgb(116,110,109)";
-	var schoolStrokeColor = "rgb(155,161,155)";
+	var workStrokeColor = "rgb(50,50,80)";
+	var schoolStrokeColor = "rgb(80,50,50)";
 	var strokeOpacity = .5;
 	var fillOpacity = .5;
-	var workFillColor = "rgb(254,112,1)";
-	var schoolFillColor = "rgb(43,219,22)";
+	var workFillColor = "rgb(150,150,200)";
+	var schoolFillColor = "rgb(200,150,150)";
 
 	// Circles creation:
 	work.displayCircleOnMap = function() {

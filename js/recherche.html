@@ -1,0 +1,30 @@
+<html:form action="/beanToForm" styleId="findForm">
+
+	<table width="96%">
+
+		<!--										-->
+		<!-- Titre de recherche	-->
+		<!-- 										-->
+		<tr>
+			<td width="96%" class="Title2">
+				<bean:message key="titre.formacionEjemplo" bundle="formacionEjemplo" />
+			</td>
+		</tr>
+		<!-- Note/bean : message :s
+key = ref/fichier properties, bundle.
+bundle = key/struts ...
+-->
+		<tr><td>&nbsp;&nbsp;</td></tr>
+		<!--											-->
+		<!-- Contenu de recherche	-->
+		<!-- 											-->
+		<tr>
+			<td width="96%">
+				<tiles:insert attribute="contentFindResultat" /><!-- attribute = ref/tiles-def, pointe donc vers un .jsp -->
+			</td>
+		</tr>
+
+	</table>
+
+
+</html:form>
