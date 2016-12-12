@@ -127,7 +127,21 @@ var work = {
 		"dates": "Enero de 2012-diciembre de 2014",
 		"description": 'Participación, desde su inicio hasta su “fin” al portal <a href="http://www.globalcarbonatlas.org/?q=en/content/welcome-carbon-atlas" target="_blank">Global Carbon Atlas</a><span> (concepción y realización de los mapas)</span>',
 		"tecnologies": "HTML5, javascript, jQuery, css, Bootstrap, OpenLayers, Geoserver, Python, PHP, xml."
-	}]
+	}],
+	"nodes":[
+		{"nameEntreprise":"Sopra-Steria", "workName": "Desarrollador web","date":"Octubre 2015 - actual", "positionX": 10, "positionY": 40},
+		{"nameEntreprise":"CEA-LSCE", "workName": "Desarrollador web/front-end","date":"Enero de 2012-diciembre de 2014", "positionX": 10, "positionY": 60},
+
+	],
+	"links":[
+		{"source":0,"target":1,"value":1,"distance":5},
+
+	],
+	"childrens": [
+		{"name": "javascript", "positionX": 500, "positionY": 40},
+		{"name": "PHP", "positionX": 500, "positionY": 60},
+		{},
+	]
 };
 
 var languesEtAutres = {

@@ -65,6 +65,11 @@ $breakpoint2: 680px;
 	cursor:pointer;
 	color: $text-hover-color!important;
 }
+@mixin svgContainers {
+	width: 970px;
+	height: 350px;
+	border: solid 1px rgb(100,100,100);
+}
 ///////////////////////////////////////
 // Stylisation des éléments : //
 ///////////////////////////////////////
@@ -111,6 +116,9 @@ a:hover {
 		li {
 			list-style-type: none;
 		}
+	}
+	.svgEducationContainer, .svgWorkingExperiencesContainer {
+		@include svgContainers;
 	}
 	.toolTipInfo {
 		content: "";
@@ -192,16 +200,22 @@ a:hover {
 				display:flex;
 				display: -webkit-flex; /* Safari */
 				justify-content: center;
-				.front_end_skills_desc_start, .back_end_level_start, .front_end_level_start, .back_end_skills_desc_start {
+				h4 {
+					text-align: left;
+				}
+				.front_end_skills_desc_start, {
+					margin-right: 50px;
+				}
+				.front_end_skills_desc_start, .back_end_skills_desc_start, .back_end_level_start, .front_end_level_start {
 					.skills_list {
-						text-align: left;
+						text-align: start;
 						position: relative;
-						left: 25px;
+						//left: 25px;
 					}
 					.skills_list:nth-of-type(1) {
-						margin-top: -6px;
+						//margin-top: -6px;
 					}
-					margin-top: -10px;
+					//margin-top: -10px;
 					.rectOut {
 						height: 20px;
 						width: 100px;
@@ -209,7 +223,12 @@ a:hover {
 						margin-bottom: 10px;
 						.rectIn {
 							height: 18px;
-							background-color: grey;
+							background: white; /* For browsers that do not support gradients */
+							background: -webkit-linear-gradient(left, white , $mapAndCoeColor); /* For Safari 5.1 to 6.0 */
+							background: -o-linear-gradient(right, white, $mapAndCoeColor); /* For Opera 11.1 to 12.0 */
+							background: -moz-linear-gradient(right, white, $mapAndCoeColor); /* For Firefox 3.6 to 15 */
+							background: linear-gradient(to right, white , $mapAndCoeColor); /* Standard syntax */
+
 						}
 					}
 				}
@@ -240,11 +259,7 @@ a:hover {
 			}
 		}
 		&.education_section {
-			.svgEducationContainer {
-				width: 970px;
-				height: 350px;
-				border: solid 1px rgb(100,100,100);
-			}
+
 		}
 		&.worksExperience-section {
 			.work_entry {
@@ -378,7 +393,7 @@ a:hover {
 				background-image: url("../../images/whereIlived.jpg");
 			}
 			&.parralax_languesAndCoe {
-				background-image: url("../../images/myLife_others.jpg");
+				background-image: url("../../images/framboises.jpg");
 			}
 			&.parralax_connect {
 				background-image: url("../../images/connect.jpg");
