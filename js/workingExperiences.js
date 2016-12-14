@@ -12,37 +12,96 @@ function startScript() {
 	svgGraph.attr("width", widthGraph);
 	svgGraph.attr("height", heightGraph);
 
-	//Add the SVG Text Element to the svgContainer
-	var node = svgGraph.selectAll("g.nodes_texts")
+	// ----------------------------------------------- //
+	// Create data entities. ------------------------- //
+	// And adding elements to svg container: --------- //
+	// ----------------------------------------------- //
+	var xWorkName = 325;// Pour placer horizontalement/svg container.
+	var nodes = svgGraph.selectAll("g.nodes_texts")
 	.data(work.nodes)
 	.enter().append("svg:g")// Va creer un element <g> pour chaque element work.nodes.
-	.attr("class", "node");
-	node
+	.attr("class", "nodes");
+	nodes
 		.append("text")
-		.attr("x", function(d) {return d.positionX})// x et y, pas cx ni cy (pour coordonees de cercles)
-		.attr("y", function(d) {return d.positionY})
-		.text(function(d) {return d.workName + " (" + d.nameEntreprise + ")"}); // = text to put!
+		.attr("x", xWorkName)// x et y, pas cx ni cy (pour coordonees de cercles)
+		.attr("y", function(d) {return d.yWorkName})
+		.attr("fill", "rgb(20,25,70)")
+		.text(function(d) {return d.workName;}); // = text to put!
 
+	var complementNodes = svgGraph.selectAll("g.complementNodes_texts")
+	.data(work.complementsNodes)
+	.enter().append("svg:g")// Va creer un element <g> pour chaque element work.nodes.
+	.attr("class", "complementNodes");
+	complementNodes
+		.append("text")
+		.attr("x", xWorkName)// x et y, pas cx ni cy (pour coordonees de cercles)
+		.attr("y", function(d) {return d.yWorkName + 15})
+		.attr("fill", "rgb(20,25,70)")
+		.text(function(d) {return '(' + d.date + ')';}); // = text to put!
+
+	var xProgrammingLanguageName = 850;
 	var childrens = svgGraph.selectAll("g.childrens_texts")
 	.data(work.childrens)
 	.enter().append("svg:g")
 	.attr("class", "childrens");
 	childrens
 		.append("text")
-		.attr("x", function(d) {return d.positionX})// x et y, pas cx ni cy (pour coordonees de cercles)
-		.attr("y", function(d) {return d.positionY})
-		.text(function(d) {return d.name});
+		.attr("x", xProgrammingLanguageName)// x et y, pas cx ni cy (pour coordonees de cercles)
+		.attr("y", function(d) {return d.y;})
+		.attr("fill", "rgb(20,25,70)")
+		.text(function(d) {return d.name;});
 
-	var link = svgGraph.selectAll("g.lines_links")
+	var xWorkNameToLink = 540;
+	var links = svgGraph.selectAll("g.lines_links")
 	.data(work.links)
 	.enter().append("svg:line")
-	.attr("class", function (d) { return "link" + d.value +""; })
-	.attr("x1", function(d) { return d.source.x; })
-	.attr("y1", function(d) { return d.source.y; })
-	.attr("x2", function(d) { return d.target.x; })
-	.attr("y2", function(d) { return d.target.y; })
-	.attr("stroke-width", 2)
-	.attr("stroke", "green");
+	.attr("class", "links");
+	links
+		.attr("x1", xWorkNameToLink)
+		.attr("y1", function(d) { return work.nodes[d.source].yWorkName - 5; })
+		.attr("x2", xProgrammingLanguageName - 5)
+		.attr("y2", function(d) { return work.childrens[d.target].y - 5; })
+		.attr("stroke", "rgb(42, 44, 51)")
+		.attr("stroke-linecap", "round")
+		.attr('stroke-width', 0.2)//Defect values
+		.attr("opacity", 0.8);
+
+	// ----------------------------------- //
+	// ------- Add interaction : --------- //
+	// ----------------------------------- //
+	// Note : selected/no_selected in in css part.
+	nodes.on('mouseover', function(d) {
+		$('.infoWorkingExperienceContainer').addClass('infoBlockToUpdate');
+		$('.infoWorkingExperienceContainer').css('display', 'block');
+		d3.select(this)
+			.attr('class', 'selected')
+		links.each(function(link) {
+			if (link.source === d.indiceArray) {
+				d3.select(this)
+					.attr('class','selected')
+					.attr('stroke-width', 1);
+			}
+		});
+		complementNodes.each(function(complementNode) {
+			if (complementNode.source === d.indiceArray) {
+				$('.infoWorkingExperienceContainer').html(complementNode.description);
+			}
+		});
+	});
+	nodes.on('mouseout', function() {
+		//$('.infoWorkingExperienceContainer').addClass('infoBlockToUpdate');
+		d3.select(this)
+			.attr('class', 'no_selected_workingExperience')
+		links.each(function(link) {
+			d3.select(this)
+				.attr('opacity','0.8')
+				.attr("stroke", "rgb(42, 44, 51)")
+				.attr('stroke-width', 0.2);
+		});
+		//$('.infoWorkingExperienceContainer').css('display', 'none');
+
+
+	});
 
 
 
@@ -54,5 +113,8 @@ function startScript() {
 
 
 
-	}
+
+
+
+}
 startScript();

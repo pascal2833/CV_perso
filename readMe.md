@@ -31,5 +31,6 @@ Pour ce CV, j'ai utilisé le cours de Udacity Front End mais pas mal adapté.
 * ~~Aligner bien les titres des skills à gauche~~
 * ~~Changer photo autres aspects, langues~~
 * ~~Video de ping pong~~
+* refaire graph/estudios avec http://jsdatav.is/chap07.html
 
 

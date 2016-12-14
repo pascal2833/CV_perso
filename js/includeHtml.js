@@ -32,13 +32,13 @@ var HTMLskillsLevel = '<li class="skills_level_list rectOut"><div class="rectIn"
 /*
 Expérience :
 */
-var HTMLworkStart = '<div class="work_entry center_text"></div>';
+/*var HTMLworkStart = '<div class="work_entry center_text"></div>';
 var HTMLworkTitle = '<div class="workTitle infoToHighlight">%data%</div>';
 var HTMLworkEmployer = '<span class="infoToHighlight"><a>%data%</a></span>';
 var HTMLworkLocation = '<span> (%data%)</span>';
 var HTMLworkDates = '<div>%data%</div>';
 var HTMLworkDescription = '<div><div class="work_description">%data%</div></div>';
-var HTMLworkTecnologies = '<span class="infoToHighlight">Tecnologias: </span><span>%data%</span>';
+var HTMLworkTecnologies = '<span class="infoToHighlight">Tecnologias: </span><span>%data%</span>';*/
 
 /*
 Projets :

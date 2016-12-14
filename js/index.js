@@ -74,7 +74,8 @@ function startScript() {
 	};
 	bio.display();
 
-	work.display = function() {
+	// A mettre seulement pour mobiles.
+	/*work.display = function() {
 		work.jobs.forEach(function(element) {
 			$(".worksExperience-section").append(HTMLworkStart);
 			var formattedWorkTitle = HTMLworkTitle.replace("%data%", element.title);
@@ -91,7 +92,7 @@ function startScript() {
 			$(".work_entry:last").append(formattedWorkTecnologies);
 		});
 	};
-	work.display();
+	work.display();*/
 
 	languesEtAutres.display = function() {
 		$(".languesEtAutresSection").append(HTMLlanguesStart);
