@@ -51,7 +51,7 @@ function startScript() {
 		.attr("fill", "rgb(20,25,70)")
 		.text(function(d) {return d.name;});
 
-	var xWorkNameToLink = 540;
+	var xWorkNameToLink = 545;
 	var links = svgGraph.selectAll("g.lines_links")
 	.data(work.links)
 	.enter().append("svg:line")
@@ -69,9 +69,8 @@ function startScript() {
 	// ----------------------------------- //
 	// ------- Add interaction : --------- //
 	// ----------------------------------- //
-	// Note : selected/no_selected in in css part.
 	nodes.on('mouseover', function(d) {
-		$('.infoWorkingExperienceContainer').addClass('infoBlockToUpdate');
+		//$('.infoWorkingExperienceContainer').addClass('infoBlockToUpdate');
 		$('.infoWorkingExperienceContainer').css('display', 'block');
 		d3.select(this)
 			.attr('class', 'selected')
@@ -98,22 +97,12 @@ function startScript() {
 				.attr("stroke", "rgb(42, 44, 51)")
 				.attr('stroke-width', 0.2);
 		});
-		//$('.infoWorkingExperienceContainer').css('display', 'none');
-
-
 	});
 
-
-
-
-
-
-
-
-
-
-
-
+	$('.svgWorkingExperiencesContainer').on('mouseleave', function() {
+		$('.infoWorkingExperienceContainer').css('display', 'none');
+		console.log("out");
+	});
 
 
 }

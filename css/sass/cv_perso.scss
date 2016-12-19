@@ -11,10 +11,9 @@ $grisTresSombre: rgb(42, 44, 51);
 $headerTextColor: rgb(70,20,25);
 $sectionTextColor: rgb(20,25,70);
 $grisClair: rgb(131,133,141);
-$grisTresClair: rgb(180,190,200);
 $text-hover-color : rgb(150,30,30);
 $mapAndCoeColor: #2f3a65;
-$greyInfoToolTips: rgb(212,215,216);
+$colorToolTipsBorders: rgb(130,130,140);
 $typoGoogleChoisie: 'Lato', sans-serif;
 // ---- Fonts-sizes : ------- //
 $max-width: 1000px;
@@ -62,21 +61,16 @@ $breakpoint2: 680px;
 	//border: solid 1px #2f3a65;
 }
 
-@mixin infoBlockBefore {// = carré avec ? qui montre info quand souris passe dessus.
+@mixin toolTipInfo {
+	position: absolute;
 	cursor: pointer;
-	background-color: $mapAndCoeColor;
-	color: white;
-	font-size: 81px;
-	height: 108px;
-	width: 89px;
-	padding-top: 37px;
-	-webkit-box-shadow: 3px 3px 5px 6px #ccc;
-	-moz-box-shadow: 3px 3px 5px 6px #ccc;
-	box-shadow: 3px 3px #2f3a65;
-	-webkit-box-shadow: 3px 3px 5px 6px #ccc;
-	-moz-box-shadow: 3px 3px 5px 6px #ccc;
-	box-shadow: 4px 5px 7px 2px $mapAndCoeColor;
+	font-size: 0.91em;
+	border: solid 1px $colorToolTipsBorders;
+	border-radius: 3px;
+	line-height: 160%;
+	padding: 6px 3px 3px 7px;
 }
+
 ///////////////////////////////////////
 // Stylisation des éléments : //
 ///////////////////////////////////////
@@ -107,11 +101,12 @@ a:hover {
 	color: $text-hover-color!important;
 }
 
-// tooltio/graph education.
+// tooltip/graph education et autres.
 // TODO : mettre bien là ou toca/scss.
 .tooltip {
-	font-size: 15px;
-	color: #1f1818;
+	@include toolTipInfo;
+	width: 200px;
+	//opacity: 0;
 }
 
 .globalPageContainer {
@@ -127,11 +122,11 @@ a:hover {
 	.svgEducationContainer, .svgWorkingExperiencesContainer {
 		@include svgContainers;
 	}
+	// map tool tips:
 	.toolTipInfo {
 		content: "";
 		opacity: 0;
 		width: 175px;
-		background-color: $greyInfoToolTips;
 		color: #1f1818;
 		text-align: center;
 		border-radius: 4px;
@@ -154,7 +149,6 @@ a:hover {
 		border-width: 11px;
 		border-style: solid;
 		border-color: $grisClair transparent transparent transparent;
-		//border: solid 1px rgb(100,100,100);
 	}
 	.header {
 		margin-top: 12px;
@@ -217,16 +211,11 @@ a:hover {
 					.skills_list {
 						text-align: start;
 						position: relative;
-						//left: 25px;
 					}
-					.skills_list:nth-of-type(1) {
-						//margin-top: -6px;
-					}
-					//margin-top: -10px;
 					.rectOut {
 						height: 20px;
 						width: 100px;
-						border: solid 1px rgb(100,100,100);
+						border: solid 1px $colorToolTipsBorders;
 						margin-bottom: 10px;
 						.rectIn {
 							height: 18px;
@@ -235,7 +224,6 @@ a:hover {
 							background: -o-linear-gradient(right, white, $mapAndCoeColor); /* For Opera 11.1 to 12.0 */
 							background: -moz-linear-gradient(right, white, $mapAndCoeColor); /* For Firefox 3.6 to 15 */
 							background: linear-gradient(to right, white , $mapAndCoeColor); /* Standard syntax */
-
 						}
 					}
 				}
@@ -245,11 +233,11 @@ a:hover {
 			.svgWorkingExperiencesContainer {
 				position: relative;
 				.infoWorkingExperienceContainer {
-					position: absolute;
-					top: 103px;
-					left: 60px;
-					padding-left: 28px;// Pour centrer "?"
-					@include infoBlockBefore;
+					@include toolTipInfo;
+					width: 295px;
+					left: 10px;
+					top: 31px;
+					display: none;
 					ul {
 						li {
 							list-style-type:disc!important;
@@ -274,11 +262,6 @@ a:hover {
 						-webkit-box-shadow: none!important;
 						-moz-box-shadow: none!important;
 						box-shadow: none!important;
-						a {
-							font-weight: bold!important;
-							color: rgb(102,204,245)!important;
-							font-style: italic;
-						}
 					}
 				}
 				.nodes {
@@ -345,6 +328,11 @@ a:hover {
 				}
 			}
 		}
+		&.education_section {
+			.tooltip .closeToolTips {
+				color: red;
+			}
+		}
 		&.mapResum {
 			#map {
 				height: 500px!important;
@@ -386,8 +374,16 @@ a:hover {
 				justify-content: space-around;
 				margin-top: 20px;
 				position: relative;
-				.defectHobby {
-					@include infoBlockBefore;
+				.defectHobby {// TODO : enlever.
+					padding-top: 8px!important;
+					line-height: 130%;
+					border: solid 1px #2f3a65;
+					font-size: 0.95em;
+					height: 300px!important;
+					border-radius: 3px;
+					width: 300px!important;
+					top: 55px!important;
+					left: 8px!important;
 				}
 				img:first-child {
 					width: 132px!important;
@@ -404,7 +400,6 @@ a:hover {
 					border: solid 1px grey;
 					border-radius: 3px;
 					padding: 10px 4px 0px 4px;
-					background-color: $greyInfoToolTips;
 					top: 13%;
 					width: 200px;
 					height: 113px;

@@ -3,7 +3,7 @@ function startScript() {
 	$.getScript("js/listeInfo.js");
 
 	// ---------------------------------- //
-	// --- Add time series/formation ---- //
+	// --- Objetif de ce code : Add time series/formation ---- //
 	// ---------------------------------- //
 	// Define scales (first thing to do):
 	var allDatesInMs = [];
@@ -21,7 +21,7 @@ function startScript() {
 	.range([0, widthGraph-100]);//set output domain (representation des données sur le graph, en gnal en pixels).
 	// Note : -100 parce que si non, prend tte la largeur du svg, container element, normal !!!
 	xScale.nice();
-	var yScale = d3.scaleLinear()
+	var yScale = d3.scaleLinear() // Pas la peine ici en fait, on n'utilise pas de scale donc position/svg container aurait suffit.
 	.domain([0, 200])// seulement montrer 2 données : schools et onlineFormation.
 	.range([0, heightGraph]);
 	yScale.nice();
@@ -31,6 +31,7 @@ function startScript() {
 
 	// Start to draw ... //
 	var diametreCercle = 8;
+	var colorStrokeCircleGraph = "rgb(20,25,70)";
 	// On selectionne svg (sur html) et on défini ses dimensions (mème que conteneur -> création container parce que + facile pour styliser):
 	var svg = d3.select(".svgFormationGraph");
 	$('.svgFormationGraph').attr("width", widthGraph);
@@ -43,37 +44,55 @@ function startScript() {
 	.style("opacity", 0);                  // set the opacity to 0
 
 	// On fait le join element/data et on ajoute elements de styles  + tooltip/cercles.:
-	svg.selectAll("circle")
-		.data(education.schoolsAndOnlineCourses)
-		.enter().append("circle")
-		.attr("cx", function(d) {return xScale(new Date(d.dates));})
-		.attr("cy", function(d) {return yScale(d.positionAxeY);})
-		.attr("fill", function(d) {return d.colorCircleGraph;})
-		.attr("stroke", function(d) {return d.colorCircleStrokeGraph;})
-		.attr("r", diametreCercle)
+	var ecclipses = svg.selectAll("ellipseToMake")
+	.data(education.schoolsAndOnlineCourses)
+	.enter().append("ellipse")
+	.attr("cx", function(d) {return xScale(new Date(d.dates));})
+	.attr("cy", function(d) {return yScale(d.positionAxeY);})
+	.attr("rx", 8)
+	.attr("ry", 10)
+	.attr("fill", "rgb(248,248,252)")
+	.attr("stroke", colorStrokeCircleGraph)
+	.attr("stroke-width", 1.3)
+	.attr("r", diametreCercle)
+	.style("cursor", "pointer");
 	// Tooltip stuff after this
-		.on("mouseover", function(d) {
+	ecclipses.on("mouseover", function(d) {
 		div.transition()
 			.duration(500)
-			.style("opacity", 0);
-		div.transition()
-			.duration(200)
-			.style("opacity", 1);
-		div	.html(
-			d.name + " (" + d.degree + ")"
+			.style("opacity", 1)
+			.style("background-color", "white");
+		div.html(
+			d.name + d.degree + "<div class= 'closeToolTips'>X</div>"
 		)
-			.style("left", (d3.event.pageX) + "px")
-			.style("top", (d3.event.pageY - 28) + "px");// Pour placer l'info/cercles.
-	})
-		.on("mouseleave", function(d) {
+			.style("left", (d3.event.pageX + 18) + "px")
+			.style("top", (d3.event.pageY - 35) + "px");// Pour placer l'info/cercles.
+	});
+	svg.on("mouseleave", function(d) {
 		div
 			.style("opacity", 0);
 	});
-	// Add axes:
+	// ------- Add axes and info/graph : -------- //
 	svg.append("g")
-	//.attr('transform', 'translate(0,'+ heightGraph -100 +')')// Pour placer l'axe comme il faut.
 		.attr("transform", "translate(20,320)")// Pour placer l'axe comme il faut. TODO : mettre en dynamique et pour responsive.
 		.call(xAxis);
+
+	var infoStudiesTitle = svg.append("g")
+	.append("text")
+	.attr("x", function(){return education.complements.xPositionSubTitleStudies;})
+	.attr("y", function(){return education.complements.yPositionSubTitleStudies;})
+	//.style("font-weight", "bold")
+	.style("fill", colorStrokeCircleGraph)
+	.style("font-size", "1.04em")
+	.text(education.complements.subTitleStudies);
+	var infoStudiesFormations = svg.append("g")
+	.append("text")
+	.attr("x", function(){return education.complements.xPositionSubTitleFormations;})
+	.attr("y", function(){return education.complements.yPositionSubTitleFormations;})
+	.style("fill", colorStrokeCircleGraph)
+	//.style("font-weight", "bold")
+	.style("font-size", "1.04em")
+	.text(education.complements.subTitleFormations);
 
 }
 startScript();

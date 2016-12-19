@@ -9,8 +9,7 @@ Pour ce CV, j'ai utilisé le cours de Udacity Front End mais pas mal adapté.
 
 
 ## TODO :
-* Remplacer barre/skills par http://bl.ocks.org/mbostock/4061961 ???
-* Mettre des effets ombres (and coe ...)/images de transition.
+* Remplacer barre/skills par http://bl.ocks.org/mbostock/4061961 ???.
 * Add zoom que j'avais fait, cool !
 * Utiliser http://loicbcn.ovh/jack-sparrow/
 * Add icon/name site
@@ -31,6 +30,6 @@ Pour ce CV, j'ai utilisé le cours de Udacity Front End mais pas mal adapté.
 * ~~Aligner bien les titres des skills à gauche~~
 * ~~Changer photo autres aspects, langues~~
 * ~~Video de ping pong~~
-* refaire graph/estudios avec http://jsdatav.is/chap07.html
+* Refaire graph/estudios avec http://jsdatav.is/chap07.html
 
 

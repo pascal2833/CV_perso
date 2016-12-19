@@ -10,7 +10,6 @@ var bio = {
 		"longitude": 4,
 		"mobile": "+34 650-754-255"
 	},
-	//"welcomeMessage": "Welcome message",
 	"skills": [
 		"HTML5", "css/Sass", , "javascript", "jQuery", "AngularJS", "Grunt/npm","d3.js"
 	],
@@ -22,13 +21,11 @@ var bio = {
 
 var education = {
 	"schoolsAndOnlineCourses": [{
-		"name": "Lycee E.Branly",
+		"name": '<a href="http://www.lyceebranlydreux.fr/actualites-du-lycee.html" target="_blank">Lycee E.Branly</a> :<br>',
 		"location": "Dreux (France)",
 		"latitude": 48.74,
 		"longitude": 1.37,
 		"textPopUpMap": "Vivi en esta ciudad (Dreux) hasta el bachillerato. Recuerdos, recuerdos, ...",
-		"colorCircleGraph": "rgb(150,150,200)",
-		"colorCircleStrokeGraph": "rgb(60,60,60)",
 		"degree": "Bachillerato científico",
 		"majors": ["major1", "major2", "major3"],
 		"dates": "October 15, 1996",
@@ -36,13 +33,11 @@ var education = {
 		"onlineOrSchool": "school",
 		"url": "http://www.lyceebranlydreux.fr/actualites-du-lycee.html"
 	}, {
-		"name": "Paris IV Sorbonne",
+		"name": '<a href="http://www.espagnol.paris-sorbonne.fr/" target="_blank">Paris IV Sorbonne</a> :<br>',
 		"location": "Paris",
 		"latitude": 48.85,
 		"longitude": 2.34,
 		"textPopUpMap": "Estudie en la Universidad Paris Sorbonne, en el centro del Barrio Latino de Paris",
-		"colorCircleGraph": "rgb(150,150,200)",
-		"colorCircleStrokeGraph": "rgb(60,60,60)",
 		"degree": "Licenciatura en geografía y hidrología",
 		"majors": ["major1", "major2", "major3"],
 		"dates": "October 15, 2000",
@@ -50,27 +45,23 @@ var education = {
 		"onlineOrSchool": "school",
 		"url": "http://www.english.paris-sorbonne.fr/"
 	}, {
-		"name": "EdX-curso via plataforma web, Universidad MIT",
-		"location": "Dreux (France)",
+		"name": 'Universidad MIT: curso via plataforma web, <a href="https://www.edx.org/" target="_blank">EdX</a> :<br>',
+		"location": "bdeh",
 		"latitude": 48.74,
 		"longitude": 1.37,
-		"textPopUpMap": "Vivi en esta ciudad (Dreux) hasta el bachillerato. Recuerdos, recuerdos, ...",
-		"colorCircleGraph": "rgb(200,150,150)",
-		"colorCircleStrokeGraph": "rgb(60,60,60)",
-		"degree": "2 meses de formación en python",
+		"textPopUpMap": "hdeiwi",
+		"degree": "2 meses de formación en Python",
 		"majors": ["major1", "major2", "major3"],
 		"dates": "October 15, 2014",
 		"positionAxeY": 60,
-		"onlineOrSchool": "school",
-		"url": "http://www.lyceebranlydreux.fr/actualites-du-lycee.html"
+		"onlineOrSchool": "online",
+		"url": "https://www.edx.org/"
 	}, {
-		"name": "Universidad de Barcelona, UB",
+		"name": '<a href="http://www.ub.edu/web/ub/es/" target="_blank">Universidad de Barcelona, UB</a> :<br>',
 		"location": "Barcelona",
 		"latitude": 48.85,
 		"longitude": 2.34,
 		"textPopUpMap": "TODO",
-		"colorCircleGraph": "rgb(150,150,200)",
-		"colorCircleStrokeGraph": "rgb(60,60,60)",
 		"degree": "Master en gestión ambiental",
 		"majors": ["major1", "major2", "major3"],
 		"dates": "Septembre 15, 2006",
@@ -78,78 +69,72 @@ var education = {
 		"onlineOrSchool": "school",
 		"url": "TODO"
 	},{
-		"name": "Universidad Autonoma de Barcelona, UAB-CREAF",
+		"name": '<a href="http://www.creaf.cat/es" target="_blank">CREAF </a>(Centre de Recerca Ecològica i Aplicacions Forestals)/UAB: <br>',
 		"location": "TODO",
 		"latitude": 48.85,
 		"longitude": 2.34,
 		"textPopUpMap": "TODO",
-		"colorCircleGraph": "rgb(150,150,200)",
-		"colorCircleStrokeGraph": "rgb(60,60,60)",
 		"degree": "Master en Sistema de informacion geográfica y teledetección",
 		"majors": ["major1", "major2", "major3"],
 		"dates": "Septembre 15, 2010",
 		"positionAxeY": 130,
 		"onlineOrSchool": "school",
 		"url": "TODO"
-	}]
+	}],
+	"complements": {"subTitleStudies": "Estudios", "subTitleFormations": "Formaciones", "xPositionSubTitleStudies": 850, "yPositionSubTitleStudies": 230, "xPositionSubTitleFormations": 850, "yPositionSubTitleFormations": 110},
+
 };
 
 var work = {
 	"jobs": [{
 		"title": "Desarrollador web/front-end",
-		/*"employer": '<a href= "http://www.soprasteria.com/en" target="_blank">Sopra-Steria',*/
 		"location": "Barcelona",
 		"latitude": 41.39,
 		"longitude": 2.16,
 		"textPopUpMap": "Trabajo actualmente en Sopra Steria, en Barcelona",
 		"dates": "Octubre 2015-actual",
-		/*"description": "Participación en varios proyectos web para clientes Franceses.",*/
 		"tecnologies": "Sass, HTML5, javascript, jQuery, AngularJS, Bootstrap, Grunt, PHP, Symfony2, Oracle, Java/JavaEE"
 	}, {
 		"title": 'Desarrollador Front-end/mapas digitales',
-		/*"employer": '<a href="http://www.creaf.cat/" target="_blank">CEA/CREAF-UAB</a>',*/
 		"location": "Bellaterra, Barcelona",
 		"latitude": 41.5,
 		"longitude": 2.09,
 		"textPopUpMap": "Despues de trabajar en el CEA-LSCE, volvi a Barcelona para seguir trabajando en el Global Carbon Atlas desde con el CREAF",
 		"dates": "Enero 2015-septiembre 2015",
-		/*"description": "Representación de datos ambientales en un Web Map Service desde la parte cliente: aplicación al portal Global Carbon Atlas",*/
 		"tecnologies": "HTML5, javascript, jQuery, css, D3.js."
 	}, {
 		"title": "Desarrollador web-mapping",
-		/*"employer": '<a href="http://www.lsce.ipsl.fr/en/" target="_blank">CEA-LSCE</a>',*/
 		"location": "Paris",
 		"fillColorSymbolMap": "rgb(100,200,100)",
 		"latitude": 48.7,
 		"longitude": 2.195,
 		"textPopUpMap": "Empezé a desarollar participando en un nuevo portal, el Global Carbon Atlas en CEA-LSCE, al sur de Paris (dentro del contexto de un proyecto europeo dirigido por el CREAF, en Barcelona)",
 		"dates": "Enero de 2012-diciembre de 2014",
-		/*"description": 'Participación, desde su inicio hasta su “fin” al portal <a href="http://www.globalcarbonatlas.org/?q=en/content/welcome-carbon-atlas" target="_blank">Global Carbon Atlas</a><span> (concepción y realización de los mapas)</span>',*/
 		"tecnologies": "HTML5, javascript, jQuery, css, Bootstrap, OpenLayers, Geoserver, Python, PHP, xml."
 	}],
 	"nodes":[
-		{"nameEntreprise":"Sopra-Steria", "workName": "Desarrollador web", "yWorkName": 120, "indiceArray": 0},
-		{"nameEntreprise":"LSCE-CREAF", "workName": "Desarrollador Front-end", "yWorkName": 160, "description": "blablabla2", "indiceArray": 1},
-		{"nameEntreprise":"CEA-LSCE", "workName": "Desarrollador web-mapping", "yWorkName": 200, "description": "blablabla3", "indiceArray": 2},
+		{"nameEntreprise":"Sopra-Steria", "workName": "Desarrollador web", "yWorkName": 80, "indiceArray": 0},
+		{"nameEntreprise":"LSCE-CREAF", "workName": "Desarrollador Front-end", "yWorkName": 180, "description": "blablabla2", "indiceArray": 1},
+		{"nameEntreprise":"CEA-LSCE", "workName": "Desarrollador web-mapping", "yWorkName": 280, "description": "blablabla3", "indiceArray": 2},
 	],
 	"complementsNodes":[
 		{
 			"source":0,
 			"date":"Octubre 2015 - actual",
 			"description": '<a href= "http://www.soprasteria.com/en" target="_blank">Sopra-Steria</a><h4>Trabajo con clientes frances y proyecto interno:</h4><ul><li>Designo de la parte front-end de un proyecto interno e inclusión con JavaEE.</li><li>Web nueva para gestionar las inscripciones de los alumnos en el futuro gran centro universitario francés: tareas de back y de front-end simultaneamente.</li><li>Aplicación de “La Poste”: tareas de back-end.</li></ul>',
-			"yWorkName": 120
+			"yWorkName": 85
 		},
 		{
 			"source":1,
 			"date":"Enero 2015-septiembre 2015",
 			"description": '<a href="http://www.creaf.cat/" target="_blank">CEA/CREAF-UAB</a><h4>Continuación, desde España, del proyecto empezado con el CEA-LSCE:</h4><ul><li>Por razones familiales me fui de Francia para volver a Barcelona donde segui trabajando en el <a href="http://www.globalcarbonatlas.org/en/content/welcome-carbon-atlas" target="_blank">Global Carbon Atlas</a>.</li><li>Representación de datos ambientales en un Web Map Service desde la parte cliente: generación de mapas de incertidumbre con Python e integración al Global carbon Atlas</li></ul>',
-			"yWorkName": 160
+			"yWorkName": 185
 		},
 		{
 			"source":2,
 			"date":"Enero de 2012-diciembre de 2014",
 			"description": '<a href="http://www.lsce.ipsl.fr/en/" target="_blank">CEA-LSCE</a><h4>Ayuda en la realización del <a href="http://www.globalcarbonatlas.org/en/content/welcome-carbon-atlas" target="_blank">Global Carbon Atlas</a>: data visualización aplicado a mapas</h4><ul><li>Contexto: trabajo con un "partner" frances del proyecto Europeo <a href="http://www.geoviqua.org/" target="_blank">GeoViQua</a> de 3 años, dirigido por el CREAF (Barcelona)</li><li>Creación y diseño de los mapas e integración de herramientas creadas por el proyecto GeoViQua</li><li>Creación y gestión de un formulario destinado a los probadores de datos.</li></ul>',
-			"yWorkName": 200
+			"yWorkName": 285
 		},
 	],
 	"links":[// Note : source = nodes, target = childrens.
