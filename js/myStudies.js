@@ -63,15 +63,16 @@ function startScript() {
 			.style("opacity", 1)
 			.style("background-color", "white");
 		div.html(
-			d.name + d.degree + "<div class= 'closeToolTips'>X</div>"
+			d.name + d.degree
 		)
-			.style("left", (d3.event.pageX + 18) + "px")
+			.style("left", (d3.event.pageX + 5) + "px")
 			.style("top", (d3.event.pageY - 35) + "px");// Pour placer l'info/cercles.
 	});
 	svg.on("mouseleave", function(d) {
 		div
 			.style("opacity", 0);
 	});
+
 	// ------- Add axes and info/graph : -------- //
 	svg.append("g")
 		.attr("transform", "translate(20,320)")// Pour placer l'axe comme il faut. TODO : mettre en dynamique et pour responsive.

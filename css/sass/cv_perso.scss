@@ -105,9 +105,16 @@ a:hover {
 // TODO : mettre bien là ou toca/scss.
 .tooltip {
 	@include toolTipInfo;
-	width: 200px;
+	width: 150px;
 	//opacity: 0;
+	/*.closeToolTips {
+		position: absolute;
+		left: 92%;
+		top: 0px;
+		font-weight: bold;
+	}*/
 }
+
 
 .globalPageContainer {
 	width: 100%;
@@ -329,9 +336,7 @@ a:hover {
 			}
 		}
 		&.education_section {
-			.tooltip .closeToolTips {
-				color: red;
-			}
+
 		}
 		&.mapResum {
 			#map {
