@@ -1,3 +1,7 @@
+var dateActuelle = new Date();
+var dateString = dateActuelle.toDateString();
+console.log(dateString);
+
 // Using json notation :
 var bio = {
 	"name": "Pascal Evano",
@@ -28,7 +32,8 @@ var education = {
 		"textPopUpMap": "Vivi en esta ciudad (Dreux) hasta el bachillerato. Recuerdos, recuerdos, ...",
 		"degree": "Bachillerato científico",
 		"majors": ["major1", "major2", "major3"],
-		"dates": "October 15, 1996",
+		"dates": "June 30, 1996",
+		"date_finale": "July 30, 1996",
 		"positionAxeY": 130,
 		"onlineOrSchool": "school",
 		"url": "http://www.lyceebranlydreux.fr/actualites-du-lycee.html"
@@ -40,23 +45,38 @@ var education = {
 		"textPopUpMap": "Estudie en la Universidad Paris Sorbonne, en el centro del Barrio Latino de Paris",
 		"degree": "Licenciatura en geografía y hidrología",
 		"majors": ["major1", "major2", "major3"],
-		"dates": "October 15, 2000",
+		"dates": "September 1, 1998",
+		"date_finale": "June 30, 2002",
 		"positionAxeY": 130,
 		"onlineOrSchool": "school",
 		"url": "http://www.english.paris-sorbonne.fr/"
 	}, {
-		"name": 'Universidad MIT: curso via plataforma web, <a href="https://www.edx.org/" target="_blank">EdX</a> :<br>',
+		"name": '<a href="https://www.edx.org/" target="_blank">Universidad MIT, EdX</a> :<br>',
 		"location": "bdeh",
 		"latitude": 48.74,
 		"longitude": 1.37,
 		"textPopUpMap": "hdeiwi",
-		"degree": "2 meses de formación en Python",
+		"degree": "Formación en Python",
 		"majors": ["major1", "major2", "major3"],
-		"dates": "October 15, 2014",
+		"dates": "July 1, 2015",
+		"date_finale": "August 30, 2015",
 		"positionAxeY": 60,
 		"onlineOrSchool": "online",
 		"url": "https://www.edx.org/"
 	}, {
+		"name": '<a href="https://www.udacity.com/" target="_blank">Udacity</a> (Nanodegree) :<br>',
+		"location": "bdeh",
+		"latitude": 48.74,
+		"longitude": 1.37,
+		"textPopUpMap": "hdeiwi",
+		"degree": "Formación front-end, en curso",
+		"majors": ["major1", "major2", "major3"],
+		"dates": "August 1, 2016",
+		"date_finale": dateString,
+		"positionAxeY": 60,
+		"onlineOrSchool": "online",
+		"url": "https://www.udacity.com/"
+	},{
 		"name": '<a href="http://www.ub.edu/web/ub/es/" target="_blank">Universidad de Barcelona, UB</a> :<br>',
 		"location": "Barcelona",
 		"latitude": 48.85,
@@ -65,23 +85,25 @@ var education = {
 		"degree": "Master en gestión ambiental",
 		"majors": ["major1", "major2", "major3"],
 		"dates": "Septembre 15, 2006",
+		"date_finale": "March 20, 2008",
 		"positionAxeY": 130,
 		"onlineOrSchool": "school",
 		"url": "TODO"
 	},{
-		"name": '<a href="http://www.creaf.cat/es" target="_blank">CREAF </a>(Centre de Recerca Ecològica i Aplicacions Forestals)/UAB: <br>',
+		"name": '<a href="http://www.creaf.cat/es" target="_blank">CREAF </a>/UAB: <br>',
 		"location": "TODO",
 		"latitude": 48.85,
 		"longitude": 2.34,
-		"textPopUpMap": "TODO",
+		"textPopUpMap": "Después del bachillerato, estudie geografía física en la Sorbona, en Paris. Después de mi licencia, pasé la oposición para ser profesor y ejerce en colegios en las afueras de parís. Luego, me fui a Barcelona para vivir con mi futura esposa",
 		"degree": "Master en Sistema de informacion geográfica y teledetección",
 		"majors": ["major1", "major2", "major3"],
-		"dates": "Septembre 15, 2010",
+		"dates": "September 15, 2010",
+		"date_finale": "September 30, 2011",
 		"positionAxeY": 130,
 		"onlineOrSchool": "school",
 		"url": "TODO"
 	}],
-	"complements": {"subTitleStudies": "Estudios", "subTitleFormations": "Formaciones", "xPositionSubTitleStudies": 850, "yPositionSubTitleStudies": 230, "xPositionSubTitleFormations": 850, "yPositionSubTitleFormations": 110},
+	"complements": {"subTitleStudies": "Estudios", "subTitleFormations": "Formaciones", "xPositionSubTitleStudies": 850, "yPositionSubTitleStudies": 210, "xPositionSubTitleFormations": 850, "yPositionSubTitleFormations": 90},
 
 };
 
@@ -91,7 +113,7 @@ var work = {
 		"location": "Barcelona",
 		"latitude": 41.39,
 		"longitude": 2.16,
-		"textPopUpMap": "Trabajo actualmente en Sopra Steria, en Barcelona",
+		"textPopUpMap": "Llegué a Barcelona en el verano de 2006 y trabajé como teleoperador (en Francés!) durante un año mientras estaba haciendo un master en 'Planificación territorial y gestión ambiental'. Luego, trabajé 2 años en hidrología desde una empresa privada, Ofiteco, para el ACA (Agencia Catalana del Agua). Actualmente, trabajo en Sopra-Steria",
 		"dates": "Octubre 2015-actual",
 		"tecnologies": "Sass, HTML5, javascript, jQuery, AngularJS, Bootstrap, Grunt, PHP, Symfony2, Oracle, Java/JavaEE"
 	}, {
@@ -99,7 +121,7 @@ var work = {
 		"location": "Bellaterra, Barcelona",
 		"latitude": 41.5,
 		"longitude": 2.09,
-		"textPopUpMap": "Despues de trabajar en el CEA-LSCE, volvi a Barcelona para seguir trabajando en el Global Carbon Atlas desde con el CREAF",
+		"textPopUpMap": "Hice un master en el CREAF/UAB en 'Sistema de información Geográfica' y a raíz de este master, empecé a trabajar en el CEA-LSCE, en París (dentro del contexto de un proyecto europeo). Después de 3 años, volví a Barcelona para seguir trabajando en el Global Carbón Atlas desde el CREAF",
 		"dates": "Enero 2015-septiembre 2015",
 		"tecnologies": "HTML5, javascript, jQuery, css, D3.js."
 	}, {
@@ -108,7 +130,7 @@ var work = {
 		"fillColorSymbolMap": "rgb(100,200,100)",
 		"latitude": 48.7,
 		"longitude": 2.195,
-		"textPopUpMap": "Empezé a desarollar participando en un nuevo portal, el Global Carbon Atlas en CEA-LSCE, al sur de Paris (dentro del contexto de un proyecto europeo dirigido por el CREAF, en Barcelona)",
+		"textPopUpMap": "Empecé a desarrollar participando en un nuevo portal, el Global Carbón Atlas en CEA-LSCE, al sur de Paris (dentro del contexto de un proyecto europeo dirigido por el CREAF, en Barcelona)",
 		"dates": "Enero de 2012-diciembre de 2014",
 		"tecnologies": "HTML5, javascript, jQuery, css, Bootstrap, OpenLayers, Geoserver, Python, PHP, xml."
 	}],

@@ -20,21 +20,17 @@ function startScript() {
 	var popup;
 	var circleRadius = 20000;// Initialisation (/niveau zoom).
 	var circleArray = [];
-	var workStrokeColor = "rgb(50,50,80)";
-	var schoolStrokeColor = "rgb(80,50,50)";
-	var strokeOpacity = .5;
 	var fillOpacity = .5;
-	var workFillColor = "rgb(150,150,200)";
-	var schoolFillColor = "rgb(200,150,150)";
+	var colorStrokeCircleGraph = "rgb(20,25,70)";
+	var colorFillCircleGraph = "rgb(220,220,240)";
 
 	// Circles creation:
 	work.displayCircleOnMap = function() {
 		work.jobs.forEach(function(element, index) {
 			// Display cities/works/maps :
 			circle = L.circle([element.latitude, element.longitude], { //[lat, long]
-				color: workStrokeColor,
-				opacity: strokeOpacity,
-				fillColor: workFillColor,
+				color: colorStrokeCircleGraph,
+				fillColor: colorFillCircleGraph,
 				fillOpacity: fillOpacity,
 				radius: circleRadius
 			});
@@ -55,9 +51,8 @@ function startScript() {
 		education.schoolsAndOnlineCourses.forEach(function(element, index) {
 			if (element.onlineOrSchool == "school") {
 				circle = L.circle([element.latitude, element.longitude], { //[lat, long]
-					color: schoolStrokeColor,
-					opacity: strokeOpacity,
-					fillColor: schoolFillColor,
+					color: colorStrokeCircleGraph,
+					fillColor: colorFillCircleGraph,
 					fillOpacity: fillOpacity,
 					radius: circleRadius
 				});
@@ -86,7 +81,7 @@ function startScript() {
 				popup = L.popup()
 					.setLatLng([latCircle,longCircle])
 					.setContent(textPopUp)
-					.addTo(mymap);
+					.openOn(mymap);// A la différence de .addTo(mymap);, permet d'éléminier celui antérieur.
 			});
 		}
 	});
@@ -99,7 +94,7 @@ function startScript() {
 			popup = L.popup()
 				.setLatLng([latCircle,longCircle])
 				.setContent(textPopUp)
-				.addTo(mymap);
+				.openOn(mymap);
 		});
 	});
 

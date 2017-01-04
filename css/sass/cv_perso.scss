@@ -105,16 +105,8 @@ a:hover {
 // TODO : mettre bien là ou toca/scss.
 .tooltip {
 	@include toolTipInfo;
-	width: 150px;
-	//opacity: 0;
-	/*.closeToolTips {
-		position: absolute;
-		left: 92%;
-		top: 0px;
-		font-weight: bold;
-	}*/
+	width: 250px;
 }
-
 
 .globalPageContainer {
 	width: 100%;
@@ -128,34 +120,6 @@ a:hover {
 	}
 	.svgEducationContainer, .svgWorkingExperiencesContainer {
 		@include svgContainers;
-	}
-	// map tool tips:
-	.toolTipInfo {
-		content: "";
-		opacity: 0;
-		width: 175px;
-		color: #1f1818;
-		text-align: center;
-		border-radius: 4px;
-		padding: 5px 3px;
-		position: absolute;
-		z-index: 1;
-		margin-top: -80px;
-		margin-left: -175px;
-		border: solid 1px $grisClair;
-		transition: opacity 1.5s;
-	}
-	.addToolTip:hover .toolTipInfo {
-		opacity: 1;
-	}
-	.toolTipInfo::after {// Add bottom arrow.
-		content: "";
-		position: absolute;
-		top: 100%; /* At the bottom of the tooltip */
-		left: 31%;
-		border-width: 11px;
-		border-style: solid;
-		border-color: $grisClair transparent transparent transparent;
 	}
 	.header {
 		margin-top: 12px;
@@ -345,7 +309,9 @@ a:hover {
 					border: none;// Pour éviter border/tiles des cartes ...
 				}
 				.leaflet-popup-content {
+					font-size: 1.3em;
 				}
+
 			}
 		}
 		&.languesEtAutresSection {

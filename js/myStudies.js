@@ -15,9 +15,10 @@ function startScript() {
 		var dateInMs =dateObject.getTime();
 		allDatesInMs.push(dateInMs);
 	});
+	var dateActuelle = new Date();
 
 	var xScale = d3.scaleTime()
-	.domain([new Date(d3.min(allDatesInMs)), new Date(d3.max(allDatesInMs)*1.0001)])// Set input domain (= domain/read data)
+	.domain([new Date(d3.min(allDatesInMs)), dateActuelle*1.0001])// Set input domain (= domain/read data)
 	.range([0, widthGraph-100]);//set output domain (representation des données sur le graph, en gnal en pixels).
 	// Note : -100 parce que si non, prend tte la largeur du svg, container element, normal !!!
 	xScale.nice();
@@ -32,6 +33,7 @@ function startScript() {
 	// Start to draw ... //
 	var diametreCercle = 8;
 	var colorStrokeCircleGraph = "rgb(20,25,70)";
+	var colorFillCircleGraph = "rgb(248,248,252)";
 	// On selectionne svg (sur html) et on défini ses dimensions (mème que conteneur -> création container parce que + facile pour styliser):
 	var svg = d3.select(".svgFormationGraph");
 	$('.svgFormationGraph').attr("width", widthGraph);
@@ -43,21 +45,21 @@ function startScript() {
 	.attr("class", "tooltip")              // apply the 'tooltip' class
 	.style("opacity", 0);                  // set the opacity to 0
 
-	// On fait le join element/data et on ajoute elements de styles  + tooltip/cercles.:
-	var ecclipses = svg.selectAll("ellipseToMake")
+	// On fait le join element/data et on ajoute elements de styles  + tooltip/rectangles.:
+	var rectangles = svg.selectAll("ellipseToMake")
 	.data(education.schoolsAndOnlineCourses)
-	.enter().append("ellipse")
-	.attr("cx", function(d) {return xScale(new Date(d.dates));})
-	.attr("cy", function(d) {return yScale(d.positionAxeY);})
-	.attr("rx", 8)
-	.attr("ry", 10)
-	.attr("fill", "rgb(248,248,252)")
+	.enter().append("rect")
+	.attr("x", function(d) {return xScale(new Date(d.dates));})
+	.attr("y", function(d) {return yScale(d.positionAxeY);})
+	.attr("width", function(d) {return xScale(new Date(d.date_finale)) - xScale(new Date(d.dates));})
+	.attr("height", 4)
+	.attr("fill", colorFillCircleGraph)
 	.attr("stroke", colorStrokeCircleGraph)
 	.attr("stroke-width", 1.3)
-	.attr("r", diametreCercle)
+	//.attr("r", diametreCercle)
 	.style("cursor", "pointer");
 	// Tooltip stuff after this
-	ecclipses.on("mouseover", function(d) {
+	rectangles.on("mouseover", function(d) {
 		div.transition()
 			.duration(500)
 			.style("opacity", 1)
@@ -65,8 +67,8 @@ function startScript() {
 		div.html(
 			d.name + d.degree
 		)
-			.style("left", (d3.event.pageX + 5) + "px")
-			.style("top", (d3.event.pageY - 35) + "px");// Pour placer l'info/cercles.
+			.style("left", (d3.event.pageX - 10) + "px")
+			.style("top", (d3.event.pageY + 6) + "px");// Pour placer l'info/cercles.
 	});
 	svg.on("mouseleave", function(d) {
 		div

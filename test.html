@@ -13,59 +13,31 @@
 <!--Fin VO-->
 
 
-
-<!--Erreur :-->
-<html:select
-						 multiple="multiple" size="10" property="projetsSelected"
-						 styleId="projetList"
-						 onchange="getCollaborateursParProjet();">
-	<html:option value="">
-		<bean:message key="formTitre.Nom" bundle="formacionEjemplo"/>
-	</html:option>
-	<logic:iterate id="lprojet" name="findForm" property="listProjets"> <!--listProjets = la liste de tous les projets.-->
-		<bean:define id="idPrj" name="lprojet" property="id" />
-		<bean:define id="name" name="lprojet" property="projNom" />
-		<html:option value="${idPrj}">${name}</html:option>
+<html:select name= "findForm" multiple="multiple" size="10" property="projetsSelected" styleId="projetMultiSelect" onchange="getCollaborateursParProjet();">
+	<!--<html:option value="">
+<bean:message key="filtre.tous" bundle="planCharges" />
+</html:option>-->
+	<logic:iterate id="oneProject" name="findForm" property="allProjectsList">
+		<bean:define id="projectId" name="oneProject" property="id"></bean:define>
+		<bean:define id="projectName" name="oneProject" property="projNom"></bean:define>
+		<html:option value="${projectId}">${projectName}</html:option>
 	</logic:iterate>
 </html:select>
-<!------------>
-
-<!--Pas d'erreur :-->
-<html:select
-						 multiple="multiple" size="10"
-						 property="projetsSelected"
-						 styleId="projetList"
-						 onchange="getCollaborateursParProjet();">
-	<html:option value=""><!--Valeur(s) par défaut du multiselect ??? -->
-		<!--Si plusieurs bean:message, plusieurs choix.-->
-		<bean:message key="formTitre.Nom" bundle="formacionEjemplo"/>
-	</html:option>
-	<html:option value=""><!--Valeur(s) par défaut du multiselect -->
-		<bean:message key="formTitre.Nom" bundle="formacionEjemplo"/>
-	</html:option>
-
-</html:select>
-<!------------>
 
 
-The property attribute of the HTML select tag hold the country value selected by the user.
-Present dans struts, dans form-bean
+///////////////////////////////
+///// Tarea PBT-882: //////////////
+//////////////////////////////////
 
-Pour logic:iterate :
-https://www.mkyong.com/struts/struts-logic-iterate-example/
-/iterate :
-name = list value.
-property = ???
-/bean:define :
-id = ???
-name = ???
-property = ???
+Note : apparemment, bcp de manières différentes de construire les multiselect !!!
 
-Note/mi tarea, PBY-882 :
+The property attribute of the HTML select tag hold the value selected by the user. Present dans struts, dans form-bean
+html:select name="findForm" -> fait ref au bean ou on va trouver les données, ici, défini dans strut, <form-bean name="findForm" et property = <form-property name = ...
+value/html:option -> correspond à la valeur choisie par utilisateur, va remplacer property de html:select (à définir dans form-bean/struts) lors submit.
+
+
 <!--
 Déduction, à confirmer : name/bean:define (à définir dans struts) = là ou va se mettre les données, cad celles du multiselect ?
-<html:select name="findForm" -> fait ref au bean ou on va trouver les données, ici, défini dans strut, <form-bean name="findForm" et property = <form-property name = ...
-value/html:option -> correspond à la valeur choisie par utilisateur, va remplacer name de html:select (à définir dans form-bean/struts) lors submit.
 name/logic:iterate = la lista o array (définr dans controller, en général, FindAction pour nous).
 The variable specified by the attribute id in the <logic:iterate> tag holds the current value of the iteration.
 
@@ -78,17 +50,6 @@ request.getSession().setAttribute(FORM_UTILISATEUR_RPD,
 listUtilisateursRPD);
 -->
 
-<!-- Fait dans modifierProjetsResultat.jsp : -->
-<!--								 <html:select name="editionForm" property="utilisateurRPDSelected">-->
-<!--									<bean:define id="listUtilisateursRPD" name="utilisateurRPD" scope="session" type="java.util.Collection" />-->
-<!--										<logic:notEmpty name="listUtilisateursRPD">-->
-<!--											<html:optionsCollection name="listUtilisateursRPD" value="id" label="nom" />-->
-<!--										</logic:notEmpty>-->
-<!--								</html:select>-->
-
-///////////////////////////////
-///// Tarea : //////////////
-//////////////////////////////////
 
 <!-- Pascal : PBT-882 -->
 <TR>
@@ -120,14 +81,17 @@ listUtilisateursRPD);
 				</html:select>
 			</TD>
 
-	// Dans FindAcion.java :
+			// Dans FindAcion.java :
 			// PBT-882 Pascal
-		//IProjetService projetsService = (IProjetService) getService(IconstanteAction.FORM_PROJET_SERVICE);
-		//List<Utilisateur> listeUtilisateurRPD = projetsService.listUtilisateur("RPD");
-		//request.getSession(false).setAttribute(IconstanteAction.FORM_UTILISATEUR_RPD, listeUtilisateurRPD);
-		//int y = 2; // s'arrete bien ici .. mais pète ensuite dans ActionForward process, avec preAction(arg0, arg1, arg2, arg3); ?
-		// Fin PBT-882 Pascal
+			//IProjetService projetsService = (IProjetService) getService(IconstanteAction.FORM_PROJET_SERVICE);
+			//List<Utilisateur> listeUtilisateurRPD = projetsService.listUtilisateur("RPD");
+			//request.getSession(false).setAttribute(IconstanteAction.FORM_UTILISATEUR_RPD, listeUtilisateurRPD);
+			//int y = 2; // s'arrete bien ici .. mais pète ensuite dans ActionForward process, avec preAction(arg0, arg1, arg2, arg3); ?
+			// Fin PBT-882 Pascal
 
+			// champs ajoutes dans le strut local :
+			<!--			<form-property name="listeManagerDeDomaineCreated" type="java.lang.String[]" />-->
+			<!--			<form-property name="managerDeDomaineSeleted" type="java.lang.String" />-->
 
 
 

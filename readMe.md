@@ -10,7 +10,6 @@ Pour ce CV, j'ai utilisé le cours de Udacity Front End mais pas mal adapté.
 
 ## TODO :
 * Remplacer barre/skills par http://bl.ocks.org/mbostock/4061961 ???.
-* Add zoom que j'avais fait, cool !
 * Utiliser http://loicbcn.ovh/jack-sparrow/
 * Add icon/name site
 * Option multilangue.
@@ -30,6 +29,10 @@ Pour ce CV, j'ai utilisé le cours de Udacity Front End mais pas mal adapté.
 * ~~Aligner bien les titres des skills à gauche~~
 * ~~Changer photo autres aspects, langues~~
 * ~~Video de ping pong~~
-* Refaire graph/estudios avec http://jsdatav.is/chap07.html
+* ~~Refaire graph/estudios avec http://jsdatav.is/chap07.html~~
+* Ajouter info/formation et studies + jobs.
+* ~~Enlever TODO/tool tip map info, à compléter.~~
+* Mettre couleur <a></a> (icones portofolio en gris, pas en bleu !)
+* Passer la date actuelle en dynamique/cours de Udacity.
 
 
