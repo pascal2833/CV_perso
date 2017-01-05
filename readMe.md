@@ -4,7 +4,7 @@ Pour ce CV, j'ai utilisé le cours de Udacity Front End mais pas mal adapté.
 
 * Bonne partie de l'html est généré par js et les données à insérées dans cet html sont elles même sissue d'un autre fichier js contenant des objets json.
 * On a également utiliser **l'encapsulation** pour avoir un code + propre, cad :
-    * on met notre fonction associée à un objet, pour que ce soit + clair et éviter le risque des erreurs si on appelle avec même nom, ...
+		* on met notre fonction associée à un objet, pour que ce soit + clair et éviter le risque des erreurs si on appelle avec même nom, ...
 * Inclure http://www.findtheconversation.com/concept-map/pour expériences (au centre, nom fonction)
 
 
@@ -30,7 +30,7 @@ Pour ce CV, j'ai utilisé le cours de Udacity Front End mais pas mal adapté.
 * ~~Changer photo autres aspects, langues~~
 * ~~Video de ping pong~~
 * ~~Refaire graph/estudios avec http://jsdatav.is/chap07.html~~
-* Ajouter info/formation et studies + jobs.
+* ~~Ajouter info/formation et studies + jobs.~~
 * ~~Enlever TODO/tool tip map info, à compléter.~~
 * Mettre couleur <a></a> (icones portofolio en gris, pas en bleu !)
 * Passer la date actuelle en dynamique/cours de Udacity.

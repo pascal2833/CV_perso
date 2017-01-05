@@ -51,6 +51,32 @@ var education = {
 		"onlineOrSchool": "school",
 		"url": "http://www.english.paris-sorbonne.fr/"
 	}, {
+		"name": 'Certificado de catalán (Generalitad de Catalunya) ',
+		"location": "bdeh",
+		"latitude": 48.74,
+		"longitude": 1.37,
+		"textPopUpMap": "hdeiwi",
+		"degree": "Nivel basic (B)",
+		"majors": ["major1", "major2", "major3"],
+		"dates": "Juny 1, 2009",
+		"date_finale": "November 1, 2009",
+		"positionAxeY": 60,
+		"onlineOrSchool": "online",
+		"url": "https://www.edx.org/"
+	},{
+		"name": 'Git/GitHub: ',
+		"location": "bdeh",
+		"latitude": 48.74,
+		"longitude": 1.37,
+		"textPopUpMap": "hdeiwi",
+		"degree": "Formación por internet",
+		"majors": ["major1", "major2", "major3"],
+		"dates": "January 1, 2015",
+		"date_finale": "February 1, 2015",
+		"positionAxeY": 60,
+		"onlineOrSchool": "online",
+		"url": "https://www.edx.org/"
+	},{
 		"name": '<a href="https://www.edx.org/" target="_blank">Universidad MIT, EdX</a> :<br>',
 		"location": "bdeh",
 		"latitude": 48.74,
@@ -58,12 +84,25 @@ var education = {
 		"textPopUpMap": "hdeiwi",
 		"degree": "Formación en Python",
 		"majors": ["major1", "major2", "major3"],
-		"dates": "July 1, 2015",
-		"date_finale": "August 30, 2015",
+		"dates": "March 1, 2015",
+		"date_finale": " June 1, 2015",
 		"positionAxeY": 60,
 		"onlineOrSchool": "online",
 		"url": "https://www.edx.org/"
 	}, {
+		"name": '<a href="https://www.edx.org/" target="_blank">W3C, EdX</a> :<br>',
+		"location": "bdeh",
+		"latitude": 48.74,
+		"longitude": 1.37,
+		"textPopUpMap": "hdeiwi",
+		"degree": "HTML5: Web Design Fundamentals",
+		"majors": ["major1", "major2", "major3"],
+		"dates": "June 30, 2015",
+		"date_finale": " August 30, 2015",
+		"positionAxeY": 60,
+		"onlineOrSchool": "online",
+		"url": "https://www.edx.org/"
+	},{
 		"name": '<a href="https://www.udacity.com/" target="_blank">Udacity</a> (Nanodegree) :<br>',
 		"location": "bdeh",
 		"latitude": 48.74,
@@ -94,7 +133,7 @@ var education = {
 		"location": "TODO",
 		"latitude": 48.85,
 		"longitude": 2.34,
-		"textPopUpMap": "Después del bachillerato, estudie geografía física en la Sorbona, en Paris. Después de mi licencia, pasé la oposición para ser profesor y ejerce en colegios en las afueras de parís. Luego, me fui a Barcelona para vivir con mi futura esposa",
+		"textPopUpMap": "Después del bachillerato, estudie geografía física en la Sorbona, en Paris. Después de mi licencia, pasé la oposición para ser profesor y ejerce como profesor titular de historia y geografía en colegios en las afueras de parís. Luego, me fui a Barcelona para vivir con mi futura esposa",
 		"degree": "Master en Sistema de informacion geográfica y teledetección",
 		"majors": ["major1", "major2", "major3"],
 		"dates": "September 15, 2010",
@@ -113,7 +152,7 @@ var work = {
 		"location": "Barcelona",
 		"latitude": 41.39,
 		"longitude": 2.16,
-		"textPopUpMap": "Llegué a Barcelona en el verano de 2006 y trabajé como teleoperador (en Francés!) durante un año mientras estaba haciendo un master en 'Planificación territorial y gestión ambiental'. Luego, trabajé 2 años en hidrología desde una empresa privada, Ofiteco, para el ACA (Agencia Catalana del Agua). Actualmente, trabajo en Sopra-Steria",
+		"textPopUpMap": "Llegué a Barcelona en el verano de 2006 y trabajé como teleoperador (en Francés!) durante un año mientras estaba haciendo un master en 'Planificación territorial y gestión ambiental'. Luego, trabajé 2 años como Coordinador de proyectos en hidrología desde una empresa privada, Ofiteco, para el ACA (Agencia Catalana del Agua). Actualmente, trabajo en Sopra-Steria",
 		"dates": "Octubre 2015-actual",
 		"tecnologies": "Sass, HTML5, javascript, jQuery, AngularJS, Bootstrap, Grunt, PHP, Symfony2, Oracle, Java/JavaEE"
 	}, {
