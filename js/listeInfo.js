@@ -121,7 +121,7 @@ var education = {
 		"latitude": 48.85,
 		"longitude": 2.34,
 		"textPopUpMap": "TODO",
-		"degree": "Preparación a la oposición para ser profesor de colegio ( niños de 11-18 años)",
+		"degree": "Preparación a la oposición para ser profesor de historia y geografía (niños de 11-18 años)",
 		"majors": ["major1", "major2", "major3"],
 		"dates": "Septembre 15, 2002",
 		"date_finale": "August 15 2003",

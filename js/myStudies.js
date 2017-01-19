@@ -56,10 +56,9 @@ function startScript() {
 	.attr("fill", colorFillCircleGraph)
 	.attr("stroke", colorStrokeCircleGraph)
 	.attr("stroke-width", 1.3)
-	//.attr("r", diametreCercle)
 	.style("cursor", "pointer");
 	// Tooltip stuff after this
-	rectangles.on("mouseover", function(d) {
+	rectangles.on("mouseenter", function(d) {
 		div.transition()
 			.duration(500)
 			.style("opacity", 1)
@@ -68,7 +67,7 @@ function startScript() {
 			d.name + d.degree
 		)
 			.style("left", (d3.event.pageX - 10) + "px")
-			.style("top", (d3.event.pageY + 6) + "px");// Pour placer l'info/cercles.
+			.style("top", (d3.event.pageY + 6) + "px");// Pour placer l'info/rectangles.
 	});
 	svg.on("mouseleave", function(d) {
 		div
