@@ -43,7 +43,7 @@ var education = {
 		"latitude": 48.85,
 		"longitude": 2.34,
 		"textPopUpMap": "Estudie en la Universidad Paris Sorbonne, en el centro del Barrio Latino de Paris",
-		"degree": "Licenciatura en geografía y hidrología",
+		"degree": "Licenciatura en geografía e hidrología",
 		"majors": ["major1", "major2", "major3"],
 		"dates": "September 1, 1998",
 		"date_finale": "June 30, 2002",
@@ -134,7 +134,7 @@ var education = {
 		"latitude": 48.85,
 		"longitude": 2.34,
 		"textPopUpMap": "TODO",
-		"degree": "Master en gestión ambiental",
+		"degree": "Master en Gestión Ambiental",
 		"majors": ["major1", "major2", "major3"],
 		"dates": "Septembre 15, 2006",
 		"date_finale": "March 20, 2008",
@@ -147,7 +147,7 @@ var education = {
 		"latitude": 48.85,
 		"longitude": 2.34,
 		"textPopUpMap": "Después del bachillerato, estudie geografía física en la Sorbona, en Paris. Después de mi licencia, pasé la oposición para ser profesor y ejerce como profesor titular de historia y geografía en colegios en las afueras de parís. Luego, me fui a Barcelona para vivir con mi futura esposa",
-		"degree": "Master en Sistema de informacion geográfica y teledetección",
+		"degree": "Master en Sistema de información geográfica y teledetección",
 		"majors": ["major1", "major2", "major3"],
 		"dates": "September 15, 2010",
 		"date_finale": "September 30, 2011",
@@ -195,19 +195,19 @@ var work = {
 		{
 			"source":0,
 			"date":"Octubre 2015 - actual",
-			"description": '<a href= "http://www.soprasteria.com/en" target="_blank">Sopra-Steria</a><h4>Trabajo con clientes frances y proyecto interno:</h4><ul><li>Designo de la parte front-end de un proyecto interno e inclusión con JavaEE.</li><li>Web nueva para gestionar las inscripciones de los alumnos en el futuro gran centro universitario francés: tareas de back y de front-end simultaneamente.</li><li>Aplicación de “La Poste”: tareas de back-end.</li></ul>',
+			"description": '<a href= "http://www.soprasteria.com/en" target="_blank">Sopra-Steria</a><h4>Trabajo con clientes frances y proyecto interno:</h4><ul><li>Diseño de la parte front-end de un proyecto interno e inclusión con JavaEE.</li><li>Web nueva para gestionar en el futuro las inscripciones de los alumnos en un gran centro universitario francés: tareas de back y de front-end simultaneamente.</li><li>Aplicación de “La Poste”: tareas de back-end.</li></ul>',
 			"yWorkName": 85
 		},
 		{
 			"source":1,
 			"date":"Enero 2015-septiembre 2015",
-			"description": '<a href="http://www.creaf.cat/" target="_blank">CEA/CREAF-UAB</a><h4>Continuación, desde España, del proyecto empezado con el CEA-LSCE:</h4><ul><li>Por razones familiales me fui de Francia para volver a Barcelona donde segui trabajando en el <a href="http://www.globalcarbonatlas.org/en/content/welcome-carbon-atlas" target="_blank">Global Carbon Atlas</a>.</li><li>Representación de datos ambientales en un Web Map Service desde la parte cliente: generación de mapas de incertidumbre con Python e integración al Global carbon Atlas</li></ul>',
+			"description": '<a href="http://www.creaf.cat/" target="_blank">CEA/CREAF-UAB</a><h4>Continuación, desde España, del proyecto empezado con el CEA-LSCE:</h4><ul><li>Por razones familiares salí de Francia para volver a Barcelona donde segui trabajando en el <a href="http://www.globalcarbonatlas.org/en/content/welcome-carbon-atlas" target="_blank">Global Carbon Atlas</a>.</li><li>Representación de datos ambientales en un Web Map Service desde la parte cliente: generación de mapas de incertidumbre con Python e integración al Global carbon Atlas</li></ul>',
 			"yWorkName": 185
 		},
 		{
 			"source":2,
 			"date":"Enero de 2012-diciembre de 2014",
-			"description": '<a href="http://www.lsce.ipsl.fr/en/" target="_blank">CEA-LSCE</a><h4>Ayuda en la realización del <a href="http://www.globalcarbonatlas.org/en/content/welcome-carbon-atlas" target="_blank">Global Carbon Atlas</a>: data visualización aplicado a mapas</h4><ul><li>Contexto: trabajo con un "partner" frances del proyecto Europeo <a href="http://www.geoviqua.org/" target="_blank">GeoViQua</a> de 3 años, dirigido por el CREAF (Barcelona)</li><li>Creación y diseño de los mapas e integración de herramientas creadas por el proyecto GeoViQua</li><li>Creación y gestión de un formulario destinado a los probadores de datos.</li></ul>',
+			"description": '<a href="http://www.lsce.ipsl.fr/en/" target="_blank">CEA-LSCE</a><h4>Colaboración para la realización del <a href="http://www.globalcarbonatlas.org/en/content/welcome-carbon-atlas" target="_blank">Global Carbon Atlas</a>: data visualización aplicado a mapas</h4><ul><li>Contexto: trabajo con un "partner" frances del proyecto Europeo <a href="http://www.geoviqua.org/" target="_blank">GeoViQua</a> dirigido por el CREAF (Barcelona)</li><li>Creación y diseño de los mapas e integración de herramientas creadas por el proyecto GeoViQua</li><li>Creación y gestión de un formulario destinado a los probadores de datos.</li></ul>',
 			"yWorkName": 285
 		},
 	],
