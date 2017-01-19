@@ -31,7 +31,7 @@ public String[][] getCollaborateursParListProjets(String[] projet) {
 	HttpServletRequest _request = webContextFact.getHttpServletRequest();
 
 	List<Collaborateur> listCollaborateurProjet = (List<Collaborateur>) session.getAttribute("listCollaborateurSession");
-	List<Projet> listProjets = (List) session.getAttribute("listProjetsSession");
+	List<Projet> listProjets = (List) session.getAttribute("listProjetsSession");// Ne sert pas.
 	List<EquipeProjet> listEquipeProjet = (List) session.getAttribute("listEquipeProjetFiltresSession");
 	String[][] listD2= new String[2][listCollaborateurProjet.size()+1];
 	int k=0;
@@ -92,6 +92,7 @@ function getCollaborateursParProjet() {
 	}
 
 	AjaxDependentComboBoxFormation.getCollaborateursParListProjets(projet , function(data) {
+		console.log("projet = " + projet + ", data = " + data);
 		document.getElementById("collaborateurMultiSelect").length=data[0].length+1;
 		var cnt=0;
 		if(data!=null){// On rempli double array collaborateur f(data, response)

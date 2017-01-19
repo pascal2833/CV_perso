@@ -116,6 +116,19 @@ var education = {
 		"onlineOrSchool": "online",
 		"url": "https://www.udacity.com/"
 	},{
+		"name": '<a href="">Formación de los profesores</a> :<br>',
+		"location": "Paris",
+		"latitude": 48.85,
+		"longitude": 2.34,
+		"textPopUpMap": "TODO",
+		"degree": "Preparación a la oposición para ser profesor de colegio ( niños de 11-18 años)",
+		"majors": ["major1", "major2", "major3"],
+		"dates": "Septembre 15, 2002",
+		"date_finale": "August 15 2003",
+		"positionAxeY": 130,
+		"onlineOrSchool": "school",
+		"url": "TODO"
+	},{
 		"name": '<a href="http://www.ub.edu/web/ub/es/" target="_blank">Universidad de Barcelona, UB</a> :<br>',
 		"location": "Barcelona",
 		"latitude": 48.85,

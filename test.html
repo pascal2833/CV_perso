@@ -1,3 +1,7 @@
+///////////////////////////////
+///// Tarea de formation : //////////////
+//////////////////////////////////
+
 <!--VO :-->
 <html:select multiple="multiple" size="10" property="projetsSelected" styleId="projetList" onchange="getCollaborateursParProjet(null,null);">
 	<!-- FIN PBT-133 -->
@@ -12,26 +16,42 @@
 </html:select>
 <!--Fin VO-->
 
-
-<html:select name= "findForm" multiple="multiple" size="10" property="projetsSelected" styleId="projetMultiSelect" onchange="getCollaborateursParProjet();">
-	<!--<html:option value="">
-<bean:message key="filtre.tous" bundle="planCharges" />
-</html:option>-->
-	<logic:iterate id="oneProject" name="findForm" property="allProjectsList">
-		<bean:define id="projectId" name="oneProject" property="id"></bean:define>
-		<bean:define id="projectName" name="oneProject" property="projNom"></bean:define>
-		<html:option value="${projectId}">${projectName}</html:option>
+<!--Version definitive, qui fonctionne/formation (pour les collaborateurs) :-->
+<html:select name= "findForm" multiple="multiple" size="10" property="collaborateursSelected" styleId="collaborateurMultiSelect">
+	<html:option value=""><bean:message key="collaborateursMultiselectDefaultValue" bundle="formacionEjemplo" /></html:option><!--Valeur par defaut, cad au dessus des valeurs qui viennent via iterate-->
+	<!--logic:iterate : définit les valeurs sur lesquelles on va itérer. Dans ce cas là, on va utiliser le form mais d'autre façon (entités, ...)
+		id = holds the current value of the selection, on peut mettre ce que l'on veut (une valeur, par itération)
+		Ici, property = form-bean property/struts.
+		-->
+	<logic:iterate id="oneCollaborateur" name="findForm" property="listAllCollaborateurs"><!-- property = à définir ici dans crtler, ce qui contient les données sur lesquelles on veut itérer -->
+		<bean:define id="collaborateurId" name="oneCollaborateur" property="id"></bean:define>
+		<bean:define id="nomCollaborateur" name="oneCollaborateur" property="collPatronyme"></bean:define><!-- Property doit correspondre à proprieté/entité-->
+		<bean:define id="prenomCollaborateur" name="oneCollaborateur" property="collPrenom"></bean:define>
+		<html:option value="${collaborateurId}">${prenomCollaborateur} ${nomCollaborateur}</html:option>
 	</logic:iterate>
 </html:select>
 
+<!-------- Traduction  et explications : ------->
+<!--
+<html:select
+	The property attribute of the HTML select tag hold the value selected by the user. Present dans struts, dans form-bean
+-->
 
 ///////////////////////////////
 ///// Tarea PBT-882: //////////////
 //////////////////////////////////
+<html:select name= "findForm" multiple="multiple" size="10" property="RPD_MDD_selected" styleId="RPD_MDD_MultiSelect">
+	<html:option value=""><bean:message key="RPD_MDD_MultiselectDefaultValue" bundle="reportingV2TK" /></html:option><!--Valeur par defaut, cad au dessus des valeurs qui viennent via iterate-->
+	<logic:iterate id="oneRPD_MDD" name="findForm" property="listAllRPD_MDD">
+		<bean:define id="RPD_MDD_Id" name="oneRPD_MDD" property="id"></bean:define>
+		<bean:define id="RPD_MDD_nom" name="oneRPD_MDD" property="usrPatronyme"></bean:define>
+		<bean:define id="RPD_MDD_prenom" name="oneRPD_MDD" property="usrPrenom"></bean:define>
+		<html:option value="${RPD_MDD_Id}">${RPD_MDD_prenom} ${RPD_MDD_nom}</html:option>
+	</logic:iterate>
+</html:select>
+
 
 Note : apparemment, bcp de manières différentes de construire les multiselect !!!
-
-The property attribute of the HTML select tag hold the value selected by the user. Present dans struts, dans form-bean
 html:select name="findForm" -> fait ref au bean ou on va trouver les données, ici, défini dans strut, <form-bean name="findForm" et property = <form-property name = ...
 value/html:option -> correspond à la valeur choisie par utilisateur, va remplacer property de html:select (à définir dans form-bean/struts) lors submit.
 
@@ -51,47 +71,16 @@ listUtilisateursRPD);
 -->
 
 
-<!-- Pascal : PBT-882 -->
-<TR>
-	<TD colspan=2><BR></TD></TR>
-	<TR>
-		<TR>
-			<TD style="padding-left: 30px;" nowrap="nowrap"><img src="../images/picto/puce.gif" ></img>
-			<bean:message key="export.v2TKProjet.libelleFiltreManagerDeDomaine" bundle="reportingV2TK" />
-			</TD>
-	</TR>
-	<TR>
-		<TD colspan=2><BR></TD></TR>
-		<TR>
-			<TR>
-				<!-- Ajouter td perso -->
-			</TR>
-			<!-- Fin PBT-882 -->
+// Dans FindAction.java :
+//IProjetService projetsService = (IProjetService) getService(IconstanteAction.FORM_PROJET_SERVICE);
+//List<Utilisateur> listAllRPD_MDD = projetsService.listUtilisateur("RPD");
 
 
-			// Tests/td :
-			<TD  style="padding-left:30px;"  size="1">
-				<bean:define id="listeManagerDeDomaine" name="listeManagerDeDomaineCreated" ></bean:define>
-				<html:select name="findForm" property="managerDeDomaineSeleted" styleId="selectManagerDeDomaine">
-					<logic:iterate name="listeUtilisateurRPD" id="listeUtilisateurId" type="com.sopra.csma.business.domain.Utilisateur">
-						<html:option value="${listeUtilisateurId.id}">
-							<bean:write name="listeUtilisateurId" property="usrPatronyme"/>&nbsp;
-						</html:option>
-					</logic:iterate>
-				</html:select>
-			</TD>
+	// champs ajoutes dans le strut local :
+	<!--			<form-property name="listAllRPD_MDD" type="java.util.ArrayList" />-->Done
+	<!--			<form-property name="RPD_MDD_selected" type="java.lang.String[]" />-->Done
 
-			// Dans FindAcion.java :
-			// PBT-882 Pascal
-			//IProjetService projetsService = (IProjetService) getService(IconstanteAction.FORM_PROJET_SERVICE);
-			//List<Utilisateur> listeUtilisateurRPD = projetsService.listUtilisateur("RPD");
-			//request.getSession(false).setAttribute(IconstanteAction.FORM_UTILISATEUR_RPD, listeUtilisateurRPD);
-			//int y = 2; // s'arrete bien ici .. mais pète ensuite dans ActionForward process, avec preAction(arg0, arg1, arg2, arg3); ?
-			// Fin PBT-882 Pascal
 
-			// champs ajoutes dans le strut local :
-			<!--			<form-property name="listeManagerDeDomaineCreated" type="java.lang.String[]" />-->
-			<!--			<form-property name="managerDeDomaineSeleted" type="java.lang.String" />-->
 
 
 

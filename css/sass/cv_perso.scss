@@ -108,6 +108,34 @@ a:hover {
 	width: 250px;
 }
 
+.languagesElementsContainer {
+	display:flex;
+	display: -webkit-flex; /* Safari */
+	flex-direction: column;
+	.languagesElement {
+		height: 35px;
+		margin-bottom: 15px;
+	}
+}
+.rectOut {
+	height: 20px;
+	width: 100px;
+	border: solid 1px $colorToolTipsBorders;
+	margin-bottom: 10px;
+	.rectIn {
+		height: 100%;
+		background: white; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(left, white , $mapAndCoeColor); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(right, white, $mapAndCoeColor); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(right, white, $mapAndCoeColor); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to right, white , $mapAndCoeColor); /* Standard syntax */
+	}
+}
+
+.languagesElement:first-of-type {
+	margin-top: 30px;
+}
+
 .globalPageContainer {
 	width: 100%;
 	padding: 5px 15px 0 15px;
@@ -183,20 +211,6 @@ a:hover {
 						text-align: start;
 						position: relative;
 					}
-					.rectOut {
-						height: 20px;
-						width: 100px;
-						border: solid 1px $colorToolTipsBorders;
-						margin-bottom: 10px;
-						.rectIn {
-							height: 18px;
-							background: white; /* For browsers that do not support gradients */
-							background: -webkit-linear-gradient(left, white , $mapAndCoeColor); /* For Safari 5.1 to 6.0 */
-							background: -o-linear-gradient(right, white, $mapAndCoeColor); /* For Opera 11.1 to 12.0 */
-							background: -moz-linear-gradient(right, white, $mapAndCoeColor); /* For Firefox 3.6 to 15 */
-							background: linear-gradient(to right, white , $mapAndCoeColor); /* Standard syntax */
-						}
-					}
 				}
 			}
 		}
@@ -257,23 +271,6 @@ a:hover {
 					font-size: 1.05em;
 				}
 			}
-			// A commenter, à enlever, en tout cas pour version desktop.
-			/*.work_entry {
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-			max-width: $max_width_work_section;
-			.workTitle {
-			text-decoration: underline!important;
-		}
-			margin-bottom: 10px;
-			.infoToHighlight {
-			@include infoToHighlight;
-		}
-			.work_description {
-			//text-align: justify;
-		}
-		}*/
 		}
 		&.projects-section {
 			.linkToProjetsHand {
@@ -284,7 +281,8 @@ a:hover {
 				margin-left: 74px;
 			}
 			.myProjectsContainer {
-				display: flex;
+				display:flex;
+				display: -webkit-flex; /* Safari */
 				justify-content: center;
 				.linkToPortofolio {
 					color: #461419;
@@ -300,7 +298,6 @@ a:hover {
 			}
 		}
 		&.education_section {
-
 		}
 		&.mapResum {
 			#map {
@@ -340,7 +337,8 @@ a:hover {
 			}
 			.hobbiesContainer {
 				height: 150px;
-				display: flex;
+				display:flex;
+				display: -webkit-flex; /* Safari */
 				align-items: center;
 				justify-content: space-around;
 				margin-top: 20px;
@@ -412,8 +410,11 @@ a:hover {
 			&.parralax_mapResum {
 				background-image: url("../../images/whereIlived.jpg");
 			}
+			&.parralax_hobbyPingPong {
+				background-image: url("../../images/pingb.JPG");
+			}
 			&.parralax_hobbyPhoto {
-				background-image: url("../../images/aficionFoto1b.jpg");
+				background-image: url("../../images/aficionFotob.jpg");
 			}
 			&.parralax_connect {
 				background-image: url("../../images/connect.jpg");
@@ -421,6 +422,27 @@ a:hover {
 		}
 		.school-entry {
 			margin-top: 10px;
+		}
+		.languagesSkillsContainer {
+			display: flex;
+			display: -webkit-flex; /* Safari */
+			justify-content: center;
+			.languagesLevel {
+				margin-left: 20%;
+				.frenchLevel {
+					width: 100%;
+				}
+				.spanishLevel {
+					width: 90%;
+				}
+				.englishLevel {
+					width: 70%;
+				}
+				.catalanLevel {
+					width: 60%;
+				}
+			}
+
 		}
 	}
 

@@ -139,7 +139,7 @@ function startScript() {
  */
 
 	$(document).click(function(loc) {
-		console.log(loc.pageX, loc.pageY);
+		//console.log(loc.pageX, loc.pageY);
 	});
 
 	//$('#map').css('height', '50px');
