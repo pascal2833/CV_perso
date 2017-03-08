@@ -1,7 +1,6 @@
 function startScript() {
 	"use strict";
 	$.getScript("js/listeInfo.js");
-	$.getScript("js/listeInfo.js");
 
 	var mymap = L.map('map').setView([45, 2], 5);
 

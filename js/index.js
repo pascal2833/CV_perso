@@ -1,6 +1,5 @@
 function startScript() {
 	"use strict";
-	$.getScript("js/listeInfo.js");
 
 	// Own code, not related with Udacity.
 	var breakPoint1 = 480; // CF scss file.
@@ -93,26 +92,6 @@ function startScript() {
 		});
 	};
 	work.display();*/
-
-	languesEtAutres.display = function() {
-		$(".languesEtAutresSection").append(HTMLlanguesStart);
-		languesEtAutres.langues.forEach(function(element) {
-			$(".languesList").append(HTMLlangueContainer);
-			var formattedLangueLevel = HTMLlanguesLevel.replace("%data%", element.level);
-			var formattedLangueFlag = HTMLlanguesFlag.replace("%data%", element.flagSymbol);
-			$(".langueContainer:last").append(formattedLangueFlag);
-			$(".langueContainer:last").append(formattedLangueLevel);
-		});
-		$(".languesEtAutresSection").append(HTMLHobbiesContainer);
-		languesEtAutres.autres.forEach(function(element) {
-			var formattedImageUrl = HTMLImageHobby.replace("%data%", element.imageUrl);
-			var formattedHobbiesInfo = HTMLHobbiesInfo.replace("%data%", element.hobbyInfo);
-			$('.hobbiesContainer').append(HTMLDefectHobbies);
-			$('.hobbiesContainer:last').append(formattedImageUrl);
-			$('.hobbiesContainer').append(formattedHobbiesInfo);
-		});
-	};
-	languesEtAutres.display();
 
 	// Show/hide hobbies infos :
 	$('.defectHobby:first').on('mouseover', function() {

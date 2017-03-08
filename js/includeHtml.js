@@ -12,19 +12,17 @@ var HTMLemail = '<div class= "typoMedium mailAndTel"><i class="fa fa-envelope-o 
 var HTMLgithub = '<div class= "typoMedium mailAndTel"><i class="fa fa-github iconeFontAwesome"></i>%data%</div>';
 var HTMLlocation = '<div class= "typoMedium mailAndTel"><i class="fa fa-globe iconeFontAwesome"></i>%data%</div>';
 /*var HTMLbioPic = '<figure class= "photo"><img src="%data%" alt= "CV\'s picture" class="biopic"></figure>';*/
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+/*var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';*/
 
 /*
 Skills
 */
 var HTMLskillsFrontEndDescAndLevelStart = '<div class="skills_frontEnd_desc_level_start"></div>';
 var HTMLskillsFrontEndDescriptionStart = '<ul class="front_end_skills_desc_start center_text"><h4>Front-end:</h4></ul>';
-var HTMLskillsFrontEndLevelStart = '<ul class="front_end_level_start center_text"><h4>Nivel:</h4></ul>';
-//
+var HTMLskillsFrontEndLevelStart = '<ul class="front_end_level_start center_text"><h4 lang="es" data-lang-token="skillsLevel_title">Nivel:</h4></ul>';
 var HTMLskillsBackEndDescAndLevelStart = '<div class="skills_backEnd_desc_level_start"></div>';
 var HTMLskillsBackEndDescriptionStart = '<ul class="back_end_skills_desc_start center_text"><h4>Back-end:</h4></ul>';
-var HTMLskillsBackEndLevelStart = '<ul class="back_end_level_start center_text"><h4>Nivel:</h4></ul>';
-//
+var HTMLskillsBackEndLevelStart = '<ul class="back_end_level_start center_text"><h4 lang="es" data-lang-token="skillsLevel_title">Nivel:</h4></ul>';
 var HTMLFrontEndSkills = '<li class="skills_list"><span>%data%</span></li>';
 var HTMLBackEndSkills = '<li class="skills_list"><span>%data%</span></li>';
 var HTMLskillsLevel = '<li class="skills_level_list rectOut"><div class="rectIn"></div></li>';

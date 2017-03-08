@@ -18,11 +18,24 @@ meta pour Boostrap : cf http://getbootstrap.com/getting-started/
 		<link rel="stylesheet" href="./../../librairiesFront/font-awesome-4.6.3/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="./../../librairiesFront/bootstrap-sass-official/assets/stylesheets/_bootstrap-compass.scss"/>
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+		<!--Pour multilangue :-->
+		<script src="js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
+		<!--multilangue-->
 
 		<title>CV pascal Evano</title>
 	</head>
 
 	<body>
+		<!--multilangue-->
+		<!--CF https://github.com/Irrelon/jquery-lang-js : Switching languages-->
+		<!--<a href="#lang-en" onclick="window.lang.change('en'); return false;">Switch to English</a> | <a href="#lang-fr" onclick="window.lang.change('fr'); return false;">Switch to French</a>-->
+		<!--multilangue-->
+		<!--Test perso multilangues:-->
+		<div class="flagLanguagesContainer">
+			<img src="images/spain_flag.png" class="flagToChangeLanguage" alt="spain flag" onclick="window.lang.change('es'); return false;">
+			<img src="images/french_flag.png" class="flagToChangeLanguage" alt="french flag" onclick="window.lang.change('fr'); return false;">
+		</div>
+
 		<div class="globalPageContainer">
 			<header class="header">
 				<div class="myNameAndRoleName"></div>
@@ -93,7 +106,6 @@ meta pour Boostrap : cf http://getbootstrap.com/getting-started/
 					</div>
 				</div>
 			</section>
-
 			<section class="section hobbyPingPong">
 				<div class="parallax parralax_hobbyPingPong">
 					<h2 class="main_title_section">Mi afición</h2>
@@ -118,18 +130,18 @@ meta pour Boostrap : cf http://getbootstrap.com/getting-started/
 		<!--<script src="./../../librairiesFront/modernizr-custom.js"></script>-->
 		<!--Fout le bordel /etude element vi aconsole chrome, affiche user agent.-->
 		<script src="./../../librairiesFront/jquery/jquery.min.js"></script>
+		<script src="js/doMultilanguages.js"></script>
+		<script src="js/index.js"></script>
 		<script src="./../../librairiesFront/ol.js"></script>
 		<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 		<script src="js/doMap.js"></script>
 		<script src="js/includeHtml.js"></script>
+		<!--<script src="js/listeInfo_fr.js"></script>-->
 		<script src="js/listeInfo.js"></script>
-
 		<!--// Add time series/formation : ---//-->
 		<script src="https://d3js.org/d3.v4.min.js"></script>
 		<script src= "js/myStudies.js"></script>
 		<script src= "js/workingExperiences.js"></script>
-		<script src="js/index.js"></script>
-		<!--------------->
 	</body>
 
 </html>

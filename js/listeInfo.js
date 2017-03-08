@@ -1,6 +1,5 @@
 var dateActuelle = new Date();
 var dateString = dateActuelle.toDateString();
-console.log(dateString);
 
 // Using json notation :
 var bio = {
@@ -15,7 +14,7 @@ var bio = {
 		"mobile": "+34 650-754-255"
 	},
 	"skills": [
-		"HTML5", "css/Sass", , "javascript", "jQuery", "AngularJS", "Grunt/npm","d3.js"
+		"HTML5", "css/Sass", "javascript", "jQuery", "AngularJS", "Grunt/npm","d3.js"
 	],
 	"frontLevel": ["80", "75", "75", "75","65", "60","60"],
 	"back_end_skills": ["Base de Datos/SQL", "PHP", "Symphony2", "java/javaEE"],
@@ -51,7 +50,7 @@ var education = {
 		"onlineOrSchool": "school",
 		"url": "http://www.english.paris-sorbonne.fr/"
 	}, {
-		"name": 'Certificado de catalán (Generalitad de Catalunya) ',
+		"name": '<div>rrrrr</div>',
 		"location": "bdeh",
 		"latitude": 48.74,
 		"longitude": 1.37,
@@ -249,32 +248,5 @@ var work = {
 		{"name": "Symphony2", "y": 305, "indiceArray": 9},
 		{"name": "Java/javaEE", "y": 335, "indiceArray": 10},
 	]
-};
-
-var languesEtAutres = {
-	"langues": [{
-		"name": "Frances: ",
-		"flagSymbol": "images/french_flag.png",
-		"level": "Soy frances!"
-	}, {
-		"name": "Español: ",
-		"flagSymbol": "images/spain_flag.png",
-		"level": "Vivo en Barcelona desde 2006!"
-	}, {
-		"name": "Ingles: ",
-		"flagSymbol": "images/UK_flag.jpg",
-		"level": "Nivel medio aunque lo estoy trabajando ..."
-	}, {
-		"name": "Catalan: ",
-		"flagSymbol": "images/catalan_flag.png",
-		"level": "Nivel medio"
-	}],
-	"autres":[{
-		imageUrl: "images/pingpong_e0.gif",
-		"hobbyInfo":"Soy jugador federado de tenis de mesa desde que tengo 16 años. Ahora tengo menos tiempo para practicar pero sigo competiendo!",
-	}, {
-		imageUrl: "images/camera.png",
-		"hobbyInfo":"Descubrí la fotografía de vacaciones en Corsega, muy joven. Me compré luego una camara oscura y cuando estaba en la faculdad, hacía mis propias foto.",
-	}]
 };
 
