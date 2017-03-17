@@ -80,39 +80,31 @@ var infoMapFr = [
 var educationEs = {
 	"schoolsAndOnlineCourses": [{
 		"name": '<a href="http://www.lyceebranlydreux.fr/actualites-du-lycee.html" target="_blank">Lycee E.Branly</a> :<br>',
-		//"location": "Dreux (France)",
 		"degree": "Bachillerato científico",
 		"dates": "June 30, 1996",
 		"date_finale": "July 30, 1996",
 		"positionAxeY": 130,
-		//"onlineOrSchool": "school",
 		"url": "http://www.lyceebranlydreux.fr/actualites-du-lycee.html"
 	}, {
 		"name": '<a href="http://www.espagnol.paris-sorbonne.fr/" target="_blank">Paris IV Sorbonne</a> :<br>',
-		//"location": "Paris",
 		"degree": "Licenciatura en geografía e hidrología",
 		"dates": "September 1, 1998",
 		"date_finale": "June 30, 2002",
 		"positionAxeY": 130,
-		//"onlineOrSchool": "school",
 		"url": "http://www.english.paris-sorbonne.fr/"
 	}, {
 		"name": '<div>Catalan (cursos de la generalitat)</div>',
-		//"location": "bdeh",
 		"degree": "Nivel basic (B)",
 		"dates": "Juny 1, 2009",
 		"date_finale": "November 1, 2009",
 		"positionAxeY": 60,
-		//"onlineOrSchool": "online",
 		"url": "https://www.edx.org/"
 	},{
 		"name": 'Git/GitHub: ',
-		//"location": "bdeh",
 		"degree": "Formación por internet",
 		"dates": "January 1, 2015",
 		"date_finale": "February 1, 2015",
 		"positionAxeY": 60,
-		//"onlineOrSchool": "online",
 		"url": "https://www.edx.org/"
 	},{
 		"name": '<a href="https://www.edx.org/" target="_blank">Universidad MIT, EdX</a> :<br>',
@@ -145,7 +137,6 @@ var educationEs = {
 		"name": '<a href="">Formación de los profesores</a> :<br>',
 		//"location": "Paris",
 		"degree": "Preparación a la oposición para ser profesor de historia y geografía",
-		"majors": ["major1", "major2", "major3"],
 		"dates": "Septembre 15, 2002",
 		"date_finale": "August 15 2003",
 		"positionAxeY": 130,
@@ -161,8 +152,8 @@ var educationEs = {
 		//"onlineOrSchool": "school",
 		"url": "TODO"
 	},{
-		"name": '<a href="http://www.creaf.cat/es" target="_blank">CREAF </a>/UAB: <br>',
-		//"location": "TODO",
+		"name": '<a href="http://www.creaf.cat/es" target="_blank">CREAF / UAB:</a><br>',
+		"degree": "Master en Sistema de Información geografíca y teledetección",
 		"dates": "September 15, 2010",
 		"date_finale": "September 30, 2011",
 		"positionAxeY": 130,
@@ -263,13 +254,11 @@ var educationFr = {
 		//"onlineOrSchool": "school",
 		"url": "TODO"
 	},{
-		"name": '<a href="http://www.creaf.cat/es" target="_blank">CREAF </a>/UAB: <br>',
-		//"location": "TODO",
-		"majors": ["major1", "major2", "major3"],
+		"name": '<a href="http://www.creaf.cat/es" target="_blank">CREAF / UAB:</a><br>',
+		"degree": "Master en SIG et télédetection",
 		"dates": "September 15, 2010",
 		"date_finale": "September 30, 2011",
 		"positionAxeY": 130,
-		//"onlineOrSchool": "school",
 		"url": "TODO"
 	}],
 	"complements": {"subTitleStudies": "Études", "subTitleFormations": "Formations", "xPositionSubTitleStudies": 850, "yPositionSubTitleStudies": 210, "xPositionSubTitleFormations": 850, "yPositionSubTitleFormations": 90, "keyMultiLanguage_formationsTitle": "formationsTitle", "keyMultiLanguage_studiesTitle": "studiesTitle"},
