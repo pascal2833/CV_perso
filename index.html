@@ -18,25 +18,20 @@ meta pour Boostrap : cf http://getbootstrap.com/getting-started/
 		<link rel="stylesheet" href="./../../librairiesFront/font-awesome-4.6.3/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="./../../librairiesFront/bootstrap-sass-official/assets/stylesheets/_bootstrap-compass.scss"/>
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
-		<!--Pour multilangue :-->
 		<script src="js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
-		<!--multilangue-->
 
 		<title>CV pascal Evano</title>
 	</head>
 
 	<body>
-		<!--multilangue-->
-		<!--CF https://github.com/Irrelon/jquery-lang-js : Switching languages-->
-		<!--<a href="#lang-en" onclick="window.lang.change('en'); return false;">Switch to English</a> | <a href="#lang-fr" onclick="window.lang.change('fr'); return false;">Switch to French</a>-->
-		<!--multilangue-->
-		<!--Test perso multilangues:-->
-		<div class="flagLanguagesContainer">
-			<img src="images/spain_flag.png" class="flagToChangeLanguage" alt="spain flag" onclick="window.lang.change('es'); return false;">
-			<img src="images/french_flag.png" class="flagToChangeLanguage" alt="french flag" onclick="window.lang.change('fr'); return false;">
-		</div>
+
 
 		<div class="globalPageContainer">
+			<div class="flagLanguagesContainer">
+				<img src="images/spain_flag.png" id="flagToChangeLanguageEs" class="flagToChangeLanguage" alt="spain flag">
+				<!--<img src="images/UK_flag.jpg" class="flagToChangeLanguage" alt="english flag" onclick="window.lang.change('en'); return false;">-->
+				<img src="images/french_flag.png" id="flagToChangeLanguageFr" class="flagToChangeLanguage" alt="french flag">
+			</div>
 			<header class="header">
 				<div class="myNameAndRoleName"></div>
 				<div class="welcome-message"></div>
@@ -45,12 +40,12 @@ meta pour Boostrap : cf http://getbootstrap.com/getting-started/
 			</header>
 			<section class="section skills-section">
 				<div class="parallax parralax_skills">
-					<h2 class="main_title_section main_title_section_skills">Conocimientos técnicos</h2>
+					<h2 class="main_title_section main_title_section_skills" lang="es" data-lang-token="skillsPpalTitle">Conocimientos técnicos</h2>
 				</div>
 			</section>
 			<section class="section worksExperience-section">
 				<div class="parallax parralax_works">
-					<h2 class="main_title_section">Trabajos de programador</h2>
+					<h2 class="main_title_section" lang="es" data-lang-token="worksExperiencePpalTitle">Trabajos de programador</h2>
 				</div>
 				<div class="svgWorkingExperiencesContainer">
 					<svg class= "svgWorkingExperiencesGraph">
@@ -60,18 +55,18 @@ meta pour Boostrap : cf http://getbootstrap.com/getting-started/
 			</section>
 			<section class="section projects-section">
 				<div class="parallax parralax_projects">
-					<h2 class="main_title_section">Proyectos</h2>
+					<h2 class="main_title_section" lang="es" data-lang-token="projectsPpalTitle">Proyectos</h2>
 				</div>
 				<img class="linkToProjetsHand" src="images/hand.png" alt="Link to my projets: hand image">
 				<div class="myProjectsContainer">
-					<span class="linkToPortofolio">Ver
-						<a class="linkToPortofolio complementLink" href="https://pascal-evano.org/portofolio/" target="_blank">portafolio</a>
+					<span class="linkToPortofolio" style="width: 35px;" lang="es" data-lang-token="linkPortofolioPart1">Ver</span>
+					<span><a class="linkToPortofolio complementLink" href="https://pascal-evano.org/portofolio/" target="_blank" lang="es" data-lang-token="linkPortofolioPart2">portafolio</a>
 					</span>
 				</div>
 			</section>
 			<section class="section education_section">
 				<div class="parallax parralax_education">
-					<h2 class="main_title_section">Estudios y formaciones</h2>
+					<h2 class="main_title_section" lang="es" data-lang-token="studiesPpalTitle">Estudios y formaciones</h2>
 				</div>
 				<div class="svgEducationContainer">
 					<svg class= "svgFormationGraph"></svg>
@@ -80,7 +75,7 @@ meta pour Boostrap : cf http://getbootstrap.com/getting-started/
 
 			<section class="section mapResum">
 				<div class="parallax parralax_mapResum">
-					<h2 class="main_title_section">Trayectoria personal en mapa</h2>
+					<h2 class="main_title_section" lang="es" data-lang-token="mapPpalTitle">Trayectoria personal en mapa</h2>
 				</div>
 				<div id= "map"></div>
 				<div class= "languagesSkillsContainer">
@@ -108,13 +103,13 @@ meta pour Boostrap : cf http://getbootstrap.com/getting-started/
 			</section>
 			<section class="section hobbyPingPong">
 				<div class="parallax parralax_hobbyPingPong">
-					<h2 class="main_title_section">Mi afición</h2>
+					<h2 class="main_title_section" lang="es" data-lang-token="hobby1PpalTitle">Mi afición</h2>
 				</div>
 			</section>
 
 			<section class="section hobbyPhoto">
 				<div class="parallax parralax_hobbyPhoto">
-					<h2 class="main_title_section">Mi otra afición</h2>
+					<h2 class="main_title_section" lang="es" data-lang-token="hobby2PpalTitle">Mi otra afición</h2>
 				</div>
 			</section>
 
@@ -134,14 +129,14 @@ meta pour Boostrap : cf http://getbootstrap.com/getting-started/
 		<script src="js/index.js"></script>
 		<script src="./../../librairiesFront/ol.js"></script>
 		<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+		<script src="js/listeInfo.js"></script>
 		<script src="js/doMap.js"></script>
 		<script src="js/includeHtml.js"></script>
-		<!--<script src="js/listeInfo_fr.js"></script>-->
-		<script src="js/listeInfo.js"></script>
 		<!--// Add time series/formation : ---//-->
 		<script src="https://d3js.org/d3.v4.min.js"></script>
 		<script src= "js/myStudies.js"></script>
 		<script src= "js/workingExperiences.js"></script>
+		<script src= "js/multilangueFormation_map.js"></script>
 	</body>
 
 </html>

@@ -83,24 +83,6 @@ $breakpoint2: 680px;
 	font-family: $typoGoogleChoisie;
 }
 
-html, body {
-	margin-bottom: 10px;
-	font-size: 16px;
-	.flagLanguagesContainer {
-		position: relative;
-		margin-left: 90%;
-		margin-top: 15px;
-		width: 120px;
-		.flagToChangeLanguage {
-			width: 41px;
-			height: 24px;
-			cursor: pointer;
-			padding-left: 10px;
-		}
-	}
-
-}
-
 img,embed,video {
 	max-width: 100%;
 }
@@ -150,102 +132,228 @@ a:hover {
 }
 
 
-.globalPageContainer {
-	width: 100%;
-	padding: 5px 15px 0 15px;
-	ul {
-		position: relative;
-		right: 25px;
-		li {
-			list-style-type: none;
-		}
-	}
-	.svgEducationContainer, .svgWorkingExperiencesContainer {
-		@include svgContainers;
-	}
-	.header {
-		margin-top: 12px;
-		color: $headerTextColor;
-		.myNameAndRoleName {
-			display:flex;
-			display: -webkit-flex; /* Safari */
-			flex-direction: column;
-			align-items: center;
-			.myName {
-				position: relative;
-				top: -8px;
-			}
-			.myRole {
-				font-size: 1.25em;
-				margin-top: -15px;
-				margin-bottom: 25px;
+html, body {
+	margin-bottom: 10px;
+	font-size: 16px;
+	.globalPageContainer {
+		width: 100%;
+		padding: 5px 15px 0 15px;
+		.flagLanguagesContainer {
+			float: right;
+			margin-top: 15px;
+			.flagToChangeLanguage {
+				width: 41px;
+				height: 24px;
+				cursor: pointer;
+				padding-left: 10px;
 			}
 		}
-		.welcome-message {
-			top: -12px;
+		ul {
 			position: relative;
-			text-align: center;
-		}
-		.biopic {
-			margin-bottom: 10px!important;
-		}
-		.mailTelGitAndCoe {
-			display:flex;
-			display: -webkit-flex; /* Safari */
-			justify-content: space-around;
-			.fa {
-				margin-right: 5px;
+			right: 25px;
+			li {
+				list-style-type: none;
 			}
 		}
-	}
-	.section {
-		color: $sectionTextColor;
-		margin-top: 20px;
-		line-height: 180%;
-		.main_title_section {
-			@include main_title_section;
+		.svgEducationContainer, .svgWorkingExperiencesContainer {
+			@include svgContainers;
 		}
-		.center_text {
-			@include centerText;
-		}
-		&.skills-section {
-			.skills_frontEnd_desc_level_start, .skills_backEnd_desc_level_start {
-				line-height: 30px;
+		.header {
+			margin-top: 12px;
+			color: $headerTextColor;
+			.myNameAndRoleName {
 				display:flex;
 				display: -webkit-flex; /* Safari */
-				justify-content: center;
-				h4 {
-					text-align: left;
+				flex-direction: column;
+				align-items: center;
+				.myName {
+					position: relative;
+					top: -8px;
 				}
-				.front_end_skills_desc_start, {
-					margin-right: 50px;
+				.myRole {
+					font-size: 1.25em;
+					margin-top: -15px;
+					margin-bottom: 25px;
 				}
-				.front_end_skills_desc_start, .back_end_skills_desc_start, .back_end_level_start, .front_end_level_start {
-					.skills_list {
-						text-align: start;
-						position: relative;
-					}
+			}
+			.welcome-message {
+				top: -12px;
+				position: relative;
+				text-align: center;
+			}
+			.biopic {
+				margin-bottom: 10px!important;
+			}
+			.mailTelGitAndCoe {
+				display:flex;
+				display: -webkit-flex; /* Safari */
+				justify-content: space-around;
+				.fa {
+					margin-right: 5px;
 				}
 			}
 		}
-		&.worksExperience-section {
-			.svgWorkingExperiencesContainer {
-				position: relative;
-				.infoWorkingExperienceContainer {
-					@include toolTipInfo;
-					width: 295px;
-					left: 10px;
-					top: 31px;
-					display: none;
-					ul {
-						li {
-							list-style-type:disc!important;
+		.section {
+			color: $sectionTextColor;
+			margin-top: 20px;
+			line-height: 180%;
+			.main_title_section {
+				@include main_title_section;
+			}
+			.center_text {
+				@include centerText;
+			}
+			&.skills-section {
+				.skills_frontEnd_desc_level_start, .skills_backEnd_desc_level_start {
+					line-height: 30px;
+					display:flex;
+					display: -webkit-flex; /* Safari */
+					justify-content: center;
+					h4 {
+						text-align: left;
+					}
+					.front_end_skills_desc_start, {
+						margin-right: 50px;
+					}
+					.front_end_skills_desc_start, .back_end_skills_desc_start, .back_end_level_start, .front_end_level_start {
+						.skills_list {
+							text-align: start;
+							position: relative;
 						}
 					}
-					h4{
-						font-size: 1.06em;
+				}
+			}
+			&.worksExperience-section {
+				.svgWorkingExperiencesContainer {
+					position: relative;
+					.infoWorkingExperienceContainer {
+						@include toolTipInfo;
+						width: 295px;
+						left: 10px;
+						top: 31px;
+						display: none;
+						margin-top: -5px;
+						ul {
+							li {
+								list-style-type:disc!important;
+							}
+						}
+						h4{
+							font-size: 1.06em;
+						}
+						&.infoBlockToUpdate {// On surimpose les styles hérités du mixin.
+							padding-top: 8px!important;
+							line-height: 130%;
+							border: solid 1px #2f3a65;
+							font-size: 0.95em;
+							height: 300px!important;
+							border-radius: 3px;
+							width: 300px!important;
+							top: 55px!important;
+							left: 8px!important;
+							-webkit-box-shadow: none!important;
+							-moz-box-shadow: none!important;
+							box-shadow: none!important;
+							-webkit-box-shadow: none!important;
+							-moz-box-shadow: none!important;
+							box-shadow: none!important;
+						}
 					}
-					&.infoBlockToUpdate {// On surimpose les styles hérités du mixin.
+					.nodes {
+						font-size: 1.05em;
+					}
+					.complementNodes {
+						font-size: 0.8em;
+						font-style: italic;
+						opacity: 0.8;
+					}
+					.childrens {
+						font-size: 0.9em;
+					}
+					.selected {
+						cursor: pointer;
+						opacity: 1;
+						font-weight: bold;
+						font-size: 1.05em;
+					}
+					.no_selected_workingExperience {
+						font-weight: normal;
+						font-size: 1.05em;
+					}
+				}
+			}
+			&.projects-section {
+				.linkToProjetsHand {
+					border: none;
+					width: 219px;
+					height: 127px;
+					margin-top: 9px;
+					margin-left: 74px;
+				}
+				.myProjectsContainer {
+					display:flex;
+					display: -webkit-flex; /* Safari */
+					justify-content: center;
+					.linkToPortofolio {
+						color: #461419;
+						font-size: 1.1em;
+						top: -113px;
+						left: -10px;
+						position: relative;
+						.complementLink {
+							top: 0px;
+							left: 2px;
+						}
+					}
+				}
+			}
+			&.education_section {
+			}
+			&.mapResum {
+				#map {
+					height: 500px!important;
+					img {
+						border: none;// Pour éviter border/tiles des cartes ...
+					}
+					.leaflet-popup-content {
+						font-size: 1.3em;
+					}
+
+				}
+			}
+			&.languesEtAutresSection {
+				.languesList {
+					margin-top: 87px;
+					.langueContainer {
+						.imgLanguesFlag {
+							width: 40px;
+							margin-right: 90px;
+							cursor: pointer;
+						}
+						&:last-child {
+							.imgLanguesFlag{
+								margin-right: 0px;
+							}
+							.toolTipInfo {
+								margin-left: -87px;
+							}
+						}
+						&:first-of-type {
+							.toolTipInfo {
+								padding: 19px 1px!important;
+							}
+						}
+					}
+				}
+				.hobbiesContainer {
+					height: 150px;
+					display:flex;
+					display: -webkit-flex; /* Safari */
+					align-items: center;
+					justify-content: space-around;
+					margin-top: 20px;
+					position: relative;
+					.defectHobby {// TODO : enlever.
 						padding-top: 8px!important;
 						line-height: 130%;
 						border: solid 1px #2f3a65;
@@ -255,213 +363,102 @@ a:hover {
 						width: 300px!important;
 						top: 55px!important;
 						left: 8px!important;
-						-webkit-box-shadow: none!important;
-						-moz-box-shadow: none!important;
-						box-shadow: none!important;
-						-webkit-box-shadow: none!important;
-						-moz-box-shadow: none!important;
-						box-shadow: none!important;
+					}
+					img:first-child {
+						width: 132px!important;
+					}
+					.hobbyImage:last-child {
+						width: 132px;
+						margin-bottom: 20px;
+						margin-left: 20px!important;
+					}
+					.hobbiesInfo {
+						position: absolute;
+						left: 18%;
+						background: white;
+						border: solid 1px grey;
+						border-radius: 3px;
+						padding: 10px 4px 0px 4px;
+						top: 13%;
+						width: 200px;
+						height: 113px;
+						width: 33%;
+						line-height: 138%;
+						display: none;
+						opacity: 0.93;
+					}
+					.hobbiesInfo:last-child {
+						left: 68%;
+					}
+					.hobbiesInfo:first-of-type {
+
 					}
 				}
-				.nodes {
-					font-size: 1.05em;
+			}
+			.parallax {
+				display: block;
+				position: relative;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				height: 200px;
+				background-position: 0% 100%;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: cover;
+				&.parralax_skills {
+					background-image: url("../../images/skills.jpg");
 				}
-				.complementNodes {
-					font-size: 0.8em;
-					font-style: italic;
-					opacity: 0.8;
+				&.parralax_works {
+					background-image: url("../../images/prof_experience.jpg");
 				}
-				.childrens {
-					font-size: 0.9em;
+				&.parralax_projects {
+					background-image: url("../../images/projects.jpg");
 				}
-				.selected {
-					cursor: pointer;
-					opacity: 1;
-					font-weight: bold;
-					font-size: 1.05em;
+				&.parralax_education {
+					background-image: url("../../images/education.jpg");
 				}
-				.no_selected_workingExperience {
-					font-weight: normal;
-					font-size: 1.05em;
+				&.parralax_mapResum {
+					background-image: url("../../images/whereIlived.jpg");
+				}
+				&.parralax_hobbyPingPong {
+					background-image: url("../../images/pingb.JPG");
+				}
+				&.parralax_hobbyPhoto {
+					background-image: url("../../images/aficionFotob.jpg");
+				}
+				&.parralax_connect {
+					background-image: url("../../images/connect.jpg");
 				}
 			}
-		}
-		&.projects-section {
-			.linkToProjetsHand {
-				border: none;
-				width: 219px;
-				height: 127px;
-				margin-top: 9px;
-				margin-left: 74px;
+			.school-entry {
+				margin-top: 10px;
 			}
-			.myProjectsContainer {
-				display:flex;
+			.languagesSkillsContainer {
+				display: flex;
 				display: -webkit-flex; /* Safari */
 				justify-content: center;
-				.linkToPortofolio {
-					color: #461419;
-					font-size: 1.1em;
-					top: -113px;
-					left: -10px;
-					position: relative;
-					.complementLink {
-						top: 0px;
-						left: 2px;
+				.languagesLevel {
+					margin-left: 9%;
+					.frenchLevel {
+						width: 100%;
 					}
-				}
-			}
-		}
-		&.education_section {
-		}
-		&.mapResum {
-			#map {
-				height: 500px!important;
-				img {
-					border: none;// Pour éviter border/tiles des cartes ...
-				}
-				.leaflet-popup-content {
-					font-size: 1.3em;
+					.spanishLevel {
+						width: 90%;
+					}
+					.englishLevel {
+						width: 70%;
+					}
+					.catalanLevel {
+						width: 60%;
+					}
 				}
 
 			}
-		}
-		&.languesEtAutresSection {
-			.languesList {
-				margin-top: 87px;
-				.langueContainer {
-					.imgLanguesFlag {
-						width: 40px;
-						margin-right: 90px;
-						cursor: pointer;
-					}
-					&:last-child {
-						.imgLanguesFlag{
-							margin-right: 0px;
-						}
-						.toolTipInfo {
-							margin-left: -87px;
-						}
-					}
-					&:first-of-type {
-						.toolTipInfo {
-							padding: 19px 1px!important;
-						}
-					}
-				}
-			}
-			.hobbiesContainer {
-				height: 150px;
-				display:flex;
-				display: -webkit-flex; /* Safari */
-				align-items: center;
-				justify-content: space-around;
-				margin-top: 20px;
-				position: relative;
-				.defectHobby {// TODO : enlever.
-					padding-top: 8px!important;
-					line-height: 130%;
-					border: solid 1px #2f3a65;
-					font-size: 0.95em;
-					height: 300px!important;
-					border-radius: 3px;
-					width: 300px!important;
-					top: 55px!important;
-					left: 8px!important;
-				}
-				img:first-child {
-					width: 132px!important;
-				}
-				.hobbyImage:last-child {
-					width: 132px;
-					margin-bottom: 20px;
-					margin-left: 20px!important;
-				}
-				.hobbiesInfo {
-					position: absolute;
-					left: 18%;
-					background: white;
-					border: solid 1px grey;
-					border-radius: 3px;
-					padding: 10px 4px 0px 4px;
-					top: 13%;
-					width: 200px;
-					height: 113px;
-					width: 33%;
-					line-height: 138%;
-					display: none;
-					opacity: 0.93;
-				}
-				.hobbiesInfo:last-child {
-					left: 68%;
-				}
-				.hobbiesInfo:first-of-type {
-
-				}
-			}
-		}
-		.parallax {
-			display: block;
-			position: relative;
-			margin-top: 20px;
-			margin-bottom: 20px;
-			height: 200px;
-			background-position: 0% 100%;
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-size: cover;
-			&.parralax_skills {
-				background-image: url("../../images/skills.jpg");
-			}
-			&.parralax_works {
-				background-image: url("../../images/prof_experience.jpg");
-			}
-			&.parralax_projects {
-				background-image: url("../../images/projects.jpg");
-			}
-			&.parralax_education {
-				background-image: url("../../images/education.jpg");
-			}
-			&.parralax_mapResum {
-				background-image: url("../../images/whereIlived.jpg");
-			}
-			&.parralax_hobbyPingPong {
-				background-image: url("../../images/pingb.JPG");
-			}
-			&.parralax_hobbyPhoto {
-				background-image: url("../../images/aficionFotob.jpg");
-			}
-			&.parralax_connect {
-				background-image: url("../../images/connect.jpg");
-			}
-		}
-		.school-entry {
-			margin-top: 10px;
-		}
-		.languagesSkillsContainer {
-			display: flex;
-			display: -webkit-flex; /* Safari */
-			justify-content: center;
-			.languagesLevel {
-				margin-left: 9%;
-				.frenchLevel {
-					width: 100%;
-				}
-				.spanishLevel {
-					width: 90%;
-				}
-				.englishLevel {
-					width: 70%;
-				}
-				.catalanLevel {
-					width: 60%;
-				}
-			}
-
 		}
 	}
 
-
 }
+
 
 // --------------------------------------- //
 // ------- Taille niveau 3 (desktops) : --- //

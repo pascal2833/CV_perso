@@ -26,7 +26,12 @@ function startScript() {
 		.attr("x", xWorkName)// x et y, pas cx ni cy (pour coordonees de cercles)
 		.attr("y", function(d) {return d.yWorkName})
 		.attr("fill", "rgb(20,25,70)")
+	// To add multilanguage.
+		.attr("lang", "es")
+		.attr("data-lang-token", function(d) {return d.keyMultiLanguage})
 		.text(function(d) {return d.workName;}); // = text to put!
+
+	/*lang="es" data-lang-token="mapPpalTitle"*/
 
 	var complementNodes = svgGraph.selectAll("g.complementNodes_texts")
 	.data(work.complementsNodes)
@@ -37,6 +42,9 @@ function startScript() {
 		.attr("x", xWorkName)// x et y, pas cx ni cy (pour coordonees de cercles)
 		.attr("y", function(d) {return d.yWorkName + 15})
 		.attr("fill", "rgb(20,25,70)")
+	// To add multilanguage.
+		.attr("lang", "es")
+		.attr("data-lang-token", function(d) {return d.keyMultiLanguage})
 		.text(function(d) {return '(' + d.date + ')';}); // = text to put!
 
 	var xProgrammingLanguageName = 850;
@@ -101,7 +109,6 @@ function startScript() {
 
 	$('.svgWorkingExperiencesContainer').on('mouseleave', function() {
 		$('.infoWorkingExperienceContainer').css('display', 'none');
-		console.log("out");
 	});
 
 

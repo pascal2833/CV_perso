@@ -1,6 +1,33 @@
 {
 	"token": {
-		"skillsLevel_title": "Niveau :"
+		"skillsLevel_title": "Niveau :",
+		"skillsPpalTitle": "Connaissances techniques",
+		"worksExperiencePpalTitle": "Expériences de développeur",
+		"projectsPpalTitle": "Projets",
+		"linkPortofolioPart1": "Voir",
+		"linkPortofolioPart2": "Portofolio",
+		"studiesPpalTitle": "Études et formations",
+		"mapPpalTitle": "Itinéraire en carte",
+		"hobby1PpalTitle": "Une passion",
+		"hobby2PpalTitle": "Une autre passion",
+		"workNameWebDvperTitle": "Développeur web",
+		"workNameFrEndDvperTitle": "Développeur Front-end",
+		"workNameWebMapDvperTitle": "Développeur web-mapping",
+		"nodesDatePrecisionWebDvper": "Octobre 2015-aujourd'hui",
+		"nodesDatePrecisionFrEndDvper": "Janvier 2015-septembre 2015",
+		"nodesDatePrecisionWebMapDvper": "Janvier 2012-décembre 2014",
+		"webDvperDescriptionTitle": "Travaux pour clients français et projet interne :",
+		"webDvperDescriptionPart1": "Mise en place de la partie front et intégration avec JavaEE",
+		"webDvperDescriptionPart2": "Participation à un site web visant à gérer les inscriptions du nouveaux centre universitaire parisien : tâches de back et front - end simultanément.",
+		"webDvperDescriptionPart3": "Application pour 'La Poste' : tâches de back-end",
+		"front_endDvperDescriptionPart1": "Continuation, depuis l'Espagne, du projet réalisé avec le CEA/LSCE.",
+		"front_endDvperDescriptionPart2": "Pour des raisons familiales, je suis revenu sur Barcelone ou j'ai continué à travailler sur le",
+		"front_endDvperDescriptionPart3": "Representación de données relatives aux flux de carbone via Web Map Service : création des couches cartographiques en python et intégration à la partie front.",
+		"web_mappingDvperDescriptionPart1": "Collaboration à la réalisation du ",
+		"web_mappingDvperDescriptionPart2": ": travail de visualisation de données appliquées à des cartes.",
+		"web_mappingDvperDescriptionPart3": "Contexte : au sein du projet européen ",
+		"web_mappingDvperDescriptionPart4": ", dirigé par le CREAF, travail avec un partenaire français (CEA-LSCE).",
+		"web_mappingDvperDescriptionPart5": "Création, design des cartes et intégrations de quelques outils créés par le projet GeoViqua.",
+		"web_mappingDvperDescriptionPart6": "Création et gestion d'un formulaire envoyé aux créateurs des données, situés dans différents pays."
 	}
 }
-
